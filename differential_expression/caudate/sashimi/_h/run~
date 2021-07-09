@@ -1,0 +1,21 @@
+#!/bin/bash 
+
+INPUT="/ceph/users/jbenja13/projects/sex_sz_ria/input/sample_summary/bam_inputs/ank3_bam/bam_inputs/_m"
+GTF="/ceph/genome/human/gencode26/gtf.ALL/_m/gencode.v26.chr_patch_hapl_scaff.annotation.gtf"
+SOFTWARE="/ceph/opt/ggsashimi"
+
+$SOFTWARE/sashimi-plot.py -b $INPUT/caudate_input_bam.tsv -c chr10:60026298-60739000 -L 3\
+			  -S minus -M 10 -g $GTF -s ANTISENSE --shrink -O 3 -C 3 -A median \
+			  --alpha 0.75 --base-size=20 --ann-height=10 --height=6 --width=30 \
+			  -o ank_full -F pdf -P ../_h/palette.txt
+
+$SOFTWARE/sashimi-plot.py -b $INPUT/caudate_input_bam.tsv -c chr10:60026298-60145000 -L 3\
+			  -S minus -M 10 -g $GTF -s ANTISENSE --shrink -O 3 -C 3 -A median \
+			  --alpha 0.75 --base-size=20 --ann-height=10 --height=6 --width=30 \
+			  -o ank_3prime -F pdf -P ../_h/palette.txt
+
+$SOFTWARE/sashimi-plot.py -b $INPUT/caudate_input_bam.tsv -c chr10:60264000-60270150 -L 3\
+			  -S minus -M 10 -g $GTF -s ANTISENSE --shrink -O 3 -C 3 -A median \
+			  --alpha 0.75 --base-size=20 --ann-height=10 --height=6 --width=30 \
+			  -o ank_deg_junc -F pdf -P ../_h/palette.txt
+
