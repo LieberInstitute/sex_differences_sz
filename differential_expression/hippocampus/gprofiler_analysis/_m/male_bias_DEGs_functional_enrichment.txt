@@ -1,0 +1,3 @@
+query	significant	p_value	term_size	query_size	intersection_size	precision	recall	term_id	source	term_name	effective_domain_size	source_order	parents
+query_1	TRUE	5.38308726090322e-07	17	5	4	0.8	0.235294117647059	HP:0001450	HP	Y-linked inheritance	4511	1089	HP:0010985
+query_1	TRUE	0.0384449014535968	257	5	4	0.8	0.0155642023346304	HP:0010985	HP	Gonosomal inheritance	4511	7444	HP:0000005
