@@ -1,0 +1,2 @@
+Feature	ensemblID	seqname	gene_name	Dir
+ENSG00000147050.14	ENSG00000147050	chrX	KDM6A	-1.0
