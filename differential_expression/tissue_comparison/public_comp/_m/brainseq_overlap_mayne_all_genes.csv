@@ -1,0 +1,17 @@
+external_gene_name,ensembl_gene_id,entrezgene,description,Caudate,DLPFC,Hippocampus,Mayne
+KDM5D,ENSG00000012817,8284.0,lysine demethylase 5D [Source:HGNC Symbol;Acc:HGNC:11115],1.0,1.0,1.0,1
+EIF1AY,ENSG00000198692,9086.0,eukaryotic translation initiation factor 1A Y-linked [Source:HGNC Symbol;Acc:HGNC:3252],1.0,1.0,1.0,1
+TXLNGY,ENSG00000131002,,"taxilin gamma pseudogene, Y-linked [Source:HGNC Symbol;Acc:HGNC:18473]",1.0,1.0,1.0,1
+,ENSG00000274655,,,,,,1
+PRKY,ENSG00000099725,5616.0,protein kinase Y-linked (pseudogene) [Source:HGNC Symbol;Acc:HGNC:9444],1.0,1.0,1.0,1
+NLGN4Y,ENSG00000165246,22829.0,neuroligin 4 Y-linked [Source:HGNC Symbol;Acc:HGNC:15529],1.0,1.0,1.0,1
+TTTY15,ENSG00000233864,,"testis-specific transcript, Y-linked 15 (non-protein coding) [Source:HGNC Symbol;Acc:HGNC:18567]",1.0,1.0,1.0,1
+TXLNGY,ENSG00000131002,,"taxilin gamma pseudogene, Y-linked [Source:HGNC Symbol;Acc:HGNC:18473]",1.0,1.0,1.0,1
+UTY,ENSG00000183878,7404.0,"ubiquitously transcribed tetratricopeptide repeat containing, Y-linked [Source:HGNC Symbol;Acc:HGNC:12638]",1.0,1.0,1.0,1
+TTTY14,ENSG00000176728,,"testis-specific transcript, Y-linked 14 (non-protein coding) [Source:HGNC Symbol;Acc:HGNC:18495]",1.0,1.0,1.0,1
+TMSB4Y,ENSG00000154620,9087.0,thymosin beta 4 Y-linked [Source:HGNC Symbol;Acc:HGNC:11882],1.0,1.0,1.0,1
+USP9Y,ENSG00000114374,8287.0,ubiquitin specific peptidase 9 Y-linked [Source:HGNC Symbol;Acc:HGNC:12633],1.0,1.0,1.0,1
+KDM6A,ENSG00000147050,7403.0,lysine demethylase 6A [Source:HGNC Symbol;Acc:HGNC:12637],1.0,1.0,1.0,1
+ZFY,ENSG00000067646,7544.0,zinc finger protein Y-linked [Source:HGNC Symbol;Acc:HGNC:12870],1.0,1.0,1.0,1
+TBL1Y,ENSG00000092377,90665.0,transducin beta like 1 Y-linked [Source:HGNC Symbol;Acc:HGNC:18502],1.0,0.0,1.0,1
+KDM5C,ENSG00000126012,8242.0,lysine demethylase 5C [Source:HGNC Symbol;Acc:HGNC:11114],1.0,1.0,1.0,1
