@@ -1,0 +1,21 @@
+#!/bin/sh
+set -o errexit -o pipefail
+
+DE_DIR="../../../../differential_expression"
+
+echo -e "Geneid\tensemblID\tSymbol" > background.txt
+cat $DE_DIR/dlpfc/_m/genes/diffExpr_maleVfemale_full.txt | \
+    cut -f 3-4,6 | sort -u | grep -v EntrezID >> background.txt
+cat $DE_DIR/caudate/_m/genes/diffExpr_maleVfemale_full.txt | \
+    cut -f 3-4,6 | sort -u | grep -v EntrezID >> background.txt
+cat $DE_DIR/hippocampus/_m/genes/diffExpr_maleVfemale_full.txt | \
+    cut -f 3-4,6 | sort -u | grep -v EntrezID >> background.txt
+
+for NOTEBOOK in main; do
+    cp ../_h/${NOTEBOOK}.ipynb tmp_${NOTEBOOK}.ipynb
+    jupyter-nbconvert --execute --ExecutePreprocessor.timeout=-1 --to notebook \
+                      --stdout tmp_${NOTEBOOK}.ipynb > ${NOTEBOOK}.ipynb
+    jupyter nbconvert --to html ${NOTEBOOK}.ipynb
+    jupyter nbconvert --to pdf ${NOTEBOOK}.ipynb
+    rm -f tmp_${NOTEBOOK}.ipynb
+done
