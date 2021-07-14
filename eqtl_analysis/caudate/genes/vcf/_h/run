@@ -1,0 +1,15 @@
+#!/bin/bash
+
+GENOTYPE_DIR='/ceph/projects/v4_phase3_paper/inputs/genotypes/_m'
+
+plink2 --bfile ${GENOTYPE_DIR}/LIBD_Brain_TopMed \
+       --keep ../../_m/keepFam.txt \
+       --export vcf id-paste=fid vcf-dosage=DS \
+       --out genotypes
+
+perl -pe 's/^(##contig=<ID=)/$1chr/; s/^([^#])/chr$1/' genotypes.vcf \
+     > genotypes_chr.vcf
+
+bgzip genotypes_chr.vcf && tabix -p vcf genotypes_chr.vcf.gz
+
+rm -f genotypes.vcf
