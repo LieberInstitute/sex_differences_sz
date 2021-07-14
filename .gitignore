@@ -5,3 +5,4 @@ nohup.out
 .ipynb_checkpoints
 dep/*
 dep
+input/*
