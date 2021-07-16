@@ -1,3 +1,0 @@
-#!/bin/bash
-
-plink2 --make-bed --output-chr chrM --vcf ../../_m/genotypes_chr.vcf.gz --out genotypes_chr
