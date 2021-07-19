@@ -1,0 +1,26 @@
+#!/bin/bash
+
+SOFTWARE="/ceph/opt/eigenMT"
+
+Rscript ../_h/prep_genepos.R
+
+seq 1 22 | parallel "Rscript ../_h/prep_eigenMT.R --chrom {}; \
+                     python $SOFTWARE/eigenMT.py \
+                            --CHROM {} --cis_dist 0.5e6 \
+                            --QTL cis.eqtls.{}.txt.gz \
+                            --GEN genotypes.{}.txt.gz \
+                            --GENPOS gen.position.{}.txt \
+                            --PHEPOS phe.position.txt \
+                            --OUT Brainseq_LIBD.{}.tsv"
+
+Rscript ../_h/prep_eigenMT.R --chrom X
+python $SOFTWARE/eigenMT.py \
+       --CHROM X --cis_dist 0.5e6 \
+       --QTL cis.eqtls.X.txt.gz \
+       --GEN genotypes.X.txt.gz \
+       --GENPOS gen.position.X.txt \
+       --PHEPOS phe.position.txt \
+       --OUT Brainseq_LIBD.X.tsv
+
+## clean directory
+rm *gz *txt
