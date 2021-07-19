@@ -8,7 +8,8 @@ load_eqtl <- function(){
     eqtl_dt = data.table::fread("../../_m/Brainseq_LIBD.allpairs.txt.gz") %>%
         group_by(gene_id) %>% mutate(fdr=p.adjust(pval_nominal, method="fdr")) %>%
         mutate(statistic=slope / sqrt(slope_se/ma_samples + slope_se/ma_count)) %>%
-        select(variant_id, gene_id, slope, statistic, pval_nominal, fdr) ## %>%
+        select(variant_id, gene_id, slope, statistic, pval_nominal, fdr) %>%
+        rename("p-value"="pval_nominal")## %>%
         ## tidyr::separate(variant_id, c("chrom", "pos", "alleles"),
         ##                 sep=":", remove=FALSE, extra="merge")
     return(eqtl_dt)
@@ -17,7 +18,7 @@ load_eqtl <- function(){
 memEQTL <- memoise::memoise(load_eqtl)
 
 prep_genotype_matrix <- function(chrom){
-    filename = paste0("/ceph/projects/v4_phase3_paper/inputs/genotypes/",
+    filename = paste0("/dcs04/lieber/ds2b/users/kynon/v4_phase3_paper/inputs/genotypes/",
                       "byChrom/a_transpose/_m/LIBD_Brain_TopMed.", chrom,
                       ".traw")
     geno_dt = data.table::fread(filename) %>% select(SNP, starts_with("Br"))
@@ -29,7 +30,7 @@ prep_genotype_matrix <- function(chrom){
 }
 
 extract_gen_positions <- function(chr_num){
-    filename = paste0("/ceph/projects/v4_phase3_paper/inputs/genotypes/",
+    filename = paste0("/dcs04/lieber/ds2b/users/kynon/v4_phase3_paper/inputs/genotypes/",
                       "byChrom/a_transpose/_m/LIBD_Brain_TopMed.", chr_num,
                       ".traw")
     geno_dt = data.table::fread(filename) %>% select(SNP, CHR, POS)
