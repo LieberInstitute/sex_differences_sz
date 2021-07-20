@@ -1,0 +1,106 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "2021-07-19 19:18:58 EDT"
+   user  system elapsed 
+379.327  25.399 431.061 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       CentOS Linux 7 (Core)       
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       US/Eastern                  
+ date     2021-07-19                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ argparse    * 2.0.3   2020-10-19 [1] CRAN (R 3.6.1)
+ cli           2.5.0   2021-04-26 [1] CRAN (R 3.6.1)
+ crayon        1.4.1   2021-02-08 [1] CRAN (R 3.6.1)
+ data.table    1.14.0  2021-02-21 [1] CRAN (R 3.6.1)
+ digest        0.6.27  2020-10-24 [1] CRAN (R 3.6.1)
+ dplyr       * 1.0.2   2020-08-18 [2] CRAN (R 3.6.1)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 3.6.1)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 3.6.1)
+ generics      0.1.0   2020-10-31 [2] CRAN (R 3.6.1)
+ glue          1.4.2   2020-08-27 [1] CRAN (R 3.6.1)
+ jsonlite      1.7.2   2020-12-09 [2] CRAN (R 3.6.1)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 3.6.1)
+ magrittr      2.0.1   2020-11-17 [2] CRAN (R 3.6.1)
+ memoise       1.1.0   2017-04-21 [2] CRAN (R 3.6.1)
+ pillar        1.4.7   2020-11-20 [2] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 3.6.1)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 3.6.1)
+ R6            2.5.0   2020-10-28 [2] CRAN (R 3.6.1)
+ rlang         0.4.10  2020-12-30 [1] CRAN (R 3.6.1)
+ sessioninfo   1.1.1   2018-11-05 [2] CRAN (R 3.6.1)
+ tibble        3.0.4   2020-10-12 [2] CRAN (R 3.6.1)
+ tidyselect    1.1.1   2021-04-30 [1] CRAN (R 3.6.1)
+ vctrs         0.3.6   2020-12-17 [1] CRAN (R 3.6.1)
+ withr         2.3.0   2020-09-22 [2] CRAN (R 3.6.1)
+
+[1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/3.6
+[2] /jhpce/shared/jhpce/core/R/3.6.1/lib64/R/library
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+100.0 out of 3690 completed (2.71%)
+200.0 out of 3690 completed (5.42%)
+300.0 out of 3690 completed (8.13%)
+400.0 out of 3690 completed (10.84%)
+500.0 out of 3690 completed (13.55%)
+600.0 out of 3690 completed (16.26%)
+700.0 out of 3690 completed (18.97%)
+800.0 out of 3690 completed (21.68%)
+900.0 out of 3690 completed (24.39%)
+1000.0 out of 3690 completed (27.1%)
+1100.0 out of 3690 completed (29.81%)
+1200.0 out of 3690 completed (32.52%)
+1300.0 out of 3690 completed (35.23%)
+1400.0 out of 3690 completed (37.94%)
+1500.0 out of 3690 completed (40.65%)
+1600.0 out of 3690 completed (43.36%)
+1700.0 out of 3690 completed (46.07%)
+1800.0 out of 3690 completed (48.78%)
+1900.0 out of 3690 completed (51.491%)
+2000.0 out of 3690 completed (54.201%)
+2100.0 out of 3690 completed (56.911%)
+2200.0 out of 3690 completed (59.621%)
+2300.0 out of 3690 completed (62.331%)
+2400.0 out of 3690 completed (65.041%)
+2500.0 out of 3690 completed (67.751%)
+2600.0 out of 3690 completed (70.461%)
+2700.0 out of 3690 completed (73.171%)
+2800.0 out of 3690 completed (75.881%)
+2900.0 out of 3690 completed (78.591%)
+3000.0 out of 3690 completed (81.301%)
+3100.0 out of 3690 completed (84.011%)
+3200.0 out of 3690 completed (86.721%)
+3300.0 out of 3690 completed (89.431%)
+3400.0 out of 3690 completed (92.141%)
+3500.0 out of 3690 completed (94.851%)
+3600.0 out of 3690 completed (97.561%)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)

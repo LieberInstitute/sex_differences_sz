@@ -1,0 +1,137 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "2021-07-19 22:39:35 EDT"
+   user  system elapsed 
+347.553  21.015 390.521 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       CentOS Linux 7 (Core)       
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       US/Eastern                  
+ date     2021-07-19                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ argparse    * 2.0.3   2020-10-19 [1] CRAN (R 3.6.1)
+ cli           2.5.0   2021-04-26 [1] CRAN (R 3.6.1)
+ crayon        1.4.1   2021-02-08 [1] CRAN (R 3.6.1)
+ data.table    1.14.0  2021-02-21 [1] CRAN (R 3.6.1)
+ digest        0.6.27  2020-10-24 [1] CRAN (R 3.6.1)
+ dplyr       * 1.0.2   2020-08-18 [2] CRAN (R 3.6.1)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 3.6.1)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 3.6.1)
+ generics      0.1.0   2020-10-31 [2] CRAN (R 3.6.1)
+ glue          1.4.2   2020-08-27 [1] CRAN (R 3.6.1)
+ jsonlite      1.7.2   2020-12-09 [2] CRAN (R 3.6.1)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 3.6.1)
+ magrittr      2.0.1   2020-11-17 [2] CRAN (R 3.6.1)
+ memoise       1.1.0   2017-04-21 [2] CRAN (R 3.6.1)
+ pillar        1.4.7   2020-11-20 [2] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 3.6.1)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 3.6.1)
+ R6            2.5.0   2020-10-28 [2] CRAN (R 3.6.1)
+ rlang         0.4.10  2020-12-30 [1] CRAN (R 3.6.1)
+ sessioninfo   1.1.1   2018-11-05 [2] CRAN (R 3.6.1)
+ tibble        3.0.4   2020-10-12 [2] CRAN (R 3.6.1)
+ tidyselect    1.1.1   2021-04-30 [1] CRAN (R 3.6.1)
+ vctrs         0.3.6   2020-12-17 [1] CRAN (R 3.6.1)
+ withr         2.3.0   2020-09-22 [2] CRAN (R 3.6.1)
+
+[1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/3.6
+[2] /jhpce/shared/jhpce/core/R/3.6.1/lib64/R/library
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+100.0 out of 7769 completed (1.287%)
+200.0 out of 7769 completed (2.574%)
+300.0 out of 7769 completed (3.862%)
+400.0 out of 7769 completed (5.149%)
+500.0 out of 7769 completed (6.436%)
+600.0 out of 7769 completed (7.723%)
+700.0 out of 7769 completed (9.01%)
+800.0 out of 7769 completed (10.297%)
+900.0 out of 7769 completed (11.585%)
+1000.0 out of 7769 completed (12.872%)
+1100.0 out of 7769 completed (14.159%)
+1200.0 out of 7769 completed (15.446%)
+1300.0 out of 7769 completed (16.733%)
+1400.0 out of 7769 completed (18.02%)
+1500.0 out of 7769 completed (19.308%)
+1600.0 out of 7769 completed (20.595%)
+1700.0 out of 7769 completed (21.882%)
+1800.0 out of 7769 completed (23.169%)
+1900.0 out of 7769 completed (24.456%)
+2000.0 out of 7769 completed (25.743%)
+2100.0 out of 7769 completed (27.031%)
+2200.0 out of 7769 completed (28.318%)
+2300.0 out of 7769 completed (29.605%)
+2400.0 out of 7769 completed (30.892%)
+2500.0 out of 7769 completed (32.179%)
+2600.0 out of 7769 completed (33.466%)
+2700.0 out of 7769 completed (34.754%)
+2800.0 out of 7769 completed (36.041%)
+2900.0 out of 7769 completed (37.328%)
+3000.0 out of 7769 completed (38.615%)
+3100.0 out of 7769 completed (39.902%)
+3200.0 out of 7769 completed (41.189%)
+3300.0 out of 7769 completed (42.477%)
+3400.0 out of 7769 completed (43.764%)
+3500.0 out of 7769 completed (45.051%)
+3600.0 out of 7769 completed (46.338%)
+3700.0 out of 7769 completed (47.625%)
+3800.0 out of 7769 completed (48.912%)
+3900.0 out of 7769 completed (50.2%)
+4000.0 out of 7769 completed (51.487%)
+4100.0 out of 7769 completed (52.774%)
+4200.0 out of 7769 completed (54.061%)
+4300.0 out of 7769 completed (55.348%)
+4400.0 out of 7769 completed (56.635%)
+4500.0 out of 7769 completed (57.923%)
+4600.0 out of 7769 completed (59.21%)
+4700.0 out of 7769 completed (60.497%)
+4800.0 out of 7769 completed (61.784%)
+4900.0 out of 7769 completed (63.071%)
+5000.0 out of 7769 completed (64.358%)
+5100.0 out of 7769 completed (65.646%)
+5200.0 out of 7769 completed (66.933%)
+5300.0 out of 7769 completed (68.22%)
+5400.0 out of 7769 completed (69.507%)
+5500.0 out of 7769 completed (70.794%)
+5600.0 out of 7769 completed (72.081%)
+5700.0 out of 7769 completed (73.369%)
+5800.0 out of 7769 completed (74.656%)
+5900.0 out of 7769 completed (75.943%)
+6000.0 out of 7769 completed (77.23%)
+6100.0 out of 7769 completed (78.517%)
+6200.0 out of 7769 completed (79.804%)
+6300.0 out of 7769 completed (81.092%)
+6400.0 out of 7769 completed (82.379%)
+6500.0 out of 7769 completed (83.666%)
+6600.0 out of 7769 completed (84.953%)
+6700.0 out of 7769 completed (86.24%)
+6800.0 out of 7769 completed (87.527%)
+6900.0 out of 7769 completed (88.815%)
+7000.0 out of 7769 completed (90.102%)
+7100.0 out of 7769 completed (91.389%)
+7200.0 out of 7769 completed (92.676%)
+7300.0 out of 7769 completed (93.963%)
+7400.0 out of 7769 completed (95.25%)
+7500.0 out of 7769 completed (96.538%)
+7600.0 out of 7769 completed (97.825%)
+7700.0 out of 7769 completed (99.112%)
