@@ -1,0 +1,93 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "2021-07-19 17:04:51 EDT"
+   user  system elapsed 
+385.706  17.154 526.789 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       CentOS Linux 7 (Core)       
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       US/Eastern                  
+ date     2021-07-19                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ argparse    * 2.0.3   2020-10-19 [1] CRAN (R 3.6.1)
+ cli           2.5.0   2021-04-26 [1] CRAN (R 3.6.1)
+ crayon        1.4.1   2021-02-08 [1] CRAN (R 3.6.1)
+ data.table    1.14.0  2021-02-21 [1] CRAN (R 3.6.1)
+ digest        0.6.27  2020-10-24 [1] CRAN (R 3.6.1)
+ dplyr       * 1.0.2   2020-08-18 [2] CRAN (R 3.6.1)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 3.6.1)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 3.6.1)
+ generics      0.1.0   2020-10-31 [2] CRAN (R 3.6.1)
+ glue          1.4.2   2020-08-27 [1] CRAN (R 3.6.1)
+ jsonlite      1.7.2   2020-12-09 [2] CRAN (R 3.6.1)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 3.6.1)
+ magrittr      2.0.1   2020-11-17 [2] CRAN (R 3.6.1)
+ memoise       1.1.0   2017-04-21 [2] CRAN (R 3.6.1)
+ pillar        1.4.7   2020-11-20 [2] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 3.6.1)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 3.6.1)
+ R6            2.5.0   2020-10-28 [2] CRAN (R 3.6.1)
+ rlang         0.4.10  2020-12-30 [1] CRAN (R 3.6.1)
+ sessioninfo   1.1.1   2018-11-05 [2] CRAN (R 3.6.1)
+ tibble        3.0.4   2020-10-12 [2] CRAN (R 3.6.1)
+ tidyselect    1.1.1   2021-04-30 [1] CRAN (R 3.6.1)
+ vctrs         0.3.6   2020-12-17 [1] CRAN (R 3.6.1)
+ withr         2.3.0   2020-09-22 [2] CRAN (R 3.6.1)
+
+[1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/3.6
+[2] /jhpce/shared/jhpce/core/R/3.6.1/lib64/R/library
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+100.0 out of 3349 completed (2.986%)
+200.0 out of 3349 completed (5.972%)
+300.0 out of 3349 completed (8.958%)
+400.0 out of 3349 completed (11.944%)
+500.0 out of 3349 completed (14.93%)
+600.0 out of 3349 completed (17.916%)
+700.0 out of 3349 completed (20.902%)
+800.0 out of 3349 completed (23.888%)
+900.0 out of 3349 completed (26.874%)
+1000.0 out of 3349 completed (29.86%)
+1100.0 out of 3349 completed (32.846%)
+1200.0 out of 3349 completed (35.832%)
+1300.0 out of 3349 completed (38.818%)
+1400.0 out of 3349 completed (41.804%)
+1500.0 out of 3349 completed (44.789%)
+1600.0 out of 3349 completed (47.775%)
+1700.0 out of 3349 completed (50.761%)
+1800.0 out of 3349 completed (53.747%)
+1900.0 out of 3349 completed (56.733%)
+2000.0 out of 3349 completed (59.719%)
+2100.0 out of 3349 completed (62.705%)
+2200.0 out of 3349 completed (65.691%)
+2300.0 out of 3349 completed (68.677%)
+2400.0 out of 3349 completed (71.663%)
+2500.0 out of 3349 completed (74.649%)
+2600.0 out of 3349 completed (77.635%)
+2700.0 out of 3349 completed (80.621%)
+2800.0 out of 3349 completed (83.607%)
+2900.0 out of 3349 completed (86.593%)
+3000.0 out of 3349 completed (89.579%)
+3100.0 out of 3349 completed (92.565%)
+3200.0 out of 3349 completed (95.551%)
+3300.0 out of 3349 completed (98.537%)
