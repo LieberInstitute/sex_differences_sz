@@ -1,0 +1,463 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "2021-07-19 18:36:30 EDT"
+    user   system  elapsed 
+1449.597   59.229 1617.621 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       CentOS Linux 7 (Core)       
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       US/Eastern                  
+ date     2021-07-19                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ argparse    * 2.0.3   2020-10-19 [1] CRAN (R 3.6.1)
+ cli           2.5.0   2021-04-26 [1] CRAN (R 3.6.1)
+ crayon        1.4.1   2021-02-08 [1] CRAN (R 3.6.1)
+ data.table    1.14.0  2021-02-21 [1] CRAN (R 3.6.1)
+ digest        0.6.27  2020-10-24 [1] CRAN (R 3.6.1)
+ dplyr       * 1.0.2   2020-08-18 [2] CRAN (R 3.6.1)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 3.6.1)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 3.6.1)
+ generics      0.1.0   2020-10-31 [2] CRAN (R 3.6.1)
+ glue          1.4.2   2020-08-27 [1] CRAN (R 3.6.1)
+ jsonlite      1.7.2   2020-12-09 [2] CRAN (R 3.6.1)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 3.6.1)
+ magrittr      2.0.1   2020-11-17 [2] CRAN (R 3.6.1)
+ memoise       1.1.0   2017-04-21 [2] CRAN (R 3.6.1)
+ pillar        1.4.7   2020-11-20 [2] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 3.6.1)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 3.6.1)
+ R6            2.5.0   2020-10-28 [2] CRAN (R 3.6.1)
+ rlang         0.4.10  2020-12-30 [1] CRAN (R 3.6.1)
+ sessioninfo   1.1.1   2018-11-05 [2] CRAN (R 3.6.1)
+ tibble        3.0.4   2020-10-12 [2] CRAN (R 3.6.1)
+ tidyselect    1.1.1   2021-04-30 [1] CRAN (R 3.6.1)
+ vctrs         0.3.6   2020-12-17 [1] CRAN (R 3.6.1)
+ withr         2.3.0   2020-09-22 [2] CRAN (R 3.6.1)
+
+[1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/3.6
+[2] /jhpce/shared/jhpce/core/R/3.6.1/lib64/R/library
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+100.0 out of 17326 completed (0.577%)
+200.0 out of 17326 completed (1.154%)
+300.0 out of 17326 completed (1.732%)
+400.0 out of 17326 completed (2.309%)
+500.0 out of 17326 completed (2.886%)
+600.0 out of 17326 completed (3.463%)
+700.0 out of 17326 completed (4.04%)
+800.0 out of 17326 completed (4.617%)
+900.0 out of 17326 completed (5.195%)
+1000.0 out of 17326 completed (5.772%)
+1100.0 out of 17326 completed (6.349%)
+1200.0 out of 17326 completed (6.926%)
+1300.0 out of 17326 completed (7.503%)
+1400.0 out of 17326 completed (8.08%)
+1500.0 out of 17326 completed (8.658%)
+1600.0 out of 17326 completed (9.235%)
+1700.0 out of 17326 completed (9.812%)
+1800.0 out of 17326 completed (10.389%)
+1900.0 out of 17326 completed (10.966%)
+2000.0 out of 17326 completed (11.543%)
+2100.0 out of 17326 completed (12.121%)
+2200.0 out of 17326 completed (12.698%)
+2300.0 out of 17326 completed (13.275%)
+2400.0 out of 17326 completed (13.852%)
+2500.0 out of 17326 completed (14.429%)
+2600.0 out of 17326 completed (15.006%)
+2700.0 out of 17326 completed (15.584%)
+2800.0 out of 17326 completed (16.161%)
+2900.0 out of 17326 completed (16.738%)
+3000.0 out of 17326 completed (17.315%)
+3100.0 out of 17326 completed (17.892%)
+3200.0 out of 17326 completed (18.469%)
+3300.0 out of 17326 completed (19.047%)
+3400.0 out of 17326 completed (19.624%)
+3500.0 out of 17326 completed (20.201%)
+3600.0 out of 17326 completed (20.778%)
+3700.0 out of 17326 completed (21.355%)
+3800.0 out of 17326 completed (21.932%)
+3900.0 out of 17326 completed (22.51%)
+4000.0 out of 17326 completed (23.087%)
+4100.0 out of 17326 completed (23.664%)
+4200.0 out of 17326 completed (24.241%)
+4300.0 out of 17326 completed (24.818%)
+4400.0 out of 17326 completed (25.395%)
+4500.0 out of 17326 completed (25.973%)
+4600.0 out of 17326 completed (26.55%)
+4700.0 out of 17326 completed (27.127%)
+4800.0 out of 17326 completed (27.704%)
+4900.0 out of 17326 completed (28.281%)
+5000.0 out of 17326 completed (28.858%)
+5100.0 out of 17326 completed (29.436%)
+5200.0 out of 17326 completed (30.013%)
+5300.0 out of 17326 completed (30.59%)
+5400.0 out of 17326 completed (31.167%)
+5500.0 out of 17326 completed (31.744%)
+5600.0 out of 17326 completed (32.321%)
+5700.0 out of 17326 completed (32.899%)
+5800.0 out of 17326 completed (33.476%)
+5900.0 out of 17326 completed (34.053%)
+6000.0 out of 17326 completed (34.63%)
+6100.0 out of 17326 completed (35.207%)
+6200.0 out of 17326 completed (35.784%)
+6300.0 out of 17326 completed (36.362%)
+6400.0 out of 17326 completed (36.939%)
+6500.0 out of 17326 completed (37.516%)
+6600.0 out of 17326 completed (38.093%)
+6700.0 out of 17326 completed (38.67%)
+6800.0 out of 17326 completed (39.247%)
+6900.0 out of 17326 completed (39.825%)
+7000.0 out of 17326 completed (40.402%)
+7100.0 out of 17326 completed (40.979%)
+7200.0 out of 17326 completed (41.556%)
+7300.0 out of 17326 completed (42.133%)
+7400.0 out of 17326 completed (42.71%)
+7500.0 out of 17326 completed (43.288%)
+7600.0 out of 17326 completed (43.865%)
+7700.0 out of 17326 completed (44.442%)
+7800.0 out of 17326 completed (45.019%)
+7900.0 out of 17326 completed (45.596%)
+8000.0 out of 17326 completed (46.173%)
+8100.0 out of 17326 completed (46.751%)
+8200.0 out of 17326 completed (47.328%)
+8300.0 out of 17326 completed (47.905%)
+8400.0 out of 17326 completed (48.482%)
+8500.0 out of 17326 completed (49.059%)
+8600.0 out of 17326 completed (49.636%)
+8700.0 out of 17326 completed (50.214%)
+8800.0 out of 17326 completed (50.791%)
+8900.0 out of 17326 completed (51.368%)
+9000.0 out of 17326 completed (51.945%)
+9100.0 out of 17326 completed (52.522%)
+9200.0 out of 17326 completed (53.099%)
+9300.0 out of 17326 completed (53.677%)
+9400.0 out of 17326 completed (54.254%)
+9500.0 out of 17326 completed (54.831%)
+9600.0 out of 17326 completed (55.408%)
+9700.0 out of 17326 completed (55.985%)
+9800.0 out of 17326 completed (56.562%)
+9900.0 out of 17326 completed (57.14%)
+10000.0 out of 17326 completed (57.717%)
+10100.0 out of 17326 completed (58.294%)
+10200.0 out of 17326 completed (58.871%)
+10300.0 out of 17326 completed (59.448%)
+10400.0 out of 17326 completed (60.025%)
+10500.0 out of 17326 completed (60.603%)
+10600.0 out of 17326 completed (61.18%)
+10700.0 out of 17326 completed (61.757%)
+10800.0 out of 17326 completed (62.334%)
+10900.0 out of 17326 completed (62.911%)
+11000.0 out of 17326 completed (63.488%)
+11100.0 out of 17326 completed (64.066%)
+11200.0 out of 17326 completed (64.643%)
+11300.0 out of 17326 completed (65.22%)
+11400.0 out of 17326 completed (65.797%)
+11500.0 out of 17326 completed (66.374%)
+11600.0 out of 17326 completed (66.951%)
+11700.0 out of 17326 completed (67.529%)
+11800.0 out of 17326 completed (68.106%)
+11900.0 out of 17326 completed (68.683%)
+12000.0 out of 17326 completed (69.26%)
+12100.0 out of 17326 completed (69.837%)
+12200.0 out of 17326 completed (70.414%)
+12300.0 out of 17326 completed (70.992%)
+12400.0 out of 17326 completed (71.569%)
+12500.0 out of 17326 completed (72.146%)
+12600.0 out of 17326 completed (72.723%)
+12700.0 out of 17326 completed (73.3%)
+12800.0 out of 17326 completed (73.877%)
+12900.0 out of 17326 completed (74.455%)
+13000.0 out of 17326 completed (75.032%)
+13100.0 out of 17326 completed (75.609%)
+13200.0 out of 17326 completed (76.186%)
+13300.0 out of 17326 completed (76.763%)
+13400.0 out of 17326 completed (77.34%)
+13500.0 out of 17326 completed (77.918%)
+13600.0 out of 17326 completed (78.495%)
+13700.0 out of 17326 completed (79.072%)
+13800.0 out of 17326 completed (79.649%)
+13900.0 out of 17326 completed (80.226%)
+14000.0 out of 17326 completed (80.803%)
+14100.0 out of 17326 completed (81.381%)
+14200.0 out of 17326 completed (81.958%)
+14300.0 out of 17326 completed (82.535%)
+14400.0 out of 17326 completed (83.112%)
+14500.0 out of 17326 completed (83.689%)
+14600.0 out of 17326 completed (84.266%)
+14700.0 out of 17326 completed (84.844%)
+14800.0 out of 17326 completed (85.421%)
+14900.0 out of 17326 completed (85.998%)
+15000.0 out of 17326 completed (86.575%)
+15100.0 out of 17326 completed (87.152%)
+15200.0 out of 17326 completed (87.729%)
+15300.0 out of 17326 completed (88.307%)
+15400.0 out of 17326 completed (88.884%)
+15500.0 out of 17326 completed (89.461%)
+15600.0 out of 17326 completed (90.038%)
+15700.0 out of 17326 completed (90.615%)
+15800.0 out of 17326 completed (91.192%)
+15900.0 out of 17326 completed (91.77%)
+16000.0 out of 17326 completed (92.347%)
+16100.0 out of 17326 completed (92.924%)
+16200.0 out of 17326 completed (93.501%)
+16300.0 out of 17326 completed (94.078%)
+16400.0 out of 17326 completed (94.655%)
+16500.0 out of 17326 completed (95.233%)
+16600.0 out of 17326 completed (95.81%)
+16700.0 out of 17326 completed (96.387%)
+16800.0 out of 17326 completed (96.964%)
+16900.0 out of 17326 completed (97.541%)
+17000.0 out of 17326 completed (98.118%)
+17100.0 out of 17326 completed (98.696%)
+17200.0 out of 17326 completed (99.273%)
+17300.0 out of 17326 completed (99.85%)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)
+/users/jbenjami/.local/lib/python3.7/site-packages/numpy/matrixlib/defmatrix.py:145: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray
+  arr = N.array(data, dtype=dtype, copy=copy)

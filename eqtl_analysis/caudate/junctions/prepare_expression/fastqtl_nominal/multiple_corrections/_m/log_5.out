@@ -1,0 +1,166 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "2021-07-19 16:22:55 EDT"
+    user   system  elapsed 
+1099.204   76.088  809.278 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       CentOS Linux 7 (Core)       
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       US/Eastern                  
+ date     2021-07-19                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ argparse    * 2.0.3   2020-10-19 [1] CRAN (R 3.6.1)
+ cli           2.5.0   2021-04-26 [1] CRAN (R 3.6.1)
+ crayon        1.4.1   2021-02-08 [1] CRAN (R 3.6.1)
+ data.table    1.14.0  2021-02-21 [1] CRAN (R 3.6.1)
+ digest        0.6.27  2020-10-24 [1] CRAN (R 3.6.1)
+ dplyr       * 1.0.2   2020-08-18 [2] CRAN (R 3.6.1)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 3.6.1)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 3.6.1)
+ generics      0.1.0   2020-10-31 [2] CRAN (R 3.6.1)
+ glue          1.4.2   2020-08-27 [1] CRAN (R 3.6.1)
+ jsonlite      1.7.2   2020-12-09 [2] CRAN (R 3.6.1)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 3.6.1)
+ magrittr      2.0.1   2020-11-17 [2] CRAN (R 3.6.1)
+ memoise       1.1.0   2017-04-21 [2] CRAN (R 3.6.1)
+ pillar        1.4.7   2020-11-20 [2] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 3.6.1)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 3.6.1)
+ R6            2.5.0   2020-10-28 [2] CRAN (R 3.6.1)
+ rlang         0.4.10  2020-12-30 [1] CRAN (R 3.6.1)
+ sessioninfo   1.1.1   2018-11-05 [2] CRAN (R 3.6.1)
+ tibble        3.0.4   2020-10-12 [2] CRAN (R 3.6.1)
+ tidyselect    1.1.1   2021-04-30 [1] CRAN (R 3.6.1)
+ vctrs         0.3.6   2020-12-17 [1] CRAN (R 3.6.1)
+ withr         2.3.0   2020-09-22 [2] CRAN (R 3.6.1)
+
+[1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/3.6
+[2] /jhpce/shared/jhpce/core/R/3.6.1/lib64/R/library
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+OpenBLAS blas_thread_init: pthread_create failed for thread 41 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 42 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 43 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 44 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 45 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 46 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+OpenBLAS blas_thread_init: pthread_create failed for thread 47 of 48: Resource temporarily unavailable
+OpenBLAS blas_thread_init: RLIMIT_NPROC 3094632 current, 3094632 max
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+100.0 out of 8719 completed (1.147%)
+200.0 out of 8719 completed (2.294%)
+300.0 out of 8719 completed (3.441%)
+400.0 out of 8719 completed (4.588%)
+500.0 out of 8719 completed (5.735%)
+600.0 out of 8719 completed (6.882%)
+700.0 out of 8719 completed (8.028%)
+800.0 out of 8719 completed (9.175%)
+900.0 out of 8719 completed (10.322%)
+1000.0 out of 8719 completed (11.469%)
+1100.0 out of 8719 completed (12.616%)
+1200.0 out of 8719 completed (13.763%)
+1300.0 out of 8719 completed (14.91%)
+1400.0 out of 8719 completed (16.057%)
+1500.0 out of 8719 completed (17.204%)
+1600.0 out of 8719 completed (18.351%)
+1700.0 out of 8719 completed (19.498%)
+1800.0 out of 8719 completed (20.645%)
+1900.0 out of 8719 completed (21.791%)
+2000.0 out of 8719 completed (22.938%)
+2100.0 out of 8719 completed (24.085%)
+2200.0 out of 8719 completed (25.232%)
+2300.0 out of 8719 completed (26.379%)
+2400.0 out of 8719 completed (27.526%)
+2500.0 out of 8719 completed (28.673%)
+2600.0 out of 8719 completed (29.82%)
+2700.0 out of 8719 completed (30.967%)
+2800.0 out of 8719 completed (32.114%)
+2900.0 out of 8719 completed (33.261%)
+3000.0 out of 8719 completed (34.408%)
+3100.0 out of 8719 completed (35.555%)
+3200.0 out of 8719 completed (36.701%)
+3300.0 out of 8719 completed (37.848%)
+3400.0 out of 8719 completed (38.995%)
+3500.0 out of 8719 completed (40.142%)
+3600.0 out of 8719 completed (41.289%)
+3700.0 out of 8719 completed (42.436%)
+3800.0 out of 8719 completed (43.583%)
+3900.0 out of 8719 completed (44.73%)
+4000.0 out of 8719 completed (45.877%)
+4100.0 out of 8719 completed (47.024%)
+4200.0 out of 8719 completed (48.171%)
+4300.0 out of 8719 completed (49.318%)
+4400.0 out of 8719 completed (50.465%)
+4500.0 out of 8719 completed (51.611%)
+4600.0 out of 8719 completed (52.758%)
+4700.0 out of 8719 completed (53.905%)
+4800.0 out of 8719 completed (55.052%)
+4900.0 out of 8719 completed (56.199%)
+5000.0 out of 8719 completed (57.346%)
+5100.0 out of 8719 completed (58.493%)
+5200.0 out of 8719 completed (59.64%)
+5300.0 out of 8719 completed (60.787%)
+5400.0 out of 8719 completed (61.934%)
+5500.0 out of 8719 completed (63.081%)
+5600.0 out of 8719 completed (64.228%)
+5700.0 out of 8719 completed (65.374%)
+5800.0 out of 8719 completed (66.521%)
+5900.0 out of 8719 completed (67.668%)
+6000.0 out of 8719 completed (68.815%)
+6100.0 out of 8719 completed (69.962%)
+6200.0 out of 8719 completed (71.109%)
+6300.0 out of 8719 completed (72.256%)
+6400.0 out of 8719 completed (73.403%)
+6500.0 out of 8719 completed (74.55%)
+6600.0 out of 8719 completed (75.697%)
+6700.0 out of 8719 completed (76.844%)
+6800.0 out of 8719 completed (77.991%)
+6900.0 out of 8719 completed (79.138%)
+7000.0 out of 8719 completed (80.284%)
+7100.0 out of 8719 completed (81.431%)
+7200.0 out of 8719 completed (82.578%)
+7300.0 out of 8719 completed (83.725%)
+7400.0 out of 8719 completed (84.872%)
+7500.0 out of 8719 completed (86.019%)
+7600.0 out of 8719 completed (87.166%)
+7700.0 out of 8719 completed (88.313%)
+7800.0 out of 8719 completed (89.46%)
+7900.0 out of 8719 completed (90.607%)
+8000.0 out of 8719 completed (91.754%)
+8100.0 out of 8719 completed (92.901%)
+8200.0 out of 8719 completed (94.047%)
+8300.0 out of 8719 completed (95.194%)
+8400.0 out of 8719 completed (96.341%)
+8500.0 out of 8719 completed (97.488%)
+8600.0 out of 8719 completed (98.635%)
+8700.0 out of 8719 completed (99.782%)

@@ -1,0 +1,159 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+[1] "2021-07-19 16:38:07 EDT"
+    user   system  elapsed 
+ 870.918   50.857 1031.647 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value                       
+ version  R version 3.6.1 (2019-07-05)
+ os       CentOS Linux 7 (Core)       
+ system   x86_64, linux-gnu           
+ ui       X11                         
+ language (EN)                        
+ collate  en_US.UTF-8                 
+ ctype    en_US.UTF-8                 
+ tz       US/Eastern                  
+ date     2021-07-19                  
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date       lib source        
+ argparse    * 2.0.3   2020-10-19 [1] CRAN (R 3.6.1)
+ cli           2.5.0   2021-04-26 [1] CRAN (R 3.6.1)
+ crayon        1.4.1   2021-02-08 [1] CRAN (R 3.6.1)
+ data.table    1.14.0  2021-02-21 [1] CRAN (R 3.6.1)
+ digest        0.6.27  2020-10-24 [1] CRAN (R 3.6.1)
+ dplyr       * 1.0.2   2020-08-18 [2] CRAN (R 3.6.1)
+ ellipsis      0.3.2   2021-04-29 [1] CRAN (R 3.6.1)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 3.6.1)
+ generics      0.1.0   2020-10-31 [2] CRAN (R 3.6.1)
+ glue          1.4.2   2020-08-27 [1] CRAN (R 3.6.1)
+ jsonlite      1.7.2   2020-12-09 [2] CRAN (R 3.6.1)
+ lifecycle     1.0.0   2021-02-15 [1] CRAN (R 3.6.1)
+ magrittr      2.0.1   2020-11-17 [2] CRAN (R 3.6.1)
+ memoise       1.1.0   2017-04-21 [2] CRAN (R 3.6.1)
+ pillar        1.4.7   2020-11-20 [2] CRAN (R 3.6.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 3.6.1)
+ purrr         0.3.4   2020-04-17 [1] CRAN (R 3.6.1)
+ R6            2.5.0   2020-10-28 [2] CRAN (R 3.6.1)
+ rlang         0.4.10  2020-12-30 [1] CRAN (R 3.6.1)
+ sessioninfo   1.1.1   2018-11-05 [2] CRAN (R 3.6.1)
+ tibble        3.0.4   2020-10-12 [2] CRAN (R 3.6.1)
+ tidyselect    1.1.1   2021-04-30 [1] CRAN (R 3.6.1)
+ vctrs         0.3.6   2020-12-17 [1] CRAN (R 3.6.1)
+ withr         2.3.0   2020-09-22 [2] CRAN (R 3.6.1)
+
+[1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/3.6
+[2] /jhpce/shared/jhpce/core/R/3.6.1/lib64/R/library
+Processing genotype position file.
+Processing phenotype position file.
+Processing genotype matrix.
+Processing Matrix-eQTL tests file.
+Performing eigenMT correction.
+100.0 out of 9971 completed (1.003%)
+200.0 out of 9971 completed (2.006%)
+300.0 out of 9971 completed (3.009%)
+400.0 out of 9971 completed (4.012%)
+500.0 out of 9971 completed (5.015%)
+600.0 out of 9971 completed (6.017%)
+700.0 out of 9971 completed (7.02%)
+800.0 out of 9971 completed (8.023%)
+900.0 out of 9971 completed (9.026%)
+1000.0 out of 9971 completed (10.029%)
+1100.0 out of 9971 completed (11.032%)
+1200.0 out of 9971 completed (12.035%)
+1300.0 out of 9971 completed (13.038%)
+1400.0 out of 9971 completed (14.041%)
+1500.0 out of 9971 completed (15.044%)
+1600.0 out of 9971 completed (16.047%)
+1700.0 out of 9971 completed (17.049%)
+1800.0 out of 9971 completed (18.052%)
+1900.0 out of 9971 completed (19.055%)
+2000.0 out of 9971 completed (20.058%)
+2100.0 out of 9971 completed (21.061%)
+2200.0 out of 9971 completed (22.064%)
+2300.0 out of 9971 completed (23.067%)
+2400.0 out of 9971 completed (24.07%)
+2500.0 out of 9971 completed (25.073%)
+2600.0 out of 9971 completed (26.076%)
+2700.0 out of 9971 completed (27.079%)
+2800.0 out of 9971 completed (28.081%)
+2900.0 out of 9971 completed (29.084%)
+3000.0 out of 9971 completed (30.087%)
+3100.0 out of 9971 completed (31.09%)
+3200.0 out of 9971 completed (32.093%)
+3300.0 out of 9971 completed (33.096%)
+3400.0 out of 9971 completed (34.099%)
+3500.0 out of 9971 completed (35.102%)
+3600.0 out of 9971 completed (36.105%)
+3700.0 out of 9971 completed (37.108%)
+3800.0 out of 9971 completed (38.111%)
+3900.0 out of 9971 completed (39.113%)
+4000.0 out of 9971 completed (40.116%)
+4100.0 out of 9971 completed (41.119%)
+4200.0 out of 9971 completed (42.122%)
+4300.0 out of 9971 completed (43.125%)
+4400.0 out of 9971 completed (44.128%)
+4500.0 out of 9971 completed (45.131%)
+4600.0 out of 9971 completed (46.134%)
+4700.0 out of 9971 completed (47.137%)
+4800.0 out of 9971 completed (48.14%)
+4900.0 out of 9971 completed (49.143%)
+5000.0 out of 9971 completed (50.145%)
+5100.0 out of 9971 completed (51.148%)
+5200.0 out of 9971 completed (52.151%)
+5300.0 out of 9971 completed (53.154%)
+5400.0 out of 9971 completed (54.157%)
+5500.0 out of 9971 completed (55.16%)
+5600.0 out of 9971 completed (56.163%)
+5700.0 out of 9971 completed (57.166%)
+5800.0 out of 9971 completed (58.169%)
+5900.0 out of 9971 completed (59.172%)
+6000.0 out of 9971 completed (60.175%)
+6100.0 out of 9971 completed (61.177%)
+6200.0 out of 9971 completed (62.18%)
+6300.0 out of 9971 completed (63.183%)
+6400.0 out of 9971 completed (64.186%)
+6500.0 out of 9971 completed (65.189%)
+6600.0 out of 9971 completed (66.192%)
+6700.0 out of 9971 completed (67.195%)
+6800.0 out of 9971 completed (68.198%)
+6900.0 out of 9971 completed (69.201%)
+7000.0 out of 9971 completed (70.204%)
+7100.0 out of 9971 completed (71.206%)
+7200.0 out of 9971 completed (72.209%)
+7300.0 out of 9971 completed (73.212%)
+7400.0 out of 9971 completed (74.215%)
+7500.0 out of 9971 completed (75.218%)
+7600.0 out of 9971 completed (76.221%)
+7700.0 out of 9971 completed (77.224%)
+7800.0 out of 9971 completed (78.227%)
+7900.0 out of 9971 completed (79.23%)
+8000.0 out of 9971 completed (80.233%)
+8100.0 out of 9971 completed (81.236%)
+8200.0 out of 9971 completed (82.238%)
+8300.0 out of 9971 completed (83.241%)
+8400.0 out of 9971 completed (84.244%)
+8500.0 out of 9971 completed (85.247%)
+8600.0 out of 9971 completed (86.25%)
+8700.0 out of 9971 completed (87.253%)
+8800.0 out of 9971 completed (88.256%)
+8900.0 out of 9971 completed (89.259%)
+9000.0 out of 9971 completed (90.262%)
+9100.0 out of 9971 completed (91.265%)
+9200.0 out of 9971 completed (92.268%)
+9300.0 out of 9971 completed (93.27%)
+9400.0 out of 9971 completed (94.273%)
+9500.0 out of 9971 completed (95.276%)
+9600.0 out of 9971 completed (96.279%)
+9700.0 out of 9971 completed (97.282%)
+9800.0 out of 9971 completed (98.285%)
+9900.0 out of 9971 completed (99.288%)
