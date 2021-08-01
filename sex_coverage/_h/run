@@ -1,0 +1,18 @@
+#!/bin/bash
+
+BAM='/ceph/projects/brainseq/rnaseq/phase3_Caudate_RiboZero/hisat2/sort/_m'
+
+echo -e "RNum\tauto_min\txcov\tycov" > coverage
+
+for FILE in `ls $BAM/*bam`; do
+    export ii=`basename $FILE .bam`
+    samtools idxstats -@ 24 $FILE | grep chr - | awk '{ tmp=($3)/($2) ; printf"%s %0.5f\n", $1, tmp }' - > coveragestats
+    min=`grep 'chr[0-9]' coveragestats | cut -f2 -d ' ' | sort -n | head -1`
+    xcov=`grep 'chrX' coveragestats | cut -f2 -d ' '`
+    ycov=`grep 'chrY' coveragestats | cut -f2 -d ' '`
+    echo -e "${ii}\t${min}\t${xcov}\t${ycov}" >> coverage
+done
+
+awk -F'\t' -v OFS='\t' '{if ($1=="RNum") sex="sex";else if($3 > $2) sex="F";else if ($4 < $2/10) sex="F";else sex="M";print $0,sex}' coverage > sexchrom_coverage.txt
+
+rm coveragestats coverage
