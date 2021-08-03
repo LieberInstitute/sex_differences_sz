@@ -14674,6 +14674,7 @@ dtype: int64</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xlinked</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;seqname&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;chrX&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">xx_male</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;seqname&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;chrX&quot;</span><span class="p">,</span> <span class="s2">&quot;chrY&quot;</span><span class="p">]))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;t&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">xlinked_male</span> <span class="o">=</span> <span class="n">xlinked</span><span class="p">[(</span><span class="n">xlinked</span><span class="p">[</span><span class="s2">&quot;t&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="n">xlinked_female</span> <span class="o">=</span> <span class="n">xlinked</span><span class="p">[(</span><span class="n">xlinked</span><span class="p">[</span><span class="s2">&quot;t&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
@@ -15100,7 +15101,7 @@ dtype: int64</pre>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">xci</span><span class="p">[</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xci</span><span class="p">[</span><span class="s2">&quot;Gene ID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">..*&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">xlinked_male</span><span class="p">[</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">xlinked_male</span><span class="o">.</span><span class="n">gene_id</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">..*&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">xlinked_male</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">xci</span><span class="p">[[</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">,</span> <span class="s2">&quot;Combined XCI status&quot;</span><span class="p">]],</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">)</span>
+<span class="n">xlinked_male</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">xci</span><span class="p">[[</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">,</span> <span class="s2">&quot;Combined XCI status&quot;</span><span class="p">]],</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;unknown&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15163,6 +15164,17 @@ dtype: int64</pre>
     </tr>
     <tr>
       <th>1</th>
+      <td>ENSG00000186675.6</td>
+      <td>chrX</td>
+      <td>MAGEE2</td>
+      <td>4.613375</td>
+      <td>0.000956</td>
+      <td>caudate</td>
+      <td>ENSG00000186675</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>ENSG00000102001.12</td>
       <td>chrX</td>
       <td>CACNA1F</td>
@@ -15173,7 +15185,7 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>ENSG00000172465.13</td>
       <td>chrX</td>
       <td>TCEAL1</td>
@@ -15184,10 +15196,10 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>ENSG00000236064.1</td>
       <td>chrX</td>
-      <td>NaN</td>
+      <td>unknown</td>
       <td>4.364580</td>
       <td>0.003866</td>
       <td>dlpfc</td>
@@ -15195,7 +15207,51 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>5</th>
+      <td>ENSG00000277883.1</td>
+      <td>chrX</td>
+      <td>NLRP3P1</td>
+      <td>4.155232</td>
+      <td>0.007473</td>
+      <td>dlpfc</td>
+      <td>ENSG00000277883</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ENSG00000184515.10</td>
+      <td>chrX</td>
+      <td>BEX5</td>
+      <td>4.126387</td>
+      <td>0.008105</td>
+      <td>dlpfc</td>
+      <td>ENSG00000184515</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ENSG00000204071.10</td>
+      <td>chrX</td>
+      <td>TCEAL6</td>
+      <td>3.836015</td>
+      <td>0.017011</td>
+      <td>dlpfc</td>
+      <td>ENSG00000204071</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ENSG00000147155.10</td>
+      <td>chrX</td>
+      <td>EBP</td>
+      <td>3.751150</td>
+      <td>0.020360</td>
+      <td>dlpfc</td>
+      <td>ENSG00000147155</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>9</th>
       <td>ENSG00000232119.7</td>
       <td>chrX</td>
       <td>MCTS1</td>
@@ -15206,7 +15262,7 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>10</th>
       <td>ENSG00000198932.12</td>
       <td>chrX</td>
       <td>GPRASP1</td>
@@ -15217,7 +15273,18 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>11</th>
+      <td>ENSG00000186675.6</td>
+      <td>chrX</td>
+      <td>MAGEE2</td>
+      <td>3.555431</td>
+      <td>0.031388</td>
+      <td>dlpfc</td>
+      <td>ENSG00000186675</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>12</th>
       <td>ENSG00000102054.17</td>
       <td>chrX</td>
       <td>RBBP7</td>
@@ -15228,7 +15295,29 @@ dtype: int64</pre>
       <td>variable</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>13</th>
+      <td>ENSG00000278530.4</td>
+      <td>chrX</td>
+      <td>CHMP1B2P</td>
+      <td>3.485690</td>
+      <td>0.035151</td>
+      <td>dlpfc</td>
+      <td>ENSG00000278530</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>ENSG00000133169.5</td>
+      <td>chrX</td>
+      <td>BEX1</td>
+      <td>3.454265</td>
+      <td>0.037068</td>
+      <td>dlpfc</td>
+      <td>ENSG00000133169</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>15</th>
       <td>ENSG00000184905.8</td>
       <td>chrX</td>
       <td>TCEAL2</td>
@@ -15239,7 +15328,7 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>16</th>
       <td>ENSG00000184867.13</td>
       <td>chrX</td>
       <td>ARMCX2</td>
@@ -15250,7 +15339,7 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>17</th>
       <td>ENSG00000102401.19</td>
       <td>chrX</td>
       <td>ARMCX3</td>
@@ -15261,7 +15350,7 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>18</th>
       <td>ENSG00000133134.11</td>
       <td>chrX</td>
       <td>BEX2</td>
@@ -15272,7 +15361,7 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>11</th>
+      <th>19</th>
       <td>ENSG00000224204.1</td>
       <td>chrX</td>
       <td>PHEX-AS1</td>
@@ -15283,7 +15372,18 @@ dtype: int64</pre>
       <td>inactive</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>20</th>
+      <td>ENSG00000178947.8</td>
+      <td>chrX</td>
+      <td>SMIM10L2A</td>
+      <td>3.297549</td>
+      <td>0.047002</td>
+      <td>dlpfc</td>
+      <td>ENSG00000178947</td>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>21</th>
       <td>ENSG00000147124.12</td>
       <td>chrX</td>
       <td>ZNF41</td>
@@ -15307,10 +15407,27 @@ dtype: int64</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dx</span> <span class="o">=</span> <span class="n">xlinked_male</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">xci</span><span class="p">[[</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">,</span> <span class="s2">&quot;Combined XCI status&quot;</span><span class="p">]],</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;unknown&quot;</span><span class="p">)</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span><span class="p">[(</span><span class="n">dx</span><span class="p">[</span><span class="s2">&quot;Combined XCI status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;unknown&quot;</span><span class="p">)]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">xx_male</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">xci</span><span class="p">[[</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">,</span> <span class="s2">&quot;Combined XCI status&quot;</span><span class="p">]],</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;ensemblID&quot;</span><span class="p">),</span> <span class="n">dx</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Tissue&quot;</span><span class="p">,</span>  <span class="s2">&quot;Combined XCI status&quot;</span><span class="p">,</span> <span class="s2">&quot;seqname&quot;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>\
+  <span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;BrainSeq_male_biased_genes_XCI_status.tsv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
      </div>
