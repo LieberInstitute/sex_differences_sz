@@ -7,3 +7,6 @@ dep/*
 dep
 input/*
 *~
+prep_eqtl_analysis/*
+*/prep_eqtl_analysis
+prep_eqtl_analysis
