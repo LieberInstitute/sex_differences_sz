@@ -1,3 +1,0 @@
-#!/bin/bash
-
-ln -s ../../../genes/vcf/_m/genotypes_chr.vcf.gz* .
