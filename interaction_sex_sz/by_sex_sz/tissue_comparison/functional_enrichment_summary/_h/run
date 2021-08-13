@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python ../_h/generate_enrichment_data_file.py
