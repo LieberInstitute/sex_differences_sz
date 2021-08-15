@@ -1,0 +1,81 @@
+Interacting features:
+
+Caudate
+eFeatures
+eGene:		2141
+eTranscript:	7576
+eExon:		7130
+eJunction:	12207
+
+eGenes
+Gene:		2141
+Transcript:	6140
+Exon:		4291
+Junction:	6792
+
+DLPFC
+eFeatures
+eGene:		1835
+eTranscript:	5976
+eExon:		7010
+eJunction:	10872
+
+eGenes
+Gene:		1835
+Transcript:	4891
+Exon:		4288
+Junction:	6320
+
+Hippocampus
+eFeatures
+eGene:		1740
+eTranscript:	5997
+eExon:		7593
+eJunction:	10018
+
+eGenes
+Gene:		1740
+Transcript:	4882
+Exon:		4565
+Junction:	5971
+
+Overlapping with PGC2+CLOZUK:
+
+Caudate
+eFeatures
+eGene:		3
+eTranscript:	32
+eExon:		17
+eJunction:	22
+
+eGenes
+Gene:		3
+Transcript:	32
+Exon:		13
+Junction:	17
+
+DLPFC
+eFeatures
+eGene:		6
+eTranscript:	21
+eExon:		26
+eJunction:	25
+
+eGenes
+Gene:		6
+Transcript:	21
+Exon:		19
+Junction:	23
+
+Hippocampus
+eFeatures
+eGene:		8
+eTranscript:	13
+eExon:		26
+eJunction:	38
+
+eGenes
+Gene:		8
+Transcript:	13
+Exon:		18
+Junction:	22
