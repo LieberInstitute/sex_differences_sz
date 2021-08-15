@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for FEATURE in genes transcripts exons junctions; do
+    Rscript ../_h/mashr_script.R --feature $FEATURE
+done
