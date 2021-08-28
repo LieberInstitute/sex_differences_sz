@@ -3,7 +3,6 @@ This script summarizes eQTL analysis.
 """
 import functools
 import pandas as pd
-from glob import iglob
 
 config = {
     "genes": "/ceph/projects/v4_phase3_paper/inputs/counts/"+\
@@ -17,20 +16,22 @@ config = {
 }
 
 @functools.lru_cache()
-def get_eFeatures(feature, tissue):
+def get_eFeatures(path):
+    return pd.read_csv(path, sep='\t')
+
+
+@functools.lru_cache()
+def get_sig_eFeatures(feature, tissue):
     path = "../../../prep_eqtl_analysis/%s/%s/" % (tissue, feature)+\
-        "prepare_expression/fastqtl_nominal/multiple_corrections/_m/"
-    lt = []
-    for filename in iglob(path+"*tsv"):
-        lt.append(pd.read_csv(filename, sep='\t'))
-    df = pd.concat(lt, axis=0)
-    return df[(df["BF"] < 0.05)]
+        "prepare_expression/fastqtl_nominal/multiple_corrections/_m/"+\
+        "Brainseq_LIBD.txt.gz"
+    return get_eFeatures(path)[(get_eFeatures(path)["BF"] < 0.05)]
 
 
 @functools.lru_cache()
 def annotate_eqtls(feature, tissue):
     annot = pd.read_csv(config[feature], sep='\t').loc[:,["names", "gencodeID"]]
-    return pd.merge(get_eFeatures(feature, tissue), annot,
+    return pd.merge(get_sig_eFeatures(feature, tissue), annot,
                     left_on="gene_id", right_on="names")\
              .drop(["names"], axis=1)
 
@@ -89,18 +90,18 @@ def combine_data(tissue, PGC2=False):
         genes, trans, exons, juncs = load_data(tissue, merge_pgc2_N_eqtl)
         print_summary(genes, trans, exons, juncs)
         df = pd.concat([genes, trans, exons, juncs])\
-               .sort_values(["Type", "gene_id", "p-value", "P"])\
-               .loc[:, ["variant_id", "rsid", "hg38chrc", "gene_id",
-                        "gencodeID", "Freq.A1", "A1", "slope", "statistic",
-                        "OR", "SE", "P", "p-value", "BF", "TESTS",
+               .sort_values(["Type", "gene_id", "pval_nominal", "P"])\
+               .loc[:, ["variant_id", "rsid", "hg38chrc", "gene_id","gencodeID",
+                        "Freq.A1", "A1", "slope", "statistic", "OR", "SE", "P",
+                        "pval_nominal", "BF", "eigenMT_BH", "TESTS",
                         "pgc2_a1_same_as_our_counted", "is_index_snp", "Type"]]
     else:
         genes, trans, exons, juncs = load_data(tissue, annotate_eqtls)
         print_summary(genes, trans, exons, juncs)
         df = pd.concat([genes, trans, exons, juncs])\
-               .sort_values(["Type", "gene_id", "p-value"])\
-               .loc[:, ["variant_id", "gene_id", "gencodeID", "slope",
-                        "statistic", "p-value", "BF", "TESTS", "Type"]]
+               .sort_values(["Type", "gene_id", "pval_nominal"])\
+               .loc[:, ["variant_id", "gene_id","gencodeID","slope","statistic",
+                        "pval_nominal", "BF", "eigenMT_BH", "TESTS", "Type"]]
     df["Type"] = df.Type.astype("category")\
                         .cat.reorder_categories(["Gene", "Transcript",
                                                  "Exon", "Junction"])
@@ -110,24 +111,35 @@ def combine_data(tissue, PGC2=False):
 
 def main():
     ## eFeatures
-    dt = pd.DataFrame()
-    print("Interacting features:")
-    for tissue in ["caudate", "dlpfc", "hippocampus"]:
-        dt = pd.concat([dt, combine_data(tissue, False)])
-    dt.to_csv("Brainseq_sex_interacting_4features_3regions.eFeatures.txt.gz",
-              sep='\t', index=False)
-    ## Overlapping schizophrenia risk variants
-    """
-    Overlap with PGC2+CLOZUK would be very rare as we are only look at top
-    variants for each features. We will want to also look at fine mapped SNPs
-    and colocalization.
-    """
-    dt = pd.DataFrame()
-    print("\nOverlapping with PGC2+CLOZUK:")
-    for tissue in ["caudate", "dlpfc", "hippocampus"]:
-        dt = pd.concat([dt, combine_data(tissue, True)])
-    dt.to_csv("Brainseq_sex_interacting_4features_3regions_PGC2.eFeatures.txt.gz",
-              sep='\t', index=False)
+    with open("summary.log", "w") as f:
+        dt = pd.DataFrame()
+        print("Interacting features (BF < 0.05):", file=f)
+        for tissue in ["caudate", "dlpfc", "hippocampus"]:
+            dt = pd.concat([dt, combine_data(tissue, False)])
+        print("\neignMT (BF < 0.01):", file=f)
+        print(dt[(dt["BF"] < 0.01)].groupby(["Tissue", "Type"]).size(), file=f)
+        print("\neignMT FDR corrected (q-value < 0.25):", file=f)
+        print(dt[(dt["eigenMT_BH"] < 0.25)].groupby(["Tissue", "Type"]).size(),
+              file=f)
+        dt.to_csv("Brainseq_sex_interacting_4features_3regions.eFeatures.txt.gz",
+                  sep='\t', index=False)
+        ## Overlapping schizophrenia risk variants
+        """
+        Overlap with PGC2+CLOZUK would be very rare as we are only look at top
+        variants for each features. We will want to also look at fine mapped
+        SNPs and colocalization.
+        """
+        dt = pd.DataFrame()
+        print("\nOverlapping with PGC2+CLOZUK (BF < 0.05):", file=f)
+        for tissue in ["caudate", "dlpfc", "hippocampus"]:
+            dt = pd.concat([dt, combine_data(tissue, True)])
+        print("\neignMT (BF < 0.01):", file=f)
+        print(dt[(dt["BF"] < 0.01)].groupby(["Tissue", "Type"]).size(), file=f)
+        print("\neignMT FDR corrected (q-value < 0.25):", file=f)
+        print(dt[(dt["eigenMT_BH"] < 0.25)].groupby(["Tissue", "Type"]).size(),
+              file=f)
+        dt.to_csv("Brainseq_sex_interacting_4features_3regions_PGC2.eFeatures.txt.gz",
+                  sep='\t', index=False)
 
 
 if __name__ == '__main__':

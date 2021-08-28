@@ -1,0 +1,59 @@
+Interacting features (BF < 0.05):
+
+eignMT (BF < 0.01):
+Tissue       Type      
+Caudate      Gene           536
+             Transcript     154
+             Exon          1794
+             Junction      2896
+DLPFC        Gene           452
+             Transcript    1381
+             Exon          1689
+             Junction      2560
+Hippocampus  Gene           417
+             Transcript    1417
+             Exon          1850
+             Junction      2266
+dtype: int64
+
+eignMT FDR corrected (q-value < 0.25):
+Tissue       Type      
+Caudate      Gene          40
+             Transcript     2
+             Exon          38
+             Junction       3
+DLPFC        Gene           4
+             Transcript     0
+             Exon          28
+             Junction       6
+Hippocampus  Gene          38
+             Transcript     0
+             Exon           3
+             Junction       0
+dtype: int64
+
+Overlapping with PGC2+CLOZUK (BF < 0.05):
+
+eignMT (BF < 0.01):
+Tissue       Type      
+Caudate      Gene           1
+             Transcript     0
+             Exon           2
+             Junction       3
+DLPFC        Gene           3
+             Transcript     4
+             Exon           6
+             Junction       7
+Hippocampus  Gene           2
+             Transcript     3
+             Exon           6
+             Junction      15
+dtype: int64
+
+eignMT FDR corrected (q-value < 0.25):
+Tissue   Type      
+Caudate  Gene          1
+         Transcript    0
+         Exon          0
+         Junction      0
+dtype: int64
