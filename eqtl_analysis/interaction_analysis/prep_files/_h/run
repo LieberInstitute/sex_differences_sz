@@ -2,6 +2,7 @@
 
 parallel -k echo ::: genes transcripts exons junctions > feature.list
 
-cat feature.list | parallel "mkdir {}; python ../_h/prep_files.py --feature {}"
+cat feature.list | \
+    parallel --jobs 2 "mkdir {}; python ../_h/prep_files.py --feature {}"
 
 rm feature.list
