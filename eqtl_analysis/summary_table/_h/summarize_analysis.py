@@ -116,6 +116,7 @@ def main():
         print("Interacting features (BF < 0.05):", file=f)
         for tissue in ["caudate", "dlpfc", "hippocampus"]:
             dt = pd.concat([dt, combine_data(tissue, False)])
+        print(dt[(dt["BF"] < 0.05)].groupby(["Tissue", "Type"]).size(), file=f)
         print("\neignMT (BF < 0.01):", file=f)
         print(dt[(dt["BF"] < 0.01)].groupby(["Tissue", "Type"]).size(), file=f)
         print("\neignMT FDR corrected (q-value < 0.25):", file=f)
@@ -133,6 +134,7 @@ def main():
         print("\nOverlapping with PGC2+CLOZUK (BF < 0.05):", file=f)
         for tissue in ["caudate", "dlpfc", "hippocampus"]:
             dt = pd.concat([dt, combine_data(tissue, True)])
+        print(dt[(dt["BF"] < 0.05)].groupby(["Tissue", "Type"]).size(), file=f)
         print("\neignMT (BF < 0.01):", file=f)
         print(dt[(dt["BF"] < 0.01)].groupby(["Tissue", "Type"]).size(), file=f)
         print("\neignMT FDR corrected (q-value < 0.25):", file=f)
