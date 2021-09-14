@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for FEATURE in genes transcripts exons junctions; do
+    Rscript ../_h/generate_upset.R --feature $FEATURE
+done
