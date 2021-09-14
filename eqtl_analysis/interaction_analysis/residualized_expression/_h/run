@@ -1,0 +1,5 @@
+#!/bin/bash
+
+Rscript ../_h/generate_res.R
+
+rm *.rda
