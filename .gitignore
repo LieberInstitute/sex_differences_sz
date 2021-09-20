@@ -10,3 +10,4 @@ input/*
 prep_eqtl_analysis/*
 */prep_eqtl_analysis
 prep_eqtl_analysis
+*.pybiomart.sqlite
