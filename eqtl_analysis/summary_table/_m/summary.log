@@ -1,9 +1,23 @@
 Interacting features (BF < 0.05):
+Tissue       Type      
+Caudate      Gene           2065
+             Transcript     7582
+             Exon           7125
+             Junction      12165
+DLPFC        Gene           1837
+             Transcript     5978
+             Exon           7008
+             Junction      10875
+Hippocampus  Gene           1738
+             Transcript     5986
+             Exon           7556
+             Junction       9609
+dtype: int64
 
 eignMT (BF < 0.01):
 Tissue       Type      
 Caudate      Gene           536
-             Transcript     154
+             Transcript    1882
              Exon          1794
              Junction      2896
 DLPFC        Gene           452
@@ -19,7 +33,7 @@ dtype: int64
 eignMT FDR corrected (q-value < 0.25):
 Tissue       Type      
 Caudate      Gene          40
-             Transcript     2
+             Transcript     5
              Exon          38
              Junction       3
 DLPFC        Gene           4
@@ -33,11 +47,25 @@ Hippocampus  Gene          38
 dtype: int64
 
 Overlapping with PGC2+CLOZUK (BF < 0.05):
+Tissue       Type      
+Caudate      Gene           3
+             Transcript    33
+             Exon          17
+             Junction      22
+DLPFC        Gene           6
+             Transcript    21
+             Exon          26
+             Junction      25
+Hippocampus  Gene           8
+             Transcript    12
+             Exon          24
+             Junction      41
+dtype: int64
 
 eignMT (BF < 0.01):
 Tissue       Type      
 Caudate      Gene           1
-             Transcript     0
+             Transcript     8
              Exon           2
              Junction       3
 DLPFC        Gene           3
