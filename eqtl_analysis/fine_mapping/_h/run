@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for TISSUE in caudate dlpfc hippocampus; do
+    mkdir $TISSUE
+    FN="../../../prep_eqtl_analysis/${TISSUE}/genes/prepare_expression/fastqtl_nominal/dapg_finemap/_m/dapg_out/"
+    find $FN -type f -name "*out" -exec cp -v {} $TISSUE/ \;
+done
+
+tar -czvf dapg_sex_interacting_eQTL_results.tar.gz caudate dlpfc hippocampus
+rm -rf caudate/ dlpfc/ hippocampus/
