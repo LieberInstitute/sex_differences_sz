@@ -1,0 +1,42 @@
+#!/bin/bash
+
+BED="/ceph/projects/v4_phase3_paper/inputs/counts/text_files_counts/_m/caudate"
+
+FEATURE="ENSG00000140564.10" # FURIN
+for TISSUE in dlpfc hippocampus; do
+    mkdir $TISSUE
+    grep $FEATURE $BED/gene.bed | while read -r PARAM; do
+        GNAME=`echo $PARAM | awk '{print $1}'`
+        CHR=`echo $PARAM | awk '{print $2}' | sed 's/chr//' -`
+        START=`echo $PARAM | awk '{print $3}'`
+        END=`echo $PARAM | awk '{print $4}'`
+        echo $TISSUE $GNAME $CHR $START $END
+        for SEX in female male; do
+            mkdir $TISSUE/$SEX
+            cd $TISSUE/$SEX
+            python ../../../_h/prep_colocalization.py \
+                   --chrom $CHR --start $START --end $END \
+                   --feature $GNAME --tissue $TISSUE --sex $SEX \
+                   --perm_pval 0.01 ## This is too get all the eQTL
+            cd ../../
+        done
+    done
+done
+
+FEATURE="ENSG00000226124.6" # FTCDNL1
+TISSUE="dlpfc"
+grep $FEATURE $BED/gene.bed | while read -r PARAM; do
+    GNAME=`echo $PARAM | awk '{print $1}'`
+    CHR=`echo $PARAM | awk '{print $2}' | sed 's/chr//' -`
+    START=`echo $PARAM | awk '{print $3}'`
+    END=`echo $PARAM | awk '{print $4}'`
+    echo $TISSUE $GNAME $CHR $START $END
+    for SEX in female male; do
+        cd $TISSUE/$SEX
+        python ../../../_h/prep_colocalization.py \
+               --chrom $CHR --start $START --end $END \
+               --feature $GNAME --tissue $TISSUE --sex $SEX \
+               --perm_pval 0.01 ## This is too get all the eQTL
+        cd ../../
+    done
+done
