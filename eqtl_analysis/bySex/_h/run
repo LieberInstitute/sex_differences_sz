@@ -1,0 +1,36 @@
+#!/bin/bash
+
+BYSEX="../../../prep_eqtl_analysis/by_sex"
+NOMINAL="Brainseq_LIBD.allpairs.txt.gz"
+PERM="Brainseq_LIBD.genes.txt.gz"
+
+mkdir eqtl_bySex_results
+## Nominal results
+cp -v $BYSEX/caudate/female/prepare_expression/fastqtl_nominal/_m/$NOMINAL \
+   eqtl_bySex_results/Brainseq_LIBD.Caudate.female.allpairs.txt.gz
+cp -v $BYSEX/caudate/male/prepare_expression/fastqtl_nominal/_m/$NOMINAL \
+   eqtl_bySex_results/Brainseq_LIBD.Caudate.male.allpairs.txt.gz
+cp -v $BYSEX/dlpfc/female/prepare_expression/fastqtl_nominal/_m/$NOMINAL \
+   eqtl_bySex_results/Brainseq_LIBD.DLPFC.female.allpairs.txt.gz
+cp -v $BYSEX/dlpfc/male/prepare_expression/fastqtl_nominal/_m/$NOMINAL \
+   eqtl_bySex_results/Brainseq_LIBD.DLPFC.male.allpairs.txt.gz
+cp -v $BYSEX/hippocampus/female/prepare_expression/fastqtl_nominal/_m/$NOMINAL \
+   eqtl_bySex_results/Brainseq_LIBD.Hippocampus.female.allpairs.txt.gz
+cp -v $BYSEX/hippocampus/male/prepare_expression/fastqtl_nominal/_m/$NOMINAL \
+   eqtl_bySex_results/Brainseq_LIBD.Hippocampus.male.allpairs.txt.gz
+## Permutation results
+cp -v $BYSEX/caudate/female/prepare_expression/fastqtl_permutation/_m/$PERM \
+   eqtl_bySex_results/Brainseq_LIBD.Caudate.female.genes.txt.gz
+cp -v $BYSEX/caudate/male/prepare_expression/fastqtl_permutation/_m/$PERM \
+   eqtl_bySex_results/Brainseq_LIBD.Caudate.male.genes.txt.gz
+cp -v $BYSEX/dlpfc/female/prepare_expression/fastqtl_permutation/_m/$PERM \
+   eqtl_bySex_results/Brainseq_LIBD.DLPFC.female.genes.txt.gz
+cp -v $BYSEX/dlpfc/male/prepare_expression/fastqtl_permutation/_m/$PERM \
+   eqtl_bySex_results/Brainseq_LIBD.DLPFC.male.genes.txt.gz
+cp -v $BYSEX/hippocampus/female/prepare_expression/fastqtl_permutation/_m/$PERM \
+   eqtl_bySex_results/Brainseq_LIBD.Hippocampus.female.genes.txt.gz
+cp -v $BYSEX/hippocampus/male/prepare_expression/fastqtl_permutation/_m/$PERM \
+   eqtl_bySex_results/Brainseq_LIBD.Hippocampus.male.genes.txt.gz
+
+tar -czvf BrainSeq_bySex_genes_3region_eQTL_results.tar.gz eqtl_bySex_results
+rm -rf eqtl_bySex_results/
