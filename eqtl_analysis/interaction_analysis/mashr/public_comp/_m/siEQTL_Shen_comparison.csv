@@ -1,0 +1,2 @@
+Tissue,gene_id,gencodeID,variant_id,seqnames,lfsr,Type,ensembl_gene_id,external_gene_name,entrezgene,description
+Caudate,ENSG00000125703.14,ENSG00000125703.14,chr1:63060301:G:A,chr1,0.0498957476311192,Gene,ENSG00000125703,ATG4C,84938.0,autophagy related 4C cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:16040]
