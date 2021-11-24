@@ -13,3 +13,4 @@ prep_eqtl_analysis
 *.pybiomart.sqlite
 gene2go
 go-basic.obo
+supp_data/*
