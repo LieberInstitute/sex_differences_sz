@@ -1,0 +1,75 @@
+#!/bin/bash
+
+mkdir wgcna_network_analysis
+mkdir wgcna_network_analysis/sex_network
+
+# Autosomal network
+mkdir wgcna_network_analysis/autosomal_sex_network
+## Caudate
+mkdir wgcna_network_analysis/autosomal_sex_network/caudate
+cp -v ../../sex_network_autosomes/caudate/_m/*csv \
+   wgcna_network_analysis/autosomal_sex_network/caudate/
+cp -v ../../sex_network_autosomes/caudate/_m/*pdf \
+   wgcna_network_analysis/autosomal_sex_network/caudate/
+cp -v ../../sex_network_autosomes/caudate/deg_enrichment/_m/wgcna_module_enrichment* \
+   wgcna_network_analysis/autosomal_sex_network/caudate/
+cp -v ../../sex_network_autosomes/caudate/goatools/_m/GO_analysis_module_* \
+   wgcna_network_analysis/autosomal_sex_network/caudate/
+## DLPFC
+mkdir wgcna_network_analysis/autosomal_sex_network/dlpfc
+cp -v ../../sex_network_autosomes/dlpfc/_m/*csv \
+   wgcna_network_analysis/autosomal_sex_network/dlpfc/
+cp -v ../../sex_network_autosomes/dlpfc/_m/*pdf \
+   wgcna_network_analysis/autosomal_sex_network/dlpfc/
+cp -v ../../sex_network_autosomes/dlpfc/deg_enrichment/_m/wgcna_module_enrichment* \
+   wgcna_network_analysis/autosomal_sex_network/dlpfc/
+cp -v ../../sex_network_autosomes/dlpfc/goatools/_m/GO_analysis_module_* \
+   wgcna_network_analysis/autosomal_sex_network/dlpfc/
+## Hippocampus
+mkdir wgcna_network_analysis/autosomal_sex_network/hippocampus
+cp -v ../../sex_network_autosomes/hippocampus/_m/*csv \
+   wgcna_network_analysis/autosomal_sex_network/hippocampus/
+cp -v ../../sex_network_autosomes/hippocampus/_m/*pdf \
+   wgcna_network_analysis/autosomal_sex_network/hippocampus/
+cp -v ../../sex_network_autosomes/hippocampus/deg_enrichment/_m/wgcna_module_enrichment* \
+   wgcna_network_analysis/autosomal_sex_network/hippocampus/
+cp -v ../../sex_network_autosomes/hippocampus/goatools/_m/GO_analysis_module_* \
+   wgcna_network_analysis/autosomal_sex_network/hippocampus/
+
+# Sex network (allosomes included)
+mkdir wgcna_network_analysis/sex_network
+## Caudate
+mkdir wgcna_network_analysis/sex_network/caudate
+cp -v ../../sex_network/caudate/_m/*csv \
+   wgcna_network_analysis/sex_network/caudate/
+cp -v ../../sex_network/caudate/_m/*pdf \
+   wgcna_network_analysis/sex_network/caudate/
+cp -v ../../sex_network/caudate/deg_enrichment/_m/wgcna_module_enrichment* \
+   wgcna_network_analysis/sex_network/caudate/
+cp -v ../../sex_network/caudate/goatools/_m/GO_analysis_module_* \
+   wgcna_network_analysis/sex_network/caudate/
+## DLPFC
+mkdir wgcna_network_analysis/sex_network/dlpfc
+cp -v ../../sex_network/dlpfc/_m/*csv \
+   wgcna_network_analysis/sex_network/dlpfc/
+cp -v ../../sex_network/dlpfc/_m/*pdf \
+   wgcna_network_analysis/sex_network/dlpfc/
+cp -v ../../sex_network/dlpfc/deg_enrichment/_m/wgcna_module_enrichment* \
+   wgcna_network_analysis/sex_network/dlpfc/
+cp -v ../../sex_network/dlpfc/goatools/_m/GO_analysis_module_* \
+   wgcna_network_analysis/sex_network/dlpfc/
+## Hippocampus
+mkdir wgcna_network_analysis/sex_network/hippocampus
+cp -v ../../sex_network/hippocampus/_m/*csv \
+   wgcna_network_analysis/sex_network/hippocampus/
+cp -v ../../sex_network/hippocampus/_m/*pdf \
+   wgcna_network_analysis/sex_network/hippocampus/
+cp -v ../../sex_network/hippocampus/deg_enrichment/_m/wgcna_module_enrichment* \
+   wgcna_network_analysis/sex_network/hippocampus/
+cp -v ../../sex_network/hippocampus/goatools/_m/GO_analysis_module_* \
+   wgcna_network_analysis/sex_network/hippocampus/
+
+# Save file
+tar -czvf BrainSeq_sex_WGCNA_results.tar.gz wgcna_network_analysis
+# Clean directory
+rm -rf wgcna_network_analysis/
