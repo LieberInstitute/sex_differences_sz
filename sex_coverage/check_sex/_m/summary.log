@@ -1,10 +1,10 @@
 **** Job starts ****
-Fri Sep  9 13:26:50 EDT 2022
+Fri Sep  9 13:31:34 EDT 2022
 **** JHPCE info ****
 User: jbenjami
-Job id: 1832300
+Job id: 1832301
 Job name: check_sex
-Hostname: compute-112.cm.cluster
+Hostname: compute-103.cm.cluster
 
 Currently Loaded Modules:
   1) matlab/R2019a     5) gcc/4.4.7                       9) emacs/28.1
@@ -45,4 +45,4 @@ Remainder of file ignored
 [NbConvertApp] Converting notebook main.ipynb to html
 [NbConvertApp] Writing 602320 bytes to main.html
 **** Job ends ****
-Fri Sep  9 13:27:23 EDT 2022
+Fri Sep  9 13:31:54 EDT 2022

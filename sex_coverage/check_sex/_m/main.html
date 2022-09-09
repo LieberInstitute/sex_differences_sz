@@ -14635,7 +14635,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <span class="nf">inner_join</span><span class="p">(</span><span class="n">data.table</span><span class="o">::</span><span class="nf">fread</span><span class="p">(</span><span class="n">pheno_file</span><span class="p">),</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">"FID"</span><span class="o">=</span><span class="s">"BrNum"</span><span class="p">))</span> <span class="o">%&gt;%</span>
     <span class="nf">select</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">"FID"</span><span class="p">,</span> <span class="s">"Dx"</span><span class="p">,</span> <span class="s">"Sex"</span><span class="p">,</span> <span class="s">"Age"</span><span class="p">,</span> <span class="s">"F"</span><span class="p">,</span> <span class="s">"SNPSEX"</span><span class="p">))</span> <span class="o">%&gt;%</span>
     <span class="nf">distinct</span><span class="p">()</span> <span class="o">%&gt;%</span> <span class="nf">mutate_if</span><span class="p">(</span><span class="n">is.character</span><span class="p">,</span> <span class="n">as.factor</span><span class="p">)</span>
-<span class="nf">levels</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">'Woman'</span><span class="p">,</span> <span class="s">'Man'</span><span class="p">)</span>
+<span class="nf">levels</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">Sex</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">'Women'</span><span class="p">,</span> <span class="s">'Men'</span><span class="p">)</span>
 <span class="n">dt</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 
@@ -14664,8 +14664,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>Br763</td><td>Schizo </td><td>Man</td><td>75.22</td><td>1</td><td>1</td></tr>
-	<tr><td>Br822</td><td>Control</td><td>Man</td><td>26.73</td><td>1</td><td>1</td></tr>
+	<tr><td>Br763</td><td>Schizo </td><td>Men</td><td>75.22</td><td>1</td><td>1</td></tr>
+	<tr><td>Br822</td><td>Control</td><td>Men</td><td>26.73</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
 
@@ -14813,8 +14813,8 @@ Saving 6.67 x 6.67 in image
 	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>Woman</td><td>-0.05355674</td><td>0.156</td></tr>
-	<tr><td>Man  </td><td> 0.99623137</td><td>1.000</td></tr>
+	<tr><td>Women</td><td>-0.05355674</td><td>0.156</td></tr>
+	<tr><td>Men  </td><td> 0.99623137</td><td>1.000</td></tr>
 </tbody>
 </table>
 
@@ -14845,8 +14845,8 @@ Saving 6.67 x 6.67 in image
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Man"</span><span class="p">)</span>
-<span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">SNPSEX</span> <span class="o">==</span> <span class="m">1</span> <span class="o">&amp;</span> <span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Man"</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Men"</span><span class="p">)</span>
+<span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">SNPSEX</span> <span class="o">==</span> <span class="m">1</span> <span class="o">&amp;</span> <span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Men"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14895,8 +14895,8 @@ Saving 6.67 x 6.67 in image
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Woman"</span><span class="p">)</span>
-<span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">SNPSEX</span> <span class="o">==</span> <span class="m">2</span> <span class="o">&amp;</span> <span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Woman"</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Women"</span><span class="p">)</span>
+<span class="nf">sum</span><span class="p">(</span><span class="n">dt</span><span class="o">$</span><span class="n">SNPSEX</span> <span class="o">==</span> <span class="m">2</span> <span class="o">&amp;</span> <span class="n">dt</span><span class="o">$</span><span class="n">Sex</span> <span class="o">==</span> <span class="s">"Women"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15020,7 +15020,7 @@ Saving 6.67 x 6.67 in image
 
 <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
 <pre>
-Woman   Man 
+Women   Men 
   187   408 </pre>
 </div>
 
@@ -15085,7 +15085,7 @@ Woman   Man
 
 
 <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
-<pre>[1] &#34;2022-09-09 13:27:12 EDT&#34;</pre>
+<pre>[1] &#34;2022-09-09 13:31:45 EDT&#34;</pre>
 </div>
 
 </div>
@@ -15098,7 +15098,7 @@ Woman   Man
 
 <div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
 <pre>   user  system elapsed 
-  3.960   0.401  12.258 </pre>
+  3.486   0.289   4.978 </pre>
 </div>
 
 </div>

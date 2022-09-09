@@ -645,8 +645,8 @@
 <polyline points='96.05,418.61 470.04,418.61 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
 <polyline points='198.05,423.59 198.05,418.61 ' style='stroke-width: 1.94; stroke-linecap: butt;' />
 <polyline points='368.04,423.59 368.04,418.61 ' style='stroke-width: 1.94; stroke-linecap: butt;' />
-<text x='198.05' y='442.15' text-anchor='middle' style='font-size: 20.00px; font-family: "Liberation Sans";' textLength='75.26px' lengthAdjust='spacingAndGlyphs'>Woman</text>
-<text x='368.04' y='442.15' text-anchor='middle' style='font-size: 20.00px; font-family: "Liberation Sans";' textLength='42.19px' lengthAdjust='spacingAndGlyphs'>Man</text>
+<text x='198.05' y='442.15' text-anchor='middle' style='font-size: 20.00px; font-family: "Liberation Sans";' textLength='75.31px' lengthAdjust='spacingAndGlyphs'>Women</text>
+<text x='368.04' y='442.15' text-anchor='middle' style='font-size: 20.00px; font-family: "Liberation Sans";' textLength='42.24px' lengthAdjust='spacingAndGlyphs'>Men</text>
 <text x='283.05' y='465.88' text-anchor='middle' style='font-size: 20.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='193.28px' lengthAdjust='spacingAndGlyphs'>Reported Gender</text>
 <text transform='translate(24.54,214.28) rotate(-90)' text-anchor='middle' style='font-size: 20.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='119.99px' lengthAdjust='spacingAndGlyphs'>F estimate</text>
 <text transform='translate(46.14,214.28) rotate(-90)' text-anchor='middle' style='font-size: 20.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='174.58px' lengthAdjust='spacingAndGlyphs'>(Genotype Sex)</text>
