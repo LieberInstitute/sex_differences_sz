@@ -1,0 +1,48 @@
+**** Job starts ****
+Fri Sep  9 13:26:50 EDT 2022
+**** JHPCE info ****
+User: jbenjami
+Job id: 1832300
+Job name: check_sex
+Hostname: compute-112.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) gcc/4.4.7                       9) emacs/28.1
+  2) stata/17          6) COMMUNITY_CENTOS7_DEFAULT_ENV  10) pandoc/2.7.3
+  3) JHPCE_tools/1.0   7) JHPCE_CENTOS7_DEFAULT_ENV      11) tex/2017
+  4) sge/8.1.9         8) python/3.7.3                   12) R/3.6.1
+
+ 
+
+**** Run general correlation ****
+[NbConvertApp] Converting notebook tmp_main.ipynb to notebook
+Error processing line 1 of /users/jbenjami/.local/lib/python3.9/site-packages/matplotlib-3.5.2-py3.9-nspkg.pth:
+
+  Traceback (most recent call last):
+    File "/jhpce/shared/jhpce/core/python/3.7.3/lib/python3.7/site.py", line 168, in addpackage
+      exec(line)
+    File "<string>", line 1, in <module>
+    File "/jhpce/shared/jhpce/core/python/3.7.3/lib/python3.7/importlib/__init__.py", line 51, in <module>
+      _w_long = _bootstrap_external._w_long
+  AttributeError: module 'importlib._bootstrap_external' has no attribute '_w_long'
+
+Remainder of file ignored
+[NbConvertApp] Converting notebook main.ipynb to markdown
+[NbConvertApp] Support files will be in main_files/
+[NbConvertApp] Making directory main_files
+[NbConvertApp] Writing 8169 bytes to main.md
+Error processing line 1 of /users/jbenjami/.local/lib/python3.9/site-packages/matplotlib-3.5.2-py3.9-nspkg.pth:
+
+  Traceback (most recent call last):
+    File "/jhpce/shared/jhpce/core/python/3.7.3/lib/python3.7/site.py", line 168, in addpackage
+      exec(line)
+    File "<string>", line 1, in <module>
+    File "/jhpce/shared/jhpce/core/python/3.7.3/lib/python3.7/importlib/__init__.py", line 51, in <module>
+      _w_long = _bootstrap_external._w_long
+  AttributeError: module 'importlib._bootstrap_external' has no attribute '_w_long'
+
+Remainder of file ignored
+[NbConvertApp] Converting notebook main.ipynb to html
+[NbConvertApp] Writing 602320 bytes to main.html
+**** Job ends ****
+Fri Sep  9 13:27:23 EDT 2022
