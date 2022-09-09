@@ -18,7 +18,7 @@ dt = data.table::fread(sexcheck_file) %>%
     inner_join(data.table::fread(pheno_file), by=c("FID"="BrNum")) %>%
     select(c("FID", "Dx", "Sex", "Age", "F", "SNPSEX")) %>%
     distinct() %>% mutate_if(is.character, as.factor)
-levels(dt$Sex) <- c('Women', 'Men')
+levels(dt$Sex) <- c('Woman', 'Man')
 dt %>% head(2)
 ```
 
@@ -30,8 +30,8 @@ dt %>% head(2)
 	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>Br763</td><td>Schizo </td><td>Men</td><td>75.22</td><td>1</td><td>1</td></tr>
-	<tr><td>Br822</td><td>Control</td><td>Men</td><td>26.73</td><td>1</td><td>1</td></tr>
+	<tr><td>Br763</td><td>Schizo </td><td>Man</td><td>75.22</td><td>1</td><td>1</td></tr>
+	<tr><td>Br822</td><td>Control</td><td>Man</td><td>26.73</td><td>1</td><td>1</td></tr>
 </tbody>
 </table>
 
@@ -85,8 +85,8 @@ dt %>%
 	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>Women</td><td>-0.05355674</td><td>0.156</td></tr>
-	<tr><td>Men  </td><td> 0.99623137</td><td>1.000</td></tr>
+	<tr><td>Woman</td><td>-0.05355674</td><td>0.156</td></tr>
+	<tr><td>Man  </td><td> 0.99623137</td><td>1.000</td></tr>
 </tbody>
 </table>
 
@@ -96,8 +96,8 @@ dt %>%
 
 
 ```R
-sum(dt$Sex == "Men")
-sum(dt$SNPSEX == 1 & dt$Sex == "Men")
+sum(dt$Sex == "Man")
+sum(dt$SNPSEX == 1 & dt$Sex == "Man")
 ```
 
 
@@ -110,8 +110,8 @@ sum(dt$SNPSEX == 1 & dt$Sex == "Men")
 
 
 ```R
-sum(dt$Sex == "Women")
-sum(dt$SNPSEX == 2 & dt$Sex == "Women")
+sum(dt$Sex == "Woman")
+sum(dt$SNPSEX == 2 & dt$Sex == "Woman")
 ```
 
 
@@ -142,7 +142,7 @@ table(dt$Sex)
 
 
     
-    Women   Men 
+    Woman   Man 
       187   408 
 
 
@@ -159,12 +159,12 @@ sessioninfo::session_info()
 ```
 
 
-    [1] "2022-09-09 13:31:45 EDT"
+    [1] "2022-09-09 13:35:31 EDT"
 
 
 
        user  system elapsed 
-      3.486   0.289   4.978 
+      4.069   0.323   5.991 
 
 
 
