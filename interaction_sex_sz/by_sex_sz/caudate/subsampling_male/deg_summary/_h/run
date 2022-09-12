@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -cwd
-#$ -N sample_breakdown
+#$ -N subsampling_summary
 #$ -o ./summary.log
 #$ -e ./summary.log
 #$ -m e
@@ -19,7 +19,7 @@ module load pandoc
 module load tex
 module list
 
-echo "**** Run general correlation ****"
+echo "**** Run general permutation summary ****"
 
 for NOTEBOOK in main; do
     cp ../_h/${NOTEBOOK}.ipynb tmp_${NOTEBOOK}.ipynb
