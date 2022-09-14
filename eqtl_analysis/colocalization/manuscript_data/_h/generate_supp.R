@@ -17,7 +17,7 @@ get_coloc_signal <- function(tissue){
              "RCP")
     fn = paste0("../../../../prep_eqtl_analysis/", tissue,
                 "/genes/prepare_expression/fastqtl_nominal/",
-                "dapg_finemap/fastENLOC/_m/fastenloc.enloc.sig.out")
+                "dapg_finemap/fastENLOC/_m/pgc3.enloc.sig.out")
     return(data.table::fread(fn, col.names=cols) %>%
            mutate(Tissue=tissue_map(tissue)))
 }
@@ -28,12 +28,12 @@ get_coloc_snps <- function(tissue){
              "GWAS_PIP_prior", "SNP_RCP")
     fn = paste0("../../../../prep_eqtl_analysis/", tissue,
                 "/genes/prepare_expression/fastqtl_nominal/",
-                "dapg_finemap/fastENLOC/_m/fastenloc.enloc.snp.out")
+                "dapg_finemap/fastENLOC/_m/pgc3.enloc.snp.out")
     return(data.table::fread(fn, col.names=cols) %>%
            mutate(Tissue=tissue_map(tissue)))
 }
 
-numCores <- 32
+numCores <- 5
 registerDoParallel(numCores)
 tissues <- c("caudate", "dlpfc", "hippocampus")
 
