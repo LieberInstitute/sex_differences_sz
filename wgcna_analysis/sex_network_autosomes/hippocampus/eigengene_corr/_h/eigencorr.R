@@ -1,25 +1,29 @@
 ## Explore eigengene values and correlate with phenotype
 suppressPackageStartupMessages({
     library(ComplexHeatmap)
-    library(tidyverse)
     library(ggpubr)
+    library(dplyr)
 })
 
-pheno = data.table::fread(paste0("/ceph/projects/v4_phase3_paper/inputs/",
-                                 "phenotypes/_m/merged_phenotypes.csv"))
+pheno = data.table::fread(paste0("/dcs04/lieber/statsgen/jbenjami/",
+                                 "projects/sex_differences_sz/input/",
+                                 "phenotypes/_m/phenotypes.csv"))
 eigen = data.table::fread("../../_m/eigengenes.csv")
 modules = eigen %>% select(-V1) %>% colnames
 dt = eigen %>% left_join(pheno, by=c("V1"="RNum")) %>%
     mutate_at("Sex", as.factor) %>% mutate_at("Sex", as.numeric)
 
-pvals = c()
+pvals = c(); rsq = c();
 for(mod in modules){
     model = paste0("Sex ~ ", mod)
-    res = anova(lm(model, data=dt))
-    pvals = c(pvals, res[mod, "Pr(>F)"])
+    res = summary(lm(model, data=dt))
+    rsq = c(rsq, res$r.squared)
+    pvals = c(pvals, res$coefficients[mod, "Pr(>|t|)"])
 }
 fdr <- p.adjust(pvals, method="fdr")
-df1 = data.frame("Modules"=modules, "Pvalue"=pvals, "FDR"=fdr)
+df1 = data.frame("Modules"=modules, "Rsq"=rsq,
+                 "Pvalue"=pvals, "FDR"=fdr)
+print(df1 %>% filter(Pvalue < 0.05))
 df1 %>% mutate(Tissue="Hippocampus") %>%
     data.table::fwrite("eigen_correlation_sex.tsv", sep='\t')
 
