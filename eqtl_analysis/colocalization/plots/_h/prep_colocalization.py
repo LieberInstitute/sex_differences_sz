@@ -62,8 +62,8 @@ def get_ld(fn, eqtl_dfx, gwas_dfx, label):
                         .sort_values('P', ascending=True)
     shared_df[['SNP.Id']].to_csv('snps_%s.txt' % label, index=None, header=None)
     cmd = '''plink \
-                --bfile ../../../../input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed \
-                --extract snps_%s.txt \
+                --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed \
+                --extract snps_%s.txt --threads 4 \
                 --keep-fam %s --r2 inter-chr \
                 --write-snplist --ld-window-r2 0 \
                 --out shared_snps_%s;
@@ -74,7 +74,8 @@ def get_ld(fn, eqtl_dfx, gwas_dfx, label):
 
 
 def get_eqtl_by_genes(sex, tissue, gene):
-    fn = '../../../../prep_eqtl_analysis/by_sex/%s/%s/' % (tissue, sex) +\
+    fn = '/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/' +\
+        'prep_eqtl_analysis/by_sex/%s/%s/' % (tissue, sex) +\
         'prepare_expression/fastqtl_nominal/_m/Brainseq_LIBD.allpairs.txt.gz'
     return annotate_eqtls(fn, gene, tissue)
 
@@ -87,7 +88,8 @@ def merge_gwas(eqtl_df, gwas_df):
 
 
 def get_ld_by_tissue(eqtl_df, gwas_df, tissue, label, sex):
-    fn_fam = "../../../../prep_eqtl_analysis/by_sex/%s/%s/_m/keepFam.txt" % (tissue, sex)
+    fn_fam = "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/" +\
+        "prep_eqtl_analysis/by_sex/%s/%s/_m/keepFam.txt" % (tissue, sex)
     return get_ld(fn_fam, eqtl_df, gwas_df, "%s" % (label))
 
 
@@ -103,7 +105,7 @@ def plot_coloc(gwas_df, genes_df, perm_pval, ld_df, eqtl_df, tissue):
     library(eQTpLot)
     pval = perm_pval$perm_pval[1]
     gene = perm_pval$Gene[1]
-    p = eQTpLot(GWAS.df=gwas_df, eQTL.df=eqtl_df, Genes.df=genes_df,
+    p = eQTpLot::eQTpLot(GWAS.df=gwas_df, eQTL.df=eqtl_df, Genes.df=genes_df,
                 getplot=FALSE, LD.df=ld_df, LDmin=10, R2min=0.25,
                 LDcolor='black', gene=gene, trait='SCZD', gbuild='hg38',
                 tissue=tissue, sigpvalue_eQTL=pval, CollapseMethod="min",
@@ -122,13 +124,16 @@ def main(args):
                              'Build': ['hg38']})
     eqtl_df = get_eqtl_by_genes(args.sex, args.tissue, genes_df.Gene[0])
     eqtl_df = merge_gwas(eqtl_df, gwas_df)
+    eqtl_df.to_csv("eqtl_%s.txt" % args.feature, sep='\t', index=False)
     gwas_df.drop(["pgc3_a1_same_as_our_counted"], axis=1, inplace=True)
+    gwas_df.to_csv("gwas_pgc3_%s.txt" % args.feature,
+                   sep='\t', index=False)
     ld_df = get_ld_by_tissue(eqtl_df, gwas_df, args.tissue, args.feature,
                              args.sex)
-    try:
-        plot_coloc(gwas_df, genes_df, perm_pval, ld_df, eqtl_df, args.tissue)
-    except:
-        print("Failed to plot!")
+    # try:
+    #     plot_coloc(gwas_df, genes_df, perm_pval, ld_df, eqtl_df, args.tissue)
+    # except:
+    #     print("Failed to plot!")
     ## Reproducibility information
     session_info.show()
 
