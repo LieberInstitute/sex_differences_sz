@@ -70,7 +70,7 @@ extract_de <- function(contrast, label, efit, seed_int){
 load_counts <- function(){
     counts_file = paste0("/dcs04/lieber/statsgen/jbenjami/projects/",
                          "sex_differences_sz/input/counts/_m/", 
-                         "caudate_brainseq_phase3_hg38_rseGene_merged_n464.rda")
+                         "dlpfc_ribozero_brainseq_phase2_hg38_rseGene_merged_n453.rda")
     load(counts_file)
     rse_df = rse_gene
     return(rse_df)
@@ -83,7 +83,7 @@ get_random_samples <- function(seed_int, new_dir=TRUE){
     keepIndex = which((rse_df$Dx %in% c("Control", "Schizo")) & 
                       rse_df$Age > 17 & rse_df$Sex == "M" & 
                       rse_df$Race %in% c("AA", "CAUC"))
-    snames = sample(keepIndex, 121, replace=FALSE) # subsampling to Female N (sample size)
+    snames = sample(keepIndex, 114, replace=FALSE) # subsampling to Female N (sample size)
     return(snames)
 }
 memSamples <- memoise::memoise(get_random_samples)

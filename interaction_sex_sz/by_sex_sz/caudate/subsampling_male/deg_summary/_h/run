@@ -15,20 +15,11 @@ echo "Job name: ${JOB_NAME}"
 echo "Hostname: ${HOSTNAME}"
 
 ## List current modules for reproducibility
-module load pandoc
-module load tex
 module list
 
 echo "**** Run general permutation summary ****"
 
-for NOTEBOOK in main; do
-    cp ../_h/${NOTEBOOK}.ipynb tmp_${NOTEBOOK}.ipynb
-    jupyter-nbconvert --execute --ExecutePreprocessor.timeout=-1 --to notebook \
-		      --stdout tmp_${NOTEBOOK}.ipynb > ${NOTEBOOK}.ipynb
-    jupyter nbconvert --to html ${NOTEBOOK}.ipynb
-    jupyter nbconvert --to markdown ${NOTEBOOK}.ipynb
-    rm -f tmp_${NOTEBOOK}.ipynb
-done
+python ../_h/summarize_permutation.py
 
 echo "**** Job ends ****"
 date
