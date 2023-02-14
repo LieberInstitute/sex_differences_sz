@@ -1,3 +1,0 @@
-#!/bin/bash
-
-Rscript ../_h/heatmap_plots.R
