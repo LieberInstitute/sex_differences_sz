@@ -58,7 +58,7 @@ hippo   <- extract_bed("Hippocampus")
                                         # plot
 pdf(file = paste0("significant_circos_plot.pdf"),
     width = 10, height = 10)
-plot_circos_4tissue(caudate, dlpfc, hippo)
+plot_circos(caudate, dlpfc, hippo)
 dev.off()
 
 #### Reproducibility information
