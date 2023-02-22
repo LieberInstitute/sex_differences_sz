@@ -15,6 +15,9 @@ echo "Job id: ${JOB_ID}"
 echo "Job name: ${JOB_NAME}"
 echo "Hostname: ${HOSTNAME}"
 
+module load python
+module load pandoc
+
 module list
 
 echo "**** Run summarize results ****"

@@ -64,8 +64,28 @@ def extract_features(tissue, fdr):
     return genes, trans, exons, juncs
 
 
-def print_summary(tissue, fdr=0.05):
+def annotate_chrom(df):
+    df.loc[:, "Chrom_Type"] = "Other"
+    df.loc[df["seqnames"].isin(["chrX", "chrY"]), "Chrom_Type"] = "Allosome"
+    df.loc[df["seqnames"].str.contains("chr\d+"), "Chrom_Type"] = "Autosome"
+    df.loc[df["seqnames"] == "chrM", "Chrom_Type"] = "Mitochondria"
+    return df
+
+
+def get_DEGs_result_by_tissue(tissue, fdr=0.05):
+    # Male = 1; Female = -1
     genes, trans, exons, juncs = extract_features(tissue, fdr)
+    df = pd.concat([genes, trans, exons, juncs])
+    df.loc[:, "Direction"] = np.sign(df.logFC)
+    df["Type"] = df.Type.astype("category")\
+                   .cat.reorder_categories(["Gene", "Transcript",
+                                            "Exon", "Junction"])
+    df["Tissue"] = tissue
+    return annotate_chrom(df)
+
+
+def print_summary(tissue, fdr=0.05):
+    df = get_DEGs_result_by_tissue(tissue, fdr)
     if tissue == "Caudate":
         w_mode = "w"
     else:
@@ -73,37 +93,40 @@ def print_summary(tissue, fdr=0.05):
     statement = f"Significant DE (FDR < 0.05) in {tissue}"
     with open("summarize_results.log", mode=w_mode) as f:
         print(statement, file=f)
-        for variable in ["Feature", "gencodeID", "Symbol"]:
-            print(variable, file=f)
-            gg = len(set(genes[variable]))
-            tt = len(set(trans[variable]))
-            ee = len(set(exons[variable]))
-            jj = len(set(juncs[variable]))
-            print(f"\nGene:\t\t{gg}\nTranscript:\t{tt}"+\
-                  f"\nExon:\t\t{ee}\nJunction:\t{jj}\n", file=f)
+        for chrom_type in ["Allosome", "Autosome", "Mitochondria"]:
+            print(chrom_type, file=f)
+            genes = df[(df["Chrom_Type"] == chrom_type) &
+                       (df["Type"] == "Gene")].copy()
+            trans = df[(df["Chrom_Type"] == chrom_type) &
+                       (df["Type"] == "Transcript")].copy()
+            exons = df[(df["Chrom_Type"] == chrom_type) &
+                       (df["Type"] == "Exon")].copy()
+            juncs = df[(df["Chrom_Type"] == chrom_type) &
+                       (df["Type"] == "Junction")].copy()
+            for variable in ["Feature", "gencodeID"]:
+                print(variable, file=f)
+                gg = len(set(genes[variable]))
+                tt = len(set(trans[variable]))
+                ee = len(set(exons[variable]))
+                jj = len(set(juncs[variable]))
+                print(f"\nGene:\t\t{gg}\nTranscript:\t{tt}"+\
+                      f"\nExon:\t\t{ee}\nJunction:\t{jj}\n", file=f)
 
 
-def get_DEGs_result_by_tissue(tissue, fdr=0.05):
-    genes, trans, exons, juncs = extract_features(tissue, fdr)
-    df = pd.concat([genes, trans, exons, juncs])
-    df["Type"] = df.Type.astype("category")\
-                   .cat.reorder_categories(["Gene", "Transcript",
-                                            "Exon", "Junction"])
-    df["Tissue"] = tissue
-    return df
-
-
-def main():
+def merge_data():
     bigdata = []
     for tissue in ["Caudate", "DLPFC", "Hippocampus"]:
         print_summary(tissue)
         data = get_DEGs_result_by_tissue(tissue, 1)
         bigdata.append(data)
-    df = pd.concat(bigdata)
+    return pd.concat(bigdata)
+
+
+def main():
+    df = merge_data()
     # Summary
     print("\nSummary:")
     gene = df[(df["Type"] == "Gene") & (df["adj.P.Val"] < 0.05)]
-    gene.loc[:, "Direction"] = np.sign(gene.logFC) # Male = 1; Female = -1
     print("Unique DEGs: %d" %
           gene.drop_duplicates(subset="gencodeID").shape[0])
     print(gene.groupby(["Tissue", "Direction"]).size())
