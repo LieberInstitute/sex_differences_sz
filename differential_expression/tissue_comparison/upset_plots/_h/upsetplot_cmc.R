@@ -47,7 +47,7 @@ plot_upset <- function(CMC){
                                         # Top annotation
     top_annot = upset_top_annotation(
         m, height=unit(7, "cm"),
-        ylim = c(0, 500),
+        ylim = c(0, 750),
         gp=gpar(fill=cbb_palette[comb_degree(m)]),
         annotation_name_rot = 90)
                                         # Plotting
@@ -55,7 +55,7 @@ plot_upset <- function(CMC){
     pdf(fn, width=8, height=4)
     ht = draw(UpSet(m, pt_size=unit(4, "mm"), lwd=3,
                     comb_col=cbb_palette[comb_degree(m)],
-                    set_order = c("Caudate", "DLPFC", "Hippocampus"),
+                    set_order = c("Caudate", "DLPFC", "Hippocampus", "CMC DLPFC"),
                     comb_order = order(-comb_size(m)),
                     row_names_gp = gpar(fontsize = 14, fontface='bold'),
                     right_annotation = right_annot, top_annotation = top_annot))
@@ -75,7 +75,7 @@ plot_upset_transposed <- function(CMC){
                                         # Right annotation
     right_ha = rowAnnotation(
         "Intersection\nsize" = anno_barplot(comb_size(m), border=F,
-                                            ylim = c(0, 500),
+                                            ylim = c(0, 750),
                                             gp=gpar(fill=cbb_palette[comb_degree(m)]),
                                             width = unit(7, "cm")))
                                         # Top annotation
@@ -92,7 +92,7 @@ plot_upset_transposed <- function(CMC){
     ht = draw(UpSet(t(m), pt_size=unit(5, "mm"), lwd=3,
                     comb_order = order(-comb_size(m)),
                     comb_col=cbb_palette[comb_degree(m)],
-                    set_order = c("Caudate", "DLPFC", "Hippocampus"),
+                    set_order = c("Caudate", "DLPFC", "Hippocampus", "CMC DLPFC"),
                     row_names_gp = gpar(fontsize = 16, fontface='bold'),
                     right_annotation = right_ha, top_annotation = top_ha))
     od = rev(row_order(ht)); cs = comb_size(m)

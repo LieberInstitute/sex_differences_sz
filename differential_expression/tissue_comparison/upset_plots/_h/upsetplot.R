@@ -35,7 +35,7 @@ plot_upset <- function(){
                                         # Top annotation
     top_annot = upset_top_annotation(
         m, height=unit(7, "cm"),
-        ylim = c(0, 500),
+        ylim = c(0, 750),
         gp=gpar(fill=cbb_palette[comb_degree(m)]),
         annotation_name_rot = 90)
                                         # Plotting
@@ -62,7 +62,7 @@ plot_upset_transposed <- function(){
                                         # Right annotation
     right_ha = rowAnnotation(
         "Intersection\nsize" = anno_barplot(comb_size(m), border=F,
-                                            ylim = c(0, 500),
+                                            ylim = c(0, 750),
                                             gp=gpar(fill=cbb_palette[comb_degree(m)]),
                                             width = unit(7, "cm")))
                                         # Top annotation
