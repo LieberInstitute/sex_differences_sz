@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -cwd
-#$ -l mem_free=35.0G,h_vmem=35G,h_fsize=50G
+#$ -l mem_free=25.0G,h_vmem=25G,h_fsize=50G
 #$ -N sex_de_dlpfc
 #$ -o ./summary.log
 #$ -e ./summary.log
