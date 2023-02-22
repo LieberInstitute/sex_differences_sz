@@ -51,7 +51,7 @@ plot_upset <- function(CMC){
         gp=gpar(fill=cbb_palette[comb_degree(m)]),
         annotation_name_rot = 90)
                                         # Plotting
-    fn <- paste("cmc",tolower(CMC),"sex_upsetR.pdf", sep="\t")
+    fn <- paste("cmc",tolower(CMC),"sex_upsetR.pdf", sep="_")
     pdf(fn, width=8, height=4)
     ht = draw(UpSet(m, pt_size=unit(4, "mm"), lwd=3,
                     comb_col=cbb_palette[comb_degree(m)],
@@ -87,7 +87,7 @@ plot_upset_transposed <- function(CMC){
         gap = unit(2, "mm"), annotation_name_side = "left",
         annotation_name_rot = 90)
                                         # Plotting
-    fn <- paste("cmc",tolower(CMC),"sex_upsetR_tranposed.pdf", sep="\t")
+    fn <- paste("cmc",tolower(CMC),"sex_upsetR_tranposed.pdf", sep="_")
     pdf(fn, width=5, height=10)
     ht = draw(UpSet(t(m), pt_size=unit(5, "mm"), lwd=3,
                     comb_order = order(-comb_size(m)),
