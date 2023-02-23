@@ -72,15 +72,10 @@ def residualize(train_index, test_index):
     return x_train, x_test
 
 
-def optimize_rf(X, Y, features, estimator, cv, outdir, feature):
-    fold_num = 0
-    for train_index, test_index in cv.split(X, Y):
-        Y_train, Y_test = Y[train_index], Y[test_index]
-        fold_num += 1
-    fold_num -= 1
-    X_train, X_test = residualize(train_index, test_index)
-    X_train = X_train.select(pl.col(features))
-    X_test = X_test.select(pl.col(features))
+def resid_fixed(train_index, test_index, features, feature):
+    xtrain, xtest = residualize(train_index, test_index)
+    xtrain = xtrain.select(pl.col(features))
+    xtest = xtest.select(pl.col(features))
     ## Edit to remove "|"
     if feature in ["genes", "transcripts"]:
         new_features = [re.sub("\\|", "_", x) for x in features]
@@ -88,6 +83,17 @@ def optimize_rf(X, Y, features, estimator, cv, outdir, feature):
         new_features = [re.sub("\\-$", "minus",
                             re.sub("\\+$", "plus",
                                    re.sub("\:", "_", x))) for x in features]
+    return xtrain, xtest, new_features
+
+
+def optimize_rf(X, Y, features, estimator, cv, outdir, feature):
+    fold_num = 0
+    for train_index, test_index in cv.split(X, Y):
+        Y_train, Y_test = Y[train_index], Y[test_index]
+        fold_num += 1
+    fold_num -= 1
+    X_train, X_test, new_features = resid_fixed(train_index, test_index,
+                                                features, feature)
     d, pfirst = dRFEtools.rf_rfe(estimator, X_train.to_numpy(),
                                  Y_train.ravel(), np.array(new_features),
                                  fold_num, outdir, elimination_rate=0.1,
@@ -116,30 +122,14 @@ def annotation(tissue, feature):
              .filter(pl.col("seqnames").str.contains(r"chr\d+"))
 
 
-def extract_feature_annotation(pred_feat, path, fold, tissue, feature):
-    # Get important features
-    dft = pd.DataFrame.from_records(pred_feat,
-                                    columns=['feature_importance',
-                                             'Geneid'])
-    dft['Fold'] = fold
-    # Get gene annotation
-    annot = annotation(annot_file)
-    annot = annot.rename(columns={'seqname': 'chrom', 'names': 'gene_id'})
-    annot['ensemblID'] = annot.gene_id.str.replace("\\..*", "", regex=True)
-    pred_df = dft.merge(annot, how='left', left_on='Geneid', right_on='gene_id')
-    pred_df.to_csv('%s/important_features.txt' % path,
-                   sep='\t', mode='a', index=False,
-                   header=True if fold == 0 else False)
-
-
-def rf_run(X_train, X_test, Y_train, Y_test, fold_num, outdir,
-           estimator, frac, step_size, feature, tissue):
+def rf_run(X_train, X_test, Y_train, Y_test, S_train, S_test,
+           fold_num, outdir, estimator, frac, step_size, features):
     # Apply random forest
-    features = X_train.columns
-    d, pfirst = dRFEtools.rf_rfe(estimator, X_train.to_numpy(),
-                                 Y_train.to_numpy().ravel(),
-                                 features, fold_num, outdir,
-                                 elimination_rate=0.1)
+    new_features = np.array(features)
+    x_train = X_train.to_numpy(); x_test = X_test.to_numpy()
+    y_train = Y_train.to_numpy().ravel(); y_test = Y_test.to_numpy().ravel()
+    d, pfirst = dRFEtools.rf_rfe(estimator, x_train, y_train, new_features,
+                                 fold_num, outdir, elimination_rate=0.1)
     df_elim = pd.DataFrame([{'fold':fold_num, 'n features':k,
                              'normalized mutual information':d[k][1],
                              'accuracy':d[k][2],
@@ -159,27 +149,22 @@ def rf_run(X_train, X_test, Y_train, Y_test, fold_num, outdir,
         n_features = n_features_max
         n_redundant = n_features
     # Fit model
-    estimator.fit(X_train, Y_train)
-    all_fts = estimator.predict(X_test)
-    estimator.fit(X_train.values[:, d[n_redundant][4]], Y_train)
-    labels_pred_redundant = estimator.predict(X_test.values[:, d[n_redundant][4]])
-    estimator.fit(X_train.values[:, d[n_features][4]], Y_train)
-    labels_pred = estimator.predict(X_test.values[:, d[n_features][4]])
+    estimator.fit(x_train, y_train)
+    all_fts = estimator.predict(x_test)
+    estimator.fit(x_train[:, d[n_redundant][4]], y_train)
+    labels_pred_redundant = estimator.predict(x_test[:, d[n_redundant][4]])
+    estimator.fit(x_train[:, d[n_features][4]], y_train)
+    labels_pred = estimator.predict(x_test[:, d[n_features][4]])
     # Output test predictions
-    pd.DataFrame({'fold': fold_num,
-                  'real': Y_test,
+    pd.DataFrame({'RNum': S_test.to_numpy().ravel(),
+                  'fold': fold_num,
+                  'real': Y_test.to_numpy().ravel(),
                   'predict_all': all_fts,
                   'predict_max': labels_pred,
-                  'predict_redundant': labels_pred_redundant},
-                 index=X_test.index)\
-      .to_csv('%s/test_predictions.txt' % outdir,
-              sep='\t', mode='a', index=True,
-              header=True if fold_num == 0 else False)
-    # Annotate features
-    pred_features = sorted(list(zip(estimator.feature_importances_,
-                                    X_train.columns[d[n_features][4]])),
-                           reverse=True)
-    extract_feature_annotation(pred_features, outdir, fold_num, annot_file)
+                  'predict_redundant': labels_pred_redundant})\
+      .to_csv(f'{outdir}/test_predictions.txt',
+                 sep='\t', mode='a', index=False,
+                 header=True if fold_num == 0 else False)
     # Save output data
     output = dict()
     output['n_max'] = n_features_max
@@ -189,40 +174,21 @@ def rf_run(X_train, X_test, Y_train, Y_test, fold_num, outdir,
     output['train_oob_score_nmi_all_features'] = pfirst[1]
     output['train_oob_score_acc_all_features'] = pfirst[2]
     output['train_oob_score_roc_all_features'] = pfirst[3]
-    output['train_oob_score_nmi'] = dRFEtools.oob_score_nmi(estimator, Y_train)
+    output['train_oob_score_nmi'] = dRFEtools.oob_score_nmi(estimator, y_train)
     output['train_oob_score_acc'] = dRFEtools.oob_score_accuracy(estimator,
-                                                                 Y_train)
-    output['train_oob_score_roc'] = dRFEtools.oob_score_roc(estimator, Y_train)
-    output['test_score_acc'] = accuracy_score(Y_test, labels_pred)
-    output['test_score_nmi'] = nmi(Y_test, labels_pred,
+                                                                 y_train)
+    output['train_oob_score_roc'] = dRFEtools.oob_score_roc(estimator, y_train)
+    output['test_score_acc'] = accuracy_score(y_test, labels_pred)
+    output['test_score_nmi'] = nmi(y_test, labels_pred,
                                    average_method="arithmetic")
-    output['test_score_roc'] = roc_auc_score(Y_test, labels_pred)
-    output['test_score_acc_redundant'] = accuracy_score(Y_test,
+    output['test_score_roc'] = roc_auc_score(y_test, labels_pred)
+    output['test_score_acc_redundant'] = accuracy_score(y_test,
                                                         labels_pred_redundant)
-    output['test_score_roc_redundant'] = roc_auc_score(Y_test,
+    output['test_score_roc_redundant'] = roc_auc_score(y_test,
                                                        labels_pred_redundant)
-    output['test_score_nmi_redundant'] = nmi(Y_test, labels_pred_redundant,
+    output['test_score_nmi_redundant'] = nmi(y_test, labels_pred_redundant,
                                              average_method="arithmetic")
     return output, df_elim
-
-
-def dev_clean_names(feature, tissue):
-    if feature in ["genes", "transcripts"]:
-        new_annot = [re.sub("\\|", "_", x) for x in annot]
-        new_features = [re.sub("\\|", "_", x) for x in r['gnames']]
-        expr_df = pl.DataFrame(data=r['expr'], schema=r['snames'])\
-                    .transpose(include_header=True, header_name="RNum",
-                               column_names=np.array(new_features))
-    else:
-        new_annot = [re.sub("\\-$", "minus",
-                            re.sub("\\+$", "plus",
-                                   re.sub("\:", "_", x))) for x in annot]
-        new_features = [re.sub("\\-$", "minus",
-                            re.sub("\\+$", "plus",
-                                   re.sub("\:", "_", x))) for x in r['gnames']]
-        expr_df = pl.DataFrame(data=r['expr'], schema=r['snames'])\
-                    .transpose(include_header=True, header_name="RNum",
-                               column_names=np.array(new_features))
 
 
 def load_data(feature, tissue):
@@ -261,19 +227,18 @@ def check_matching_columns(x, y):
 
 
 def main_loop(feature, tissue):
+    outdir = f"{feature}"
     cla = dRFEtools.RandomForestClassifier(n_estimators=100,
                                            oob_score=True,
-                                           n_jobs=2)
+                                           n_jobs=2,
+                                           random_state=20230223)
     X, Y = load_data(feature, tissue)
     X, Y = check_matching_columns(X, Y)
-    X = X.select([pl.all().exclude("RNum")])
+    snames = X.select(pl.col("RNum"))
+    X = X.select([pl.all().exclude("RNum")]); features = X.columns
     Y = Y.select(pl.col("Sex"))
-    features = X.columns
     skf = StratifiedKFold(n_splits=10, shuffle=True, random_state=20230222)
     skf.get_n_splits(X.to_numpy(), Y.to_numpy())
-
-
-    ### working here!!!!, problem with optimization function
     optimize_rf(X.to_numpy(), Y.to_numpy(), features, cla,
                 skf, outdir, feature)
     frac = 0.30; step_size = 0.04; fold = 0
@@ -286,18 +251,18 @@ def main_loop(feature, tissue):
     df_dict = pd.DataFrame()
     with open("%s/dRFEtools_10folds.txt" % (outdir), "w") as f:
         print("\t".join(["fold"] + fields), file=f, flush=True)
-        for train_index, test_index in skf.split(X, Y):
+        for train_index, test_index in skf.split(X.to_numpy(), Y.to_numpy()):
             Y_train, Y_test = Y[train_index], Y[test_index]
-            X_train, X_test = residualize(train_index, test_index)
-            X_train = X_train.select(pl.col(features))
-            X_test = X_test.select(pl.col(features))
-            o, df_elim = rf_run(X_train, X_test, Y_train, Y_test, fold, outdir,
-                                cla, frac, step_size, feature, tissue)
+            S_train, S_test = snames[train_index], snames[test_index]
+            X_train, X_test, new_features = resid_fixed(train_index, test_index,
+                                                        features, feature)
+            o, df_elim = rf_run(X_train, X_test, Y_train, Y_test, S_train, S_test,
+                                fold, outdir, cla, frac, step_size, new_features)
             df_dict = pd.concat([df_dict, df_elim], axis=0)
             print("\t".join([str(fold)] + [str(o[x]) for x in fields]),
                   flush=True, file=f)
             fold += 1
-        df_dict.to_csv("%s/feature_elimination_allFolds_metrics.txt" % outdir,
+        df_dict.to_csv(f"{outdir}/feature_elimination_allFolds_metrics.txt",
                        sep="\t", index=False)
 
 
