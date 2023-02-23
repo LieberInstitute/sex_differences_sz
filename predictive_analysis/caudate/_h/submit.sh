@@ -1,9 +1,9 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=10.0G,h_vmem=10G,h_fsize=50G
-#$ -N dRFE_caudate
-#$ -o ./summary.log
-#$ -e ./summary.log
+#$ -N dRFE_gene_caudate
+#$ -o ./summary_gene.log
+#$ -e ./summary_gene.log
 
 echo "**** Job starts ****"
 date
@@ -23,7 +23,9 @@ module load python
 module list
 
 echo "**** Run dRFEtools for predictive analysis ****"
-Rscript ../_h/differential_analysis.R --feature $FEATURE
+FEATURE="genes"; TISSUE="caudate"
+
+python ../_h/dRFE_rf.py --feature $FEATURE --tissue $TISSUE
 
 echo "**** Job ends ****"
 date
