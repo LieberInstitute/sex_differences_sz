@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=10.0G,h_vmem=10G,h_fsize=50G
-#$ -N dRFE_gene_caudate
+#$ -N dRFE_gene_hippocampus
 #$ -o ./summary_gene.log
 #$ -e ./summary_gene.log
 
@@ -23,7 +23,7 @@ module load python
 module list
 
 echo "**** Run dRFEtools for predictive analysis ****"
-FEATURE="genes"; TISSUE="caudate"
+FEATURE="genes"; TISSUE="hippocampus"
 
 python ../_h/dRFE_rf.py --feature $FEATURE --tissue $TISSUE
 

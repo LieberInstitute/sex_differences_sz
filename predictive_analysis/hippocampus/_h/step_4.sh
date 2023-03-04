@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=20.0G,h_vmem=20G,h_fsize=50G
-#$ -N dRFE_jxn_caudate
+#$ -N dRFE_jxn_hippocampus
 #$ -o ./summary_jxn.log
 #$ -e ./summary_jxn.log
 
@@ -23,7 +23,7 @@ module load python
 module list
 
 echo "**** Run dRFEtools for predictive analysis ****"
-FEATURE="junctions"; TISSUE="caudate"
+FEATURE="junctions"; TISSUE="hippocampus"
 
 python ../_h/dRFE_rf.py --feature $FEATURE --tissue $TISSUE
 

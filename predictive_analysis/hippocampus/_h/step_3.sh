@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=30.0G,h_vmem=30G,h_fsize=50G
-#$ -N dRFE_exon_caudate
+#$ -N dRFE_exon_hippocampus
 #$ -o ./summary_exon.log
 #$ -e ./summary_exon.log
 
@@ -23,7 +23,7 @@ module load python
 module list
 
 echo "**** Run dRFEtools for predictive analysis ****"
-FEATURE="exons"; TISSUE="caudate"
+FEATURE="exons"; TISSUE="hippocampus"
 
 python ../_h/dRFE_rf.py --feature $FEATURE --tissue $TISSUE
 
