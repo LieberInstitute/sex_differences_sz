@@ -2,7 +2,7 @@
 #$ -cwd
 #$ -R y
 #$ -l mem_free=15.0G,h_vmem=15G,h_fsize=50G
-#$ -N 'softpower_caudate'
+#$ -N 'softpower_dlpfc'
 #$ -o ./summary.out
 #$ -e ./summary.out
 
