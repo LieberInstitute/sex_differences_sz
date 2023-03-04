@@ -1,3 +1,0 @@
-#!/bin/bash
-
-python ../_h/go_summary.py 
