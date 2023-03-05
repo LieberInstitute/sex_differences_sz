@@ -5,7 +5,6 @@
 #$ -N eigen_corr
 #$ -o ./summary.out
 #$ -e ./summary.out
-#$ -m e -M jade.benjamin@libd.org
 
 echo "**** Job starts ****"
 date
@@ -17,7 +16,10 @@ echo "Job name: ${JOB_NAME}"
 echo "Hostname: ${HOSTNAME}"
 
 ## List current modules for reproducibility
-module load R/4.0.3
+module load conda_R/4.2.x
+module load gcc/9.1.0
+module load pandoc
+
 module list
 
 ## Edit with your job command
