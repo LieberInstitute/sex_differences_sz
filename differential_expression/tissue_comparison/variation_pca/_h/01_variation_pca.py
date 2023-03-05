@@ -229,7 +229,7 @@ def main():
         plotNsave_corr(tissue, f"{new_tissue}/pca_autosomes_top10", 10,
                        get_autosomes, True)
         # Recursive run
-        pc_recursive_degs(tissue)
+        pc_recursive_autosomes(tissue)
 
 
 if __name__ == '__main__':

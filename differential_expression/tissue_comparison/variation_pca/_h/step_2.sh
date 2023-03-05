@@ -23,9 +23,9 @@ module load python
 module list
 
 echo "**** Run dRFEtools for predictive analysis ****"
-TISSUE="dlpfc"
+TISSUE="DLPFC"
 
-python ../_h/variation_pca.py --tissue $TISSUE
+python ../_h/01_variation_pca.py --tissue $TISSUE
 
 echo "**** Job ends ****"
 date
