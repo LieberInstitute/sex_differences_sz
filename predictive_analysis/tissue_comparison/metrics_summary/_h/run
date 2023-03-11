@@ -1,3 +1,0 @@
-#!/bin/bash
-
-Rscript ../_h/summary_metrics.R
