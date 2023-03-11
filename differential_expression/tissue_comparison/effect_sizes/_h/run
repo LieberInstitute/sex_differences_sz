@@ -2,7 +2,7 @@
 #$ -cwd
 #$ -R y
 #$ -l mem_free=10.0G,h_vmem=10G,h_fsize=50G
-#$ -N 'summarize_degs'
+#$ -N 'correlation'
 #$ -o ./summary.out
 #$ -e ./summary.out
 
