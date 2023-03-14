@@ -1,0 +1,95 @@
+**** Job starts ****
+Tue Mar 14 13:54:35 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3052022
+Job name: enrichment_heatmap
+Hostname: compute-106.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Generate heatmap ****
+WARNING: ignoring environment value of R_HOME
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+   XCI_status       OR       PValue   Bonferroni Direction
+1:     escape 109.9116 1.485398e-13 1.336858e-12        Up
+2:     escape 144.6270 1.978629e-17 1.780766e-16      Down
+3:     escape 109.8692 9.059089e-29 8.153180e-28       All
+[1] "2023-03-14 13:54:41 EDT"
+   user  system elapsed 
+  2.368   0.247   4.399 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.3 RC (2023-03-07 r83977)
+ os       CentOS Linux 7 (Core)
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       US/Eastern
+ date     2023-03-14
+ pandoc   2.7.3 @ /jhpce/shared/jhpce/core/pandoc/2.7.3/bin/pandoc
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ cli           3.6.0   2023-01-09 [2] CRAN (R 4.2.2)
+ colorspace    2.1-0   2023-01-23 [2] CRAN (R 4.2.2)
+ data.table    1.14.8  2023-02-17 [2] CRAN (R 4.2.2)
+ dplyr       * 1.1.0   2023-01-29 [2] CRAN (R 4.2.2)
+ fansi         1.0.4   2023-01-22 [2] CRAN (R 4.2.2)
+ farver        2.1.1   2022-07-06 [2] CRAN (R 4.2.1)
+ generics      0.1.3   2022-07-05 [2] CRAN (R 4.2.1)
+ ggplot2     * 3.4.1   2023-02-10 [2] CRAN (R 4.2.2)
+ glue          1.6.2   2022-02-24 [2] CRAN (R 4.2.1)
+ gtable        0.3.1   2022-09-01 [2] CRAN (R 4.2.1)
+ labeling      0.4.2   2020-10-20 [2] CRAN (R 4.2.1)
+ lifecycle     1.0.3   2022-10-07 [2] CRAN (R 4.2.1)
+ magrittr      2.0.3   2022-03-30 [2] CRAN (R 4.2.1)
+ munsell       0.5.0   2018-06-12 [2] CRAN (R 4.2.1)
+ pillar        1.8.1   2022-08-19 [2] CRAN (R 4.2.1)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 4.2.1)
+ purrr         1.0.1   2023-01-10 [2] CRAN (R 4.2.2)
+ R6            2.5.1   2021-08-19 [2] CRAN (R 4.2.1)
+ ragg          1.2.5   2023-01-12 [2] CRAN (R 4.2.2)
+ rlang         1.1.0   2023-03-14 [2] CRAN (R 4.2.3)
+ scales        1.2.1   2022-08-20 [2] CRAN (R 4.2.1)
+ sessioninfo   1.2.2   2021-12-06 [2] CRAN (R 4.2.1)
+ svglite       2.1.1   2023-01-10 [2] CRAN (R 4.2.2)
+ systemfonts   1.0.4   2022-02-11 [2] CRAN (R 4.2.1)
+ textshaping   0.3.6   2021-10-13 [2] CRAN (R 4.2.1)
+ tibble        3.2.0   2023-03-08 [2] CRAN (R 4.2.3)
+ tidyr         1.3.0   2023-01-24 [2] CRAN (R 4.2.2)
+ tidyselect    1.2.0   2022-10-10 [2] CRAN (R 4.2.1)
+ utf8          1.2.3   2023-01-31 [2] CRAN (R 4.2.2)
+ vctrs         0.5.2   2023-01-23 [2] CRAN (R 4.2.2)
+ withr         2.5.0   2022-03-03 [2] CRAN (R 4.2.1)
+
+ [1] /users/jbenjami/R/4.2.x
+ [2] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/site-library
+ [3] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+**** Job ends ****
+Tue Mar 14 13:54:41 EDT 2023

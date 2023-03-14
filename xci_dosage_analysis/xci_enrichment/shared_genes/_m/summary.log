@@ -1,0 +1,40 @@
+**** Job starts ****
+Tue Mar 14 13:54:06 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3052021
+Job name: xci_enrichment
+Hostname: compute-106.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) gcc/4.4.7                       9) emacs/28.1
+  2) stata/17          6) COMMUNITY_CENTOS7_DEFAULT_ENV  10) pandoc/2.7.3
+  3) JHPCE_tools/1.0   7) JHPCE_CENTOS7_DEFAULT_ENV
+  4) sge/8.1.9         8) python/3.9.10
+
+ 
+
+**** Run XCI enrichment analysis ****
+[[8, 56], [21, 16157]]
+[[0, 64], [42, 16136]]
+[[0, 64], [253, 15925]]
+[[10, 22], [39, 12409]]
+[[0, 32], [38, 12410]]
+[[0, 32], [141, 12307]]
+[[18, 78], [60, 28566]]
+[[0, 96], [80, 28546]]
+[[0, 96], [394, 28232]]
+-----
+numpy               1.20.2
+pandas              1.4.3
+pyhere              1.0.0
+scipy               1.8.1
+session_info        1.0.0
+statsmodels         0.13.2
+-----
+Python 3.9.10 (main, Feb 22 2022, 16:34:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17
+-----
+Session information updated at 2023-03-14 13:54
+**** Job ends ****
+Tue Mar 14 13:54:28 EDT 2023
