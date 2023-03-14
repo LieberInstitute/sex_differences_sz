@@ -20,7 +20,7 @@ module load pandoc
 module list
 
 echo "**** Run XCI enrichment analysis ****"
-python3 ../_h/examine_sharing.py
+python3 ../_h/01_examine_sharing.py
 
 echo "**** Job ends ****"
 date
