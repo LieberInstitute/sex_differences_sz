@@ -7,7 +7,7 @@ import session_info
 from pyhere import here
 from functools import lru_cache
 from scipy.stats import fisher_exact
-from statsmodels.stats.multitest import fdrcorrection
+from statsmodels.stats.multitest import multipletests
 
 @lru_cache()
 def get_deg(tissue):
@@ -61,13 +61,13 @@ def calculate_enrichment():
                 odd_ratio, pval = cal_fishers(status, tissue, direction)
                 xci_lt.append(status); pvals.append(pval); region_lt.append(tissue)
                 oddratio_lt.append(odd_ratio); dir_lt.append(direction)
-        _, fdr = fdrcorrection(pvals) # FDR correction per comparison and version
+        _, fdr, _, _ = multipletests(pvals, method='bonferroni')
         pval_lt = np.concatenate((pval_lt, pvals))
         fdr_lt = np.concatenate((fdr_lt, fdr))
     # Generate dataframe
     return pd.DataFrame({'Tissue': region_lt, 'XCI_status': xci_lt,
                          'OR': oddratio_lt, 'PValue': pval_lt,
-                         "FDR": fdr_lt, 'Direction': dir_lt})
+                         "Bonferroni": fdr_lt, 'Direction': dir_lt})
                 
 
 def main():
