@@ -29,7 +29,7 @@ y0 <- min(df$`log10(OR)`, na.rm=TRUE)-0.1
 dotplot <- df |> 
     ggplot(aes(x=`XCI_status`, y=Direction, color=`log10(OR)`, 
                size=`-log10(Bonferroni)`)) + 
-    geom_point() + ylab('') + xlab('') + facet_grid(~Tissue) +
+    geom_point() + ylab('') + xlab('') + #facet_grid(~Tissue) +
     scale_color_gradientn(colors=c("blue", "grey", "red"), 
                           values=scales::rescale(c(y0, 0, y1)), 
                           limits=c(y0, y1)) +
@@ -42,7 +42,7 @@ dotplot <- df |>
           panel.grid = element_blank(), 
           strip.text=element_text(size=14, face="bold"))
 
-save_plot(dotplot, "dotplot_enrichment_xci", 9, 4)
+save_plot(dotplot, "dotplot_enrichment_xci", 5, 4)
 
 #### Reproducibility information
 Sys.time()
