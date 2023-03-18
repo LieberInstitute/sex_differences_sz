@@ -178,7 +178,7 @@ tile_plot <- function(region, norm=TRUE, identity=TRUE){
               panel.grid = element_blank(),
               axis.title = element_text(size=18, face="bold"))
     fn = paste0(region, "_tilePlot_",out,"_covariates")
-    save_img(tolower(tile_plot), fn, w, h)
+    save_img(tile_plot, tolower(fn), w, h)
     return(tile_plot)
 }
 
