@@ -5,9 +5,8 @@
 #$ -tc 50
 #$ -l mem_free=5G,h_vmem=5G,h_fsize=100G
 #$ -N subsampling_sexBYsz
-#$ -o ./summary.log
-#$ -e ./summary.log
-#$ -m e -M jade.benjamin@libd.org
+#$ -o ./logs/summary_$TASK_ID.log
+#$ -e ./logs/summary_$TASK_ID.log
 
 echo "**** Job starts ****"
 date
@@ -19,7 +18,10 @@ echo "Job name: ${JOB_NAME}"
 echo "Hostname: ${HOSTNAME}"
 
 ## List current modules for reproducibility
-module load R
+module load conda_R/4.2.x
+module load gcc/9.1.0
+module load pandoc
+
 module list
 
 ## Job command
