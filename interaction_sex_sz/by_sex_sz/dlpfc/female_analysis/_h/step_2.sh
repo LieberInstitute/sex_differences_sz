@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=15.0G,h_vmem=15G,h_fsize=50G
-#$ -N de_sex_tx_caudate
+#$ -N de_sex_tx_dlpfc
 #$ -o ./summary_tx.log
 #$ -e ./summary_tx.log
 

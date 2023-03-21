@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=10.0G,h_vmem=10G,h_fsize=50G
-#$ -N de_sex_gene_caudate
+#$ -N de_sex_gene_dlpfc
 #$ -o ./summary_gene.log
 #$ -e ./summary_gene.log
 

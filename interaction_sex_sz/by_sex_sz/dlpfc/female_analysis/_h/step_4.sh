@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=45.0G,h_vmem=45G,h_fsize=50G
-#$ -N de_sex_jxn_caudate
+#$ -N de_sex_jxn_dlpfc
 #$ -o ./summary_jxn.log
 #$ -e ./summary_jxn.log
 
