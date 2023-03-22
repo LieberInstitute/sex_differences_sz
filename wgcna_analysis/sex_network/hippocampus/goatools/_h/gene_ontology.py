@@ -8,22 +8,15 @@ import numpy as np
 import pandas as pd
 import collections as cx
 from pybiomart import Dataset
-from gtfparse import read_gtf
 from scipy.stats import fisher_exact
 from statsmodels.stats.multitest import multipletests
 
 # GO analysis
+from goatools.obo_parser import GODag
 from goatools.base import download_go_basic_obo
 from goatools.base import download_ncbi_associations
-from goatools.obo_parser import GODag
 from goatools.anno.genetogo_reader import Gene2GoReader
 from goatools.goea.go_enrichment_ns import GOEnrichmentStudyNS
-
-@functools.lru_cache()
-def get_gtf_genes_df():
-    gtf_df = read_gtf("/ceph/genome/human/gencode25/gtf.CHR/_m/gencode.v25.annotation.gtf")
-    return gtf_df[gtf_df["feature"] == "gene"][['gene_id', 'gene_name']]
-
 
 @functools.lru_cache()
 def get_wgcna_modules():
