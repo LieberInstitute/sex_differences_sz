@@ -1,0 +1,72 @@
+**** Job starts ****
+2023-03-22T19:14:33-0400
+**** JHPCE info ****
+User: jbenjami
+Job id: 3068757
+Job name: go_plotting
+Hostname: compute-145.cm.cluster
+
+The following have been reloaded with a version change:
+  1) python/3.9.10 => python/3.7.3
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) gcc/4.4.7                       9) R/3.6.1
+  2) stata/17          6) COMMUNITY_CENTOS7_DEFAULT_ENV  10) python/3.7.3
+  3) JHPCE_tools/1.0   7) JHPCE_CENTOS7_DEFAULT_ENV
+  4) sge/8.1.9         8) emacs/28.1
+
+ 
+
+**** Run GO plotting ****
+R[write to console]: 
+Attaching package: ‘dplyr’
+
+
+R[write to console]: The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+
+R[write to console]: The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+
+module_orange_go_enrichment
+module_magenta_go_enrichment
+module_lightcyan_go_enrichment
+module_brown_go_enrichment
+module_turquoise_go_enrichment
+module_darkgreen_go_enrichment
+module_black_go_enrichment
+module_blue_go_enrichment
+module_yellow_go_enrichment
+module_midnightblue_go_enrichment
+module_lightgreen_go_enrichment
+module_pink_go_enrichment
+module_grey_go_enrichment
+module_royalblue_go_enrichment
+module_cyan_go_enrichment
+module_greenyellow_go_enrichment
+module_salmon_go_enrichment
+module_grey60_go_enrichment
+module_tan_go_enrichment
+module_green_go_enrichment
+module_purple_go_enrichment
+module_red_go_enrichment
+module_darkred_go_enrichment
+module_lightyellow_go_enrichment
+module_darkgrey_go_enrichment
+-----
+numpy               1.21.6
+pandas              1.3.5
+rpy2                3.5.4
+session_info        1.0.0
+-----
+Python 3.7.3 (default, Sep  6 2019, 16:02:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-centos-7.9.2009-Core
+-----
+Session information updated at 2023-03-22 19:14
+**** Job ends ****
+2023-03-22T19:14:47-0400
