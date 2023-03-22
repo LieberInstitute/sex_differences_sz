@@ -15,10 +15,11 @@ echo "Job name: ${JOB_NAME}"
 echo "Hostname: ${HOSTNAME}"
 
 module load R/3.6.1
+module load python
 module list
 
 echo "**** Run GO plotting ****"
-python3  ../_h/02_plot_go.py
+python  ../_h/02_plot_go.py
 
 echo "**** Job ends ****"
 date -Is
