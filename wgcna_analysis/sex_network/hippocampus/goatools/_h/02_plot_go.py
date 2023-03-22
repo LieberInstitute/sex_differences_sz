@@ -70,7 +70,7 @@ def main():
         m = re.search(r'(\w+)', re.split(r'_', fn)[3])
         module_number = m.group(0)
         name = "Module %s" % module_number
-        filename = 'module_%s_go_enrichment' % module_number
+        filename = f'module_{module_number}_go_enrichment'
         df = pd.read_excel(fn)
         plot_go(df, name, filename)
         print(filename)
