@@ -3,7 +3,7 @@
 construct_network <- function(softpower){
   library(WGCNA)
   options(stringsAsFactors = FALSE);
-  enableWGCNAThreads(nThreads=4)
+  enableWGCNAThreads(nThreads=16)
   lnames = load(file = "01.RData")
                                         # softPower value from previous plot
                                         # power_parameter_selection.pdf
@@ -30,7 +30,7 @@ construct_network <- function(softpower){
 plot_cluster_dendrogram <- function(){
     library(WGCNA)
     options(stringsAsFactors = FALSE);
-    enableWGCNAThreads(nThreads=4)
+    enableWGCNAThreads(nThreads=16)
     load(file = "02.RData")
     pdf(file="cluster_dendrogram.pdf",height=16,width = 22)
     mergedColors = labels2colors(net$colors)
@@ -43,7 +43,7 @@ plot_cluster_dendrogram <- function(){
 correlate_with_traits <- function(){
     library(WGCNA)
     options(stringsAsFactors = FALSE)
-    enableWGCNAThreads(nThreads=4)
+    enableWGCNAThreads(nThreads=16)
     lnames = load(file = "01.RData")
     lnames = load(file = "02.RData")
     # Define numbers of genes and samples
@@ -91,7 +91,7 @@ export_eigengene_tables <- function(){
 
 ## Run analysis
 PARAM_NETWORK_TYPE = 'signed'
-doParallel::registerDoParallel(cores=4)
+doParallel::registerDoParallel(cores=16)
 
 softPower = 8
 construct_network(softPower)

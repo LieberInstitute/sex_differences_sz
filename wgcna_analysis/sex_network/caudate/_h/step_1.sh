@@ -17,7 +17,7 @@ echo "Hostname: ${HOSTNAME}"
 
 #### Load modules
 module load gcc/9.1.0
-module load R/4.0.3
+module load conda_R/4.2.x
 module load pandoc
 
 module list
