@@ -1,0 +1,195 @@
+**** Job starts ****
+2023-03-04T13:03:02-0500
+**** JHPCE info ****
+User: jbenjami
+Job id: 3025504
+Job name: softpower_caudate
+Hostname: compute-121.cm.cluster
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+Loading conda_R/4.2.x
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) gcc/9.1.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda/3-4.11.0
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) conda_R/4.2.x
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run network analysis ****
+WARNING: ignoring environment value of R_HOME
+Loading required package: limma
+[1] 26881   393
+ Flagging genes and samples with too many missing values...
+  ..step 1
+[1]   380 26881
+pickSoftThreshold: will use block size 1664.
+ pickSoftThreshold: calculating connectivity for given powers...
+   ..working on genes 1 through 1664 of 26881
+   ..working on genes 1665 through 3328 of 26881
+   ..working on genes 3329 through 4992 of 26881
+   ..working on genes 4993 through 6656 of 26881
+   ..working on genes 6657 through 8320 of 26881
+   ..working on genes 8321 through 9984 of 26881
+   ..working on genes 9985 through 11648 of 26881
+   ..working on genes 11649 through 13312 of 26881
+   ..working on genes 13313 through 14976 of 26881
+   ..working on genes 14977 through 16640 of 26881
+   ..working on genes 16641 through 18304 of 26881
+   ..working on genes 18305 through 19968 of 26881
+   ..working on genes 19969 through 21632 of 26881
+   ..working on genes 21633 through 23296 of 26881
+   ..working on genes 23297 through 24960 of 26881
+   ..working on genes 24961 through 26624 of 26881
+   ..working on genes 26625 through 26881 of 26881
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k.  max.k.
+1      1  0.00668  -4.02          0.968 1.35e+04  1.35e+04 14400.0
+2      2  0.22700 -11.90          0.851 6.92e+03  6.89e+03  7990.0
+3      3  0.72200 -14.30          0.920 3.59e+03  3.54e+03  4610.0
+4      4  0.83400 -11.00          0.959 1.89e+03  1.84e+03  2760.0
+5      5  0.87500  -8.66          0.975 1.01e+03  9.74e+02  1710.0
+6      6  0.89600  -7.05          0.982 5.46e+02  5.20e+02  1100.0
+7      7  0.90900  -5.87          0.986 3.01e+02  2.82e+02   733.0
+8      8  0.91800  -4.97          0.989 1.69e+02  1.54e+02   504.0
+9      9  0.92400  -4.30          0.992 9.69e+01  8.51e+01   358.0
+10    10  0.92400  -3.79          0.990 5.67e+01  4.75e+01   262.0
+11    11  0.92700  -3.39          0.991 3.40e+01  2.69e+01   197.0
+12    12  0.92600  -3.09          0.990 2.09e+01  1.53e+01   152.0
+13    13  0.92400  -2.84          0.987 1.32e+01  8.87e+00   119.0
+14    14  0.91300  -2.67          0.979 8.58e+00  5.17e+00    95.9
+15    15  0.92500  -2.48          0.986 5.72e+00  3.05e+00    78.2
+16    16  0.93300  -2.31          0.990 3.92e+00  1.83e+00    64.7
+17    17  0.93700  -2.18          0.988 2.76e+00  1.10e+00    54.2
+18    18  0.94700  -2.04          0.989 1.99e+00  6.74e-01    45.9
+19    19  0.96100  -1.91          0.988 1.47e+00  4.16e-01    39.2
+20    20  0.98000  -1.80          0.990 1.11e+00  2.58e-01    34.0
+21    21  0.97100  -1.76          0.974 8.56e-01  1.63e-01    31.2
+22    22  0.94300  -1.78          0.944 6.72e-01  1.04e-01    30.9
+23    23  0.87000  -1.85          0.868 5.36e-01  6.68e-02    30.6
+24    24  0.88800  -1.82          0.883 4.34e-01  4.32e-02    30.3
+25    25  0.88600  -1.80          0.871 3.56e-01  2.81e-02    30.0
+26    26  0.87700  -1.78          0.852 2.96e-01  1.85e-02    29.8
+27    27  0.88500  -1.72          0.854 2.49e-01  1.22e-02    29.5
+28    28  0.88000  -1.70          0.845 2.12e-01  8.12e-03    29.3
+29    29  0.86900  -1.66          0.834 1.82e-01  5.43e-03    29.1
+30    30  0.36000  -1.84          0.216 1.58e-01  3.67e-03    28.8
+null device 
+          1 
+[1] "2023-03-04 13:13:01 EST"
+   user  system elapsed 
+514.980  80.781 597.409 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.2 Patched (2023-03-03 r83933)
+ os       CentOS Linux 7 (Core)
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       US/Eastern
+ date     2023-03-04
+ pandoc   2.7.3 @ /jhpce/shared/jhpce/core/pandoc/2.7.3/bin/pandoc
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package          * version   date (UTC) lib source
+ AnnotationDbi      1.60.0    2022-11-01 [2] Bioconductor
+ backports          1.4.1     2021-12-13 [2] CRAN (R 4.2.1)
+ base64enc          0.1-3     2015-07-28 [2] CRAN (R 4.2.1)
+ Biobase            2.58.0    2022-11-01 [2] Bioconductor
+ BiocGenerics       0.44.0    2022-11-01 [2] Bioconductor
+ Biostrings         2.66.0    2022-11-01 [2] Bioconductor
+ bit                4.0.5     2022-11-15 [2] CRAN (R 4.2.2)
+ bit64              4.0.5     2020-08-30 [2] CRAN (R 4.2.1)
+ bitops             1.0-7     2021-04-24 [2] CRAN (R 4.2.1)
+ blob               1.2.3     2022-04-10 [2] CRAN (R 4.2.1)
+ cachem             1.0.7     2023-02-24 [2] CRAN (R 4.2.2)
+ checkmate          2.1.0     2022-04-21 [2] CRAN (R 4.2.1)
+ cli                3.6.0     2023-01-09 [2] CRAN (R 4.2.2)
+ cluster            2.1.4     2022-08-22 [3] CRAN (R 4.2.2)
+ codetools          0.2-19    2023-02-01 [3] CRAN (R 4.2.2)
+ colorspace         2.1-0     2023-01-23 [2] CRAN (R 4.2.2)
+ crayon             1.5.2     2022-09-29 [2] CRAN (R 4.2.1)
+ data.table         1.14.8    2023-02-17 [2] CRAN (R 4.2.2)
+ DBI                1.1.3     2022-06-18 [2] CRAN (R 4.2.1)
+ deldir             1.0-6     2021-10-23 [2] CRAN (R 4.2.1)
+ digest             0.6.31    2022-12-11 [2] CRAN (R 4.2.2)
+ doParallel         1.0.17    2022-02-07 [2] CRAN (R 4.2.1)
+ dplyr            * 1.1.0     2023-01-29 [2] CRAN (R 4.2.2)
+ dynamicTreeCut   * 1.63-1    2016-03-11 [1] CRAN (R 4.2.2)
+ fansi              1.0.4     2023-01-22 [2] CRAN (R 4.2.2)
+ fastcluster      * 1.2.3     2021-05-24 [2] CRAN (R 4.2.1)
+ fastmap            1.1.1     2023-02-24 [2] CRAN (R 4.2.2)
+ foreach            1.5.2     2022-02-02 [2] CRAN (R 4.2.1)
+ foreign            0.8-84    2022-12-06 [3] CRAN (R 4.2.2)
+ Formula            1.2-5     2023-02-24 [2] CRAN (R 4.2.2)
+ generics           0.1.3     2022-07-05 [2] CRAN (R 4.2.1)
+ GenomeInfoDb       1.34.9    2023-02-02 [2] Bioconductor
+ GenomeInfoDbData   1.2.9     2022-09-29 [2] Bioconductor
+ ggplot2            3.4.1     2023-02-10 [2] CRAN (R 4.2.2)
+ glue               1.6.2     2022-02-24 [2] CRAN (R 4.2.1)
+ GO.db              3.16.0    2022-09-28 [2] Bioconductor
+ gridExtra          2.3       2017-09-09 [2] CRAN (R 4.2.1)
+ gtable             0.3.1     2022-09-01 [2] CRAN (R 4.2.1)
+ here               1.0.1     2020-12-13 [2] CRAN (R 4.2.1)
+ Hmisc              4.8-0     2023-02-09 [2] CRAN (R 4.2.2)
+ htmlTable          2.4.1     2022-07-07 [2] CRAN (R 4.2.1)
+ htmltools          0.5.4     2022-12-07 [2] CRAN (R 4.2.2)
+ htmlwidgets        1.6.1     2023-01-07 [2] CRAN (R 4.2.2)
+ httr               1.4.5     2023-02-24 [2] CRAN (R 4.2.2)
+ impute             1.72.3    2023-01-19 [2] Bioconductor
+ interp             1.1-3     2022-07-13 [2] CRAN (R 4.2.1)
+ IRanges            2.32.0    2022-11-01 [2] Bioconductor
+ iterators          1.0.14    2022-02-05 [2] CRAN (R 4.2.1)
+ jpeg               0.1-10    2022-11-29 [2] CRAN (R 4.2.2)
+ KEGGREST           1.38.0    2022-11-01 [2] Bioconductor
+ knitr              1.42      2023-01-25 [2] CRAN (R 4.2.2)
+ lattice            0.20-45   2021-09-22 [3] CRAN (R 4.2.2)
+ latticeExtra       0.6-30    2022-07-04 [2] CRAN (R 4.2.1)
+ lifecycle          1.0.3     2022-10-07 [2] CRAN (R 4.2.1)
+ limma            * 3.54.2    2023-02-28 [2] Bioconductor
+ magrittr           2.0.3     2022-03-30 [2] CRAN (R 4.2.1)
+ Matrix             1.5-3     2022-11-11 [2] CRAN (R 4.2.2)
+ matrixStats        0.63.0    2022-11-18 [2] CRAN (R 4.2.2)
+ memoise            2.0.1     2021-11-26 [2] CRAN (R 4.2.1)
+ munsell            0.5.0     2018-06-12 [2] CRAN (R 4.2.1)
+ nnet               7.3-18    2022-09-28 [3] CRAN (R 4.2.2)
+ pillar             1.8.1     2022-08-19 [2] CRAN (R 4.2.1)
+ pkgconfig          2.0.3     2019-09-22 [2] CRAN (R 4.2.1)
+ png                0.1-8     2022-11-29 [2] CRAN (R 4.2.2)
+ preprocessCore     1.60.2    2023-01-19 [2] Bioconductor
+ R6                 2.5.1     2021-08-19 [2] CRAN (R 4.2.1)
+ RColorBrewer       1.1-3     2022-04-03 [2] CRAN (R 4.2.1)
+ Rcpp               1.0.10    2023-01-22 [2] CRAN (R 4.2.2)
+ RCurl              1.98-1.10 2023-01-27 [2] CRAN (R 4.2.2)
+ rlang              1.0.6     2022-09-24 [2] CRAN (R 4.2.1)
+ rpart              4.1.19    2022-10-21 [3] CRAN (R 4.2.2)
+ rprojroot          2.0.3     2022-04-02 [2] CRAN (R 4.2.1)
+ RSQLite            2.3.0     2023-02-17 [2] CRAN (R 4.2.2)
+ rstudioapi         0.14      2022-08-22 [2] CRAN (R 4.2.1)
+ S4Vectors          0.36.2    2023-02-26 [2] Bioconductor
+ scales             1.2.1     2022-08-20 [2] CRAN (R 4.2.1)
+ sessioninfo        1.2.2     2021-12-06 [2] CRAN (R 4.2.1)
+ stringi            1.7.12    2023-01-11 [2] CRAN (R 4.2.2)
+ stringr            1.5.0     2022-12-02 [2] CRAN (R 4.2.2)
+ survival           3.5-3     2023-02-12 [3] CRAN (R 4.2.2)
+ tibble             3.1.8     2022-07-22 [2] CRAN (R 4.2.1)
+ tidyselect         1.2.0     2022-10-10 [2] CRAN (R 4.2.1)
+ utf8               1.2.3     2023-01-31 [2] CRAN (R 4.2.2)
+ vctrs              0.5.2     2023-01-23 [2] CRAN (R 4.2.2)
+ WGCNA            * 1.72-1    2023-01-18 [1] CRAN (R 4.2.2)
+ withr              2.5.0     2022-03-03 [2] CRAN (R 4.2.1)
+ xfun               0.37      2023-01-31 [2] CRAN (R 4.2.2)
+ XVector            0.38.0    2022-11-01 [2] Bioconductor
+ zlibbioc           1.44.0    2022-11-01 [2] Bioconductor
+
+ [1] /users/jbenjami/R/4.2.x
+ [2] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/site-library
+ [3] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+**** Job ends ****
+2023-03-04T13:13:02-0500
