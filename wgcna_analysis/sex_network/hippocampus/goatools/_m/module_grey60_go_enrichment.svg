@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='576.00pt' height='432.00pt' viewBox='0 0 576.00 432.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='576.00' height='432.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.00' y='0.00' width='576.00' height='432.00' style='stroke-width: 1.45; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMzIwLjU4fDQ2Mi42NnwzNi4zMHwzODUuOTU='>
+    <rect x='320.58' y='36.30' width='142.07' height='349.65' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzIwLjU4fDQ2Mi42NnwzNi4zMHwzODUuOTU=)'>
+<rect x='320.58' y='36.30' width='142.07' height='349.65' style='stroke-width: 1.45; stroke: none; fill: #FFFFFF;' />
+<polyline points='338.00,385.95 338.00,36.30 ' style='stroke-width: 0.73; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='393.04,385.95 393.04,36.30 ' style='stroke-width: 0.73; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='448.09,385.95 448.09,36.30 ' style='stroke-width: 0.73; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='320.58,345.61 462.66,345.61 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='320.58,278.37 462.66,278.37 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='320.58,211.12 462.66,211.12 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='320.58,143.88 462.66,143.88 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='320.58,76.64 462.66,76.64 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='365.52,385.95 365.52,36.30 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='420.57,385.95 420.57,36.30 ' style='stroke-width: 1.45; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polygon points='450.25,76.64 456.20,70.69 462.15,76.64 456.20,82.59 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<polygon points='410.38,143.88 413.40,140.86 416.43,143.88 413.40,146.90 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<polygon points='357.09,278.37 370.25,265.21 383.41,278.37 370.25,291.52 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<polygon points='370.90,211.12 378.89,203.14 386.87,211.12 378.89,219.11 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<polygon points='344.51,345.61 356.63,333.48 368.76,345.61 356.63,357.73 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<line x1='327.04' y1='385.95' x2='327.04' y2='36.30' style='stroke-width: 1.07; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' />
+<rect x='320.58' y='36.30' width='142.07' height='349.65' style='stroke-width: 1.45; stroke: #333333;' />
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpMzIwLjU4fDQ2Mi42Nnw3LjQ3fDM2LjMw'>
+    <rect x='320.58' y='7.47' width='142.07' height='28.82' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzIwLjU4fDQ2Mi42Nnw3LjQ3fDM2LjMw)'>
+<rect x='320.58' y='7.47' width='142.07' height='28.82' style='stroke-width: 1.45; stroke: #333333; fill: #D9D9D9;' />
+<text x='391.62' y='28.45' text-anchor='middle' style='font-size: 18.00px; font-weight: bold;fill: #1A1A1A; font-family: "Liberation Sans";' textLength='151.40px' lengthAdjust='spacingAndGlyphs'>Module grey60</text>
+</g>
+<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
+<polyline points='365.52,389.69 365.52,385.95 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='420.57,389.69 420.57,385.95 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<text x='365.52' y='401.42' text-anchor='middle' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='7.64px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='420.57' y='401.42' text-anchor='middle' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='7.64px' lengthAdjust='spacingAndGlyphs'>3</text>
+<text x='313.86' y='349.98' text-anchor='end' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='220.08px' lengthAdjust='spacingAndGlyphs'>ubiquitin-protein transferase activity</text>
+<text x='313.86' y='282.74' text-anchor='end' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='285.78px' lengthAdjust='spacingAndGlyphs'>proteasome-mediated ubiquitin-dependent pr...</text>
+<text x='313.86' y='215.50' text-anchor='end' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='70.40px' lengthAdjust='spacingAndGlyphs'>ATP binding</text>
+<text x='313.86' y='148.26' text-anchor='end' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='91.22px' lengthAdjust='spacingAndGlyphs'>protein binding</text>
+<text x='313.86' y='81.02' text-anchor='end' style='font-size: 12.00px;fill: #4D4D4D; font-family: "Liberation Sans";' textLength='42.70px' lengthAdjust='spacingAndGlyphs'>cytosol</text>
+<polyline points='316.85,345.61 320.58,345.61 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='316.85,278.37 320.58,278.37 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='316.85,211.12 320.58,211.12 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='316.85,143.88 320.58,143.88 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='316.85,76.64 320.58,76.64 ' style='stroke-width: 1.45; stroke: #333333; stroke-linecap: butt;' />
+<text x='391.62' y='420.78' text-anchor='middle' style='font-size: 18.00px; font-weight: bold; font-family: "Liberation Sans";' textLength='133.08px' lengthAdjust='spacingAndGlyphs'>-Log10 (FDR)</text>
+<rect x='477.60' y='151.99' width='90.93' height='118.28' style='stroke-width: 1.45; stroke: none; fill: #FFFFFF;' />
+<text x='485.07' y='171.95' style='font-size: 15.00px; font-family: "Liberation Sans";' textLength='75.98px' lengthAdjust='spacingAndGlyphs'>geneRatio</text>
+<rect x='485.07' y='180.98' width='33.05' height='20.88' style='stroke-width: 1.45; stroke: none; fill: #FFFFFF;' />
+<polygon points='493.39,191.42 501.60,183.21 509.81,191.42 501.60,199.63 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<rect x='485.07' y='201.86' width='33.05' height='27.88' style='stroke-width: 1.45; stroke: none; fill: #FFFFFF;' />
+<polygon points='490.75,215.80 501.60,204.95 512.45,215.80 501.60,226.65 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<rect x='485.07' y='229.74' width='33.05' height='33.05' style='stroke-width: 1.45; stroke: none; fill: #FFFFFF;' />
+<polygon points='488.81,246.26 501.60,233.47 514.40,246.26 501.60,259.06 ' style='stroke-width: 0.71; stroke: none; fill: #F8766D; fill-opacity: 0.80;' />
+<text x='525.60' y='195.80' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='7.64px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='525.60' y='220.17' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='7.64px' lengthAdjust='spacingAndGlyphs'>3</text>
+<text x='525.60' y='250.64' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='7.64px' lengthAdjust='spacingAndGlyphs'>4</text>
+</g>
+</svg>
