@@ -1768,3 +1768,68 @@ Currently Loaded Modules:
  
 
 **** Run GO plotting ****
+  EXISTS: go-basic.obo
+  EXISTS: gene2go
+go-basic.obo: fmt(1.2) rel(2023-03-06) 46,579 Terms
+HMS:0:00:07.236673 342,316 annotations, 20,739 genes, 18,984 GOs, 1 taxids READ: gene2go 
+MF 18,246 annotated human genes
+CC 19,744 annotated human genes
+BP 18,632 annotated human genes
+
+Load BP Ontology Enrichment Analysis ...
+ 77% 14,667 of 19,033 population items found in association
+
+Load CC Ontology Enrichment Analysis ...
+ 82% 15,547 of 19,033 population items found in association
+
+Load MF Ontology Enrichment Analysis ...
+ 79% 14,949 of 19,033 population items found in association
+
+Runing BP Ontology Analysis: current study set of 840 IDs.
+ 86%    726 of    840 study items found in association
+100%    840 of    840 study items found in population(19033)
+Calculating 12,008 uncorrected p-values using fisher_scipy_stats
+  12,008 terms are associated with 14,627 of 19,033 population items
+   3,562 terms are associated with    726 of    840 study items
+  METHOD fdr_bh:
+       6 GO terms found significant (< 0.05=alpha) (  6 enriched +   0 purified): statsmodels fdr_bh
+      82 study items associated with significant GO IDs (enriched)
+       0 study items associated with significant GO IDs (purified)
+
+Runing CC Ontology Analysis: current study set of 840 IDs.
+ 92%    772 of    840 study items found in association
+100%    840 of    840 study items found in population(19033)
+Calculating 1,755 uncorrected p-values using fisher_scipy_stats
+   1,755 terms are associated with 15,495 of 19,033 population items
+     480 terms are associated with    772 of    840 study items
+  METHOD fdr_bh:
+      13 GO terms found significant (< 0.05=alpha) ( 12 enriched +   1 purified): statsmodels fdr_bh
+     536 study items associated with significant GO IDs (enriched)
+      21 study items associated with significant GO IDs (purified)
+
+Runing MF Ontology Analysis: current study set of 840 IDs.
+ 88%    740 of    840 study items found in association
+100%    840 of    840 study items found in population(19033)
+Calculating 4,419 uncorrected p-values using fisher_scipy_stats
+   4,419 terms are associated with 14,903 of 19,033 population items
+   1,025 terms are associated with    740 of    840 study items
+  METHOD fdr_bh:
+       5 GO terms found significant (< 0.05=alpha) (  5 enriched +   0 purified): statsmodels fdr_bh
+     580 study items associated with significant GO IDs (enriched)
+       0 study items associated with significant GO IDs (purified)
+Significant results[24] = 6 BP + 5 MF + 13 CC
+     24 items WROTE: GO_analysis_mash_brown.xlsx
+Traceback (most recent call last):
+  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/wgcna_analysis/sex_network/caudate/goatools/_m/../_h/01_gene_ontology.py", line 103, in <module>
+    main()
+  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/wgcna_analysis/sex_network/caudate/goatools/_m/../_h/01_gene_ontology.py", line 97, in main
+    run_goea(mod)
+  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/wgcna_analysis/sex_network/caudate/goatools/_m/../_h/01_gene_ontology.py", line 91, in run_goea
+    goeaobj.wr_txt(f"GO_analysis_mash_{label}.txt", goea_results_sig)
+  File "/users/jbenjami/.local/lib/python3.9/site-packages/goatools/goea/go_enrichment_ns.py", line 36, in wr_txt
+    next(iter(self.ns2objgoea.values())).wr_txt(fout_txt, goea_results, **kws)
+  File "/users/jbenjami/.local/lib/python3.9/site-packages/goatools/go_enrichment.py", line 485, in wr_txt
+    with open(fout_txt, 'w') as prt:
+PermissionError: [Errno 13] Permission denied: 'GO_analysis_mash_brown.txt'
+**** Job ends ****
+2023-03-22T19:10:14-0400
