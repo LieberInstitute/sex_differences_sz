@@ -1,29 +1,30 @@
 ## Calculate enrichment for DE genes
 
-import functools
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from pyhere import here
 import matplotlib.pyplot as plt
+from functools import lru_cache
 from scipy.stats import fisher_exact
 from statsmodels.stats.multitest import multipletests
 
-@functools.lru_cache()
+@lru_cache()
 def get_wgcna_modules():
     return pd.read_csv("../../_m/modules.csv", index_col=0)
 
 
-@functools.lru_cache()
+@lru_cache()
 def get_degs():
-    return set(pd.read_csv('../../../../../differential_expression/caudate/'+\
-                           '_m/genes/diffExpr_maleVfemale_FDR05.txt',
+    return set(pd.read_csv(here('differential_expression/caudate',
+                                '_m/genes/diffExpr_maleVfemale_FDR05.txt'),
                            sep='\t', usecols=[0], index_col=0).index)
 
 
-@functools.lru_cache()
+@lru_cache()
 def get_mhc_genes():
-    return set(pd.read_csv('../../../../../input/counts/mhc_region_genes/'+\
-                           '_m/mhc_genes.csv')['gene_id'])
+    return set(pd.read_csv(here('input/counts/mhc_region_genes',
+                                '_m/mhc_genes.csv'))['gene_id'])
 
 
 def fet(a, b, u):
