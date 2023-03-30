@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -pe local 8
-#$ -l mem_free=3.0G,h_vmem=3G,h_fsize=50G
+#$ -l mem_free=5.0G,h_vmem=5G,h_fsize=50G
 #$ -N region_tx
 #$ -o ./summary_tx.log
 #$ -e ./summary_tx.log

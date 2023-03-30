@@ -113,7 +113,7 @@ extract_de <- function(contrast, label, efit, feature){
     if(feature == "junctions"){
         top <- top |> select(!contains("Exon"))
     }
-    top$SE  <- sqrt(efit$s2.post) * efit$stdev.unscaled
+    top$SE  <- efit$sigma * pull(as.data.frame(efit$stdev.unscaled), contrast)
     top     <- top[order(top$P.Value), ]
     top.fdr <- top |> filter(adj.P.Val<=0.05)
     print(paste("Comparison for:", label))
@@ -252,7 +252,7 @@ fit_dream <- function(feature){
     L1   <- getContrast(vobj, get_model(), x$samples,
                         c("RegionDLPFC", "RegionHIPPO"))
     L2   <- getContrast(vobj, get_model(), x$samples,
-                        c("SexM:RegionDLPFC", "Sex:RegionHIPPO"))
+                        c("SexM:RegionDLPFC", "SexM:RegionHIPPO"))
                                         # combine contrasts
     L    <- cbind(L1, L2)
                                         # visualize
