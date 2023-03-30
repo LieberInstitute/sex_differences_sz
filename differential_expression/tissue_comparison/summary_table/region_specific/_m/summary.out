@@ -1,0 +1,61 @@
+**** Job starts ****
+2023-03-30T09:40:21-0400
+**** JHPCE info ****
+User: jbenjami
+Job id: 3084648
+Job name: summarize_degs
+Hostname: compute-121.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run specificity survey ****
+Tissue       Chrom_Type
+Caudate      Allosome      60
+             Autosome      36
+DLPFC        Allosome      60
+             Autosome      36
+Hippocampus  Allosome      60
+             Autosome      36
+dtype: int64
+Tissue       Chrom_Type
+Caudate      Allosome      229
+             Autosome       46
+DLPFC        Allosome      229
+             Autosome       46
+Hippocampus  Allosome      229
+             Autosome       46
+dtype: int64
+Tissue       Chrom_Type
+Caudate      Allosome      669
+             Autosome      209
+DLPFC        Allosome      669
+             Autosome      209
+Hippocampus  Allosome      669
+             Autosome      209
+dtype: int64
+Tissue       Chrom_Type
+Caudate      Allosome      461
+             Autosome       73
+DLPFC        Allosome      461
+             Autosome       73
+Hippocampus  Allosome      461
+             Autosome       73
+dtype: int64
+-----
+numpy               1.20.2
+pandas              1.4.3
+session_info        1.0.0
+-----
+Python 3.9.10 (main, Feb 22 2022, 16:34:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17
+-----
+Session information updated at 2023-03-30 09:40
+**** Job ends ****
+2023-03-30T09:40:43-0400
