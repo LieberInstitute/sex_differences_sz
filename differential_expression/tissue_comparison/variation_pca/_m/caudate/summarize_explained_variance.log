@@ -1,0 +1,8 @@
+Explained Variance (%%) of PC1: Allosomes
+All DEGs	r2: 97.4%	p-value: 1.2e-311
+Top 100 DEGs	r2: 97.4%	p-value: 2.4e-312
+Top 10 DEGs	r2: 99.6%	p-value: 0.0
+Explained Variance (%%) of PC1: Autosomes
+All DEGs	r2: 18.6%	p-value: 3.3e-19
+Top 100 DEGs	r2: 69.4%	p-value: 1.7e-102
+Top 10 DEGs	r2: 90.4%	p-value: 7.6e-201

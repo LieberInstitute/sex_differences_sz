@@ -1,0 +1,29 @@
+**** Job starts ****
+Thu Mar 23 14:03:54 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3069030
+Job name: pca_dlpfc
+Hostname: compute-103.cm.cluster
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+The following have been reloaded with a version change:
+  1) python/3.9.10 => python/3.7.3
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) R/4.0.3
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) pandoc/2.7.3
+  3) JHPCE_tools/1.0   7) emacs/28.1                     11) python/3.7.3
+  4) sge/8.1.9         8) gcc/9.1.0
+
+ 
+
+**** Run dRFEtools for predictive analysis ****
+R[write to console]: Loading required package: ggplot2
+
+**** Job ends ****
+Thu Mar 23 14:04:40 EDT 2023
