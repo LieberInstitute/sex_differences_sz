@@ -1,0 +1,40 @@
+Gene
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.989	R2 ~ 0.978	p-value < 5.1e-106
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.992	R2 ~ 0.983	p-value < 3.6e-110
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.995	R2 ~ 0.99	p-value < 4e-104
+Transcript
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.987	R2 ~ 0.975	p-value < 1.5e-245
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.989	R2 ~ 0.978	p-value < 1.6e-252
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.989	R2 ~ 0.979	p-value < 4.7e-267
+Exon
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.986	R2 ~ 0.973	p-value < 0.0
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.991	R2 ~ 0.983	p-value < 0.0
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.993	R2 ~ 0.987	p-value < 0.0
+Junction
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.972	R2 ~ 0.945	p-value < 0.0
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.986	R2 ~ 0.973	p-value < 0.0
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.978	R2 ~ 0.956	p-value < 0.0

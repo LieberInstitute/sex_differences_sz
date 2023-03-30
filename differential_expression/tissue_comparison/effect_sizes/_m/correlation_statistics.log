@@ -1,0 +1,52 @@
+Gene
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.69	R2 ~ 0.476	p-value < 1.4e-108
+Enrichment:	 Odds Ratio > 55.7	p-value < 2.3e-141
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.894	R2 ~ 0.8	p-value < 2.3e-236
+Enrichment:	 Odds Ratio > 3.4e+02	p-value < 1.1e-181
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.948	R2 ~ 0.899	p-value < 8.1e-141
+Enrichment:	 Odds Ratio > 5e+02	p-value < 9.3e-190
+Transcript
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.833	R2 ~ 0.694	p-value < 3.6e-201
+Enrichment:	 Odds Ratio > 5.08e+02	p-value < 0.0
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.88	R2 ~ 0.775	p-value < 9.4e-204
+Enrichment:	 Odds Ratio > 1.27e+03	p-value < 0.0
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.853	R2 ~ 0.728	p-value < 1.2e-191
+Enrichment:	 Odds Ratio > 1.2e+03	p-value < 0.0
+Exon
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.841	R2 ~ 0.706	p-value < 0.0
+Enrichment:	 Odds Ratio > 3e+02	p-value < 0.0
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.93	R2 ~ 0.864	p-value < 0.0
+Enrichment:	 Odds Ratio > 1.18e+03	p-value < 0.0
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.896	R2 ~ 0.802	p-value < 0.0
+Enrichment:	 Odds Ratio > 5.39e+02	p-value < 0.0
+Junction
+Caudate vs DLPFC:
+
+Correlation:	 rho > 0.675	R2 ~ 0.456	p-value < 9.3e-293
+Enrichment:	 Odds Ratio > 2.36e+02	p-value < 0.0
+Caudate vs Hippocampus:
+
+Correlation:	 rho > 0.843	R2 ~ 0.711	p-value < 1e-312
+Enrichment:	 Odds Ratio > 9.42e+02	p-value < 0.0
+DLPFC vs Hippocampus:
+
+Correlation:	 rho > 0.672	R2 ~ 0.452	p-value < 1.4e-280
+Enrichment:	 Odds Ratio > 2.57e+02	p-value < 0.0
