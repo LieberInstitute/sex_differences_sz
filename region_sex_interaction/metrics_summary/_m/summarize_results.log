@@ -1,0 +1,45 @@
+Significant DE (FDR < 0.05) in CvD
+Feature
+
+Gene:		528
+Transcript:	728
+Exon:		2780
+Junction:	694
+
+gencodeID
+
+Gene:		528
+Transcript:	636
+Exon:		789
+Junction:	3
+
+Significant DE (FDR < 0.05) in CvH
+Feature
+
+Gene:		71
+Transcript:	137
+Exon:		256
+Junction:	127
+
+gencodeID
+
+Gene:		71
+Transcript:	102
+Exon:		95
+Junction:	5
+
+Significant DE (FDR < 0.05) in DvH
+Feature
+
+Gene:		5
+Transcript:	25
+Exon:		6
+Junction:	80
+
+gencodeID
+
+Gene:		5
+Transcript:	19
+Exon:		3
+Junction:	2
+
