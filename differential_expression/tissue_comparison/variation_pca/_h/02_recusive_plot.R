@@ -28,7 +28,7 @@ merge_data <- function(){
 
 sca <- merge_data() |>
     ggscatter(x="DEGs", y="Rsq", facet.by="Region", scales="free_x",
-              panel.labs.font=list(face="bold", size=16),
+              size=2, panel.labs.font=list(face="bold", size=16),
               alpha=0.75, xlab="# of Autosomal DEGs",
               ylab="R2 of PC1\n(Residualized Expression)",
               ggtheme=theme_pubr(base_size=15, border=TRUE),

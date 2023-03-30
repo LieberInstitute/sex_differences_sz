@@ -152,7 +152,7 @@ def get_pca_df(tissue, num, fnc, FILTER):
 def plotNsave_corr(tissue, fn, num, fnc, FILTER):
     df = get_pca_df(tissue, num, fnc, FILTER)
     rho, pval = get_corr(df)
-    label = 'PC1 R2: %.2f\nP-value: %.2e' % (rho**2, pval)
+    label = 'PC1 R2: %.2f\nP-value: %.2e' % (rho, pval)
     pandas2ri.activate()
     globalenv['df'] = df
     globalenv['fn'] = fn
@@ -165,7 +165,7 @@ def plotNsave_corr(tissue, fn, num, fnc, FILTER):
         }
     }
     ## Plotting
-    pp <- ggscatter(df, x="PC1", y="PC2", color="Sex", size=1,
+    pp <- ggscatter(df, x="PC1", y="PC2", color="Sex", size=2,
                     alpha=0.75, legend="bottom", palette="npg",
                     ggtheme=theme_pubr(base_size=15, border=TRUE))
     pp <- ggpar(pp, title=ntitle) + \
