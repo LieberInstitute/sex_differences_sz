@@ -1,0 +1,42 @@
+Caudate vs MSSM:
+
+Enrichment:	 Odds Ratio > 11.4	p-value < 6.9e-60
+Significant DEGs: True
+Correlation:	 rho > 0.971	R2 ~ 0.943	p-value < 1.4e-62
+Significant DEGs: False
+Correlation:	 rho > 0.109	R2 ~ 0.0118	p-value < 3.9e-50
+DLPFC vs MSSM:
+
+Enrichment:	 Odds Ratio > 34.0	p-value < 1.7e-70
+Significant DEGs: True
+Correlation:	 rho > 0.99	R2 ~ 0.98	p-value < 2.5e-61
+Significant DEGs: False
+Correlation:	 rho > 0.198	R2 ~ 0.0392	p-value < 5.2e-166
+Hippocampus vs MSSM:
+
+Enrichment:	 Odds Ratio > 1.48e+02	p-value < 3.5e-89
+Significant DEGs: True
+Correlation:	 rho > 0.982	R2 ~ 0.965	p-value < 2.8e-48
+Significant DEGs: False
+Correlation:	 rho > 0.134	R2 ~ 0.0179	p-value < 9.4e-76
+Caudate vs NIMH:
+
+Enrichment:	 Odds Ratio > 45.6	p-value < 4.6e-81
+Significant DEGs: True
+Correlation:	 rho > 0.981	R2 ~ 0.962	p-value < 3.9e-55
+Significant DEGs: False
+Correlation:	 rho > 0.286	R2 ~ 0.0816	p-value < 0.0
+DLPFC vs NIMH:
+
+Enrichment:	 Odds Ratio > 98.3	p-value < 5.8e-77
+Significant DEGs: True
+Correlation:	 rho > 0.99	R2 ~ 0.981	p-value < 4.6e-47
+Significant DEGs: False
+Correlation:	 rho > 0.231	R2 ~ 0.0533	p-value < 2.1e-226
+Hippocampus vs NIMH:
+
+Enrichment:	 Odds Ratio > 3.86e+02	p-value < 4.6e-101
+Significant DEGs: True
+Correlation:	 rho > 0.987	R2 ~ 0.974	p-value < 1.1e-44
+Significant DEGs: False
+Correlation:	 rho > 0.246	R2 ~ 0.0606	p-value < 3.5e-257
