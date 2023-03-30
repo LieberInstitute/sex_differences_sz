@@ -91,24 +91,18 @@ def print_summary(comp, fdr=0.05):
     statement = f"Significant DE (FDR < 0.05) in {comp}"
     with open("summarize_results.log", mode=w_mode) as f:
         print(statement, file=f)
-        for chrom_type in ["Allosome", "Autosome", "Mitochondria"]:
-            print(chrom_type, file=f)
-            genes = df[(df["Chrom_Type"] == chrom_type) &
-                       (df["Type"] == "Gene")].copy()
-            trans = df[(df["Chrom_Type"] == chrom_type) &
-                       (df["Type"] == "Transcript")].copy()
-            exons = df[(df["Chrom_Type"] == chrom_type) &
-                       (df["Type"] == "Exon")].copy()
-            juncs = df[(df["Chrom_Type"] == chrom_type) &
-                       (df["Type"] == "Junction")].copy()
-            for variable in ["Feature", "gencodeID"]:
-                print(variable, file=f)
-                gg = len(set(genes[variable]))
-                tt = len(set(trans[variable]))
-                ee = len(set(exons[variable]))
-                jj = len(set(juncs[variable]))
-                print(f"\nGene:\t\t{gg}\nTranscript:\t{tt}"+\
-                      f"\nExon:\t\t{ee}\nJunction:\t{jj}\n", file=f)
+        genes = df[(df["Type"] == "Gene")].copy()
+        trans = df[(df["Type"] == "Transcript")].copy()
+        exons = df[(df["Type"] == "Exon")].copy()
+        juncs = df[(df["Type"] == "Junction")].copy()
+        for variable in ["Feature", "gencodeID"]:
+            print(variable, file=f)
+            gg = len(set(genes[variable]))
+            tt = len(set(trans[variable]))
+            ee = len(set(exons[variable]))
+            jj = len(set(juncs[variable]))
+            print(f"\nGene:\t\t{gg}\nTranscript:\t{tt}"+\
+                  f"\nExon:\t\t{ee}\nJunction:\t{jj}\n", file=f)
 
 
 def merge_data():
