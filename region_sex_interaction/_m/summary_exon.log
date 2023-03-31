@@ -1,0 +1,90 @@
+**** Job starts ****
+Sun Mar 12 23:48:21 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3048879
+Job name: region_exon
+Hostname: compute-120.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run exonral correlation ****
+WARNING: ignoring environment value of R_HOME
+[1] "Prepare data!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+[1] "There are: 416358 features left!"
+[1] "Preform voom!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+[1] "There are: 416358 features left!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+[1] "There are: 416358 features left!"
+Memory usage to store result: >31.7 Gb
+Dividing work into 100 chunks...
+
+Total:12999 s
+Warning message:
+In canCorPairs(form, x$samples) : Regression model may be problematic.
+High colinearity between variables:
+  Dx and BrNum
+  Age and BrNum
+  snpPC1 and BrNum
+  snpPC2 and BrNum
+  snpPC3 and BrNum
+  Sex and BrNum
+[1] "Fit model!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+[1] "There are: 416358 features left!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+[1] "There are: 416358 features left!"
+Memory usage to store result: >31.7 Gb
+Dividing work into 100 chunks...
+
+Total:14294 s
+Dividing work into 100 chunks...
+
+Total:100314 s
+[1] "Comparison for: sex"
+[1] "There are: 7335 DE features!"
+null device 
+          1 
+[1] "Comparison for: CvD_sex"
+[1] "There are: 2780 DE features!"
+null device 
+          1 
+[1] "Comparison for: CvH_sex"
+[1] "There are: 256 DE features!"
+null device 
+          1 
+[1] "Comparison for: DvH_sex"
+[1] "There are: 6 DE features!"
+null device 
+          1 
+[1] "Residualized expression!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+Error: cannot allocate vector of size 2.5 Gb
+Execution halted
+**** Job ends ****
+Tue Mar 14 19:05:34 EDT 2023

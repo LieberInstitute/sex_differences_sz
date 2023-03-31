@@ -1,0 +1,54 @@
+**** Job starts ****
+Sun Mar 12 11:50:57 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3048268
+Job name: region_gene
+Hostname: compute-121.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run general correlation ****
+WARNING: ignoring environment value of R_HOME
+[1] "Prepare data!"
+[1] "dlpfc"
+[1] "caudate"
+[1] "hippocampus"
+[1] "There are: 30565 features left!"
+[1] "Preform voom!"
+Memory usage to store result: >2.3 Gb
+Dividing work into 100 chunks...
+
+Total:1013 s
+Warning message:
+In canCorPairs(form, x$samples) : Regression model may be problematic.
+High colinearity between variables:
+  Dx and BrNum
+  Age and BrNum
+  snpPC1 and BrNum
+  snpPC2 and BrNum
+  snpPC3 and BrNum
+  Sex and BrNum
+[1] "Fit model!"
+Dividing work into 100 chunks...
+
+Total:7613 s
+[1] "Comparison for: sex"
+[1] "There are: 1004 DE features!"
+Error in data.table::fwrite(top, file = paste0(feature, "/diffExpr_",  : 
+  Column 18's length (580735) is not the same as column 1's length (30565)
+Calls: extract_de -> <Anonymous>
+Execution halted
+**** Job ends ****
+Sun Mar 12 14:18:22 EDT 2023
