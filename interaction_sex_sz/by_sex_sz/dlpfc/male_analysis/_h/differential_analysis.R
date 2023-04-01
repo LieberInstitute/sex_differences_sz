@@ -91,7 +91,8 @@ prep_data <- function(feature){
     rse_df = rse_df[, keepIndex]
     rse_df$Dx = factor(rse_df$Dx, levels = c("Control", "SCZD"))
     rse_df$Sex <- factor(rse_df$Sex)
-    rownames(colData(rse_df)) <- sapply(strsplit(rownames(colData(rse_df)), "_"), "[", 1)
+    rownames(colData(rse_df)) <- sapply(strsplit(rownames(colData(rse_df)), "_"),
+                                        "[", 1)
     pheno = colData(rse_df) |> as.data.frame() |> 
         inner_join(memMDS(), by=c("BrNum"="FID"), multiple="all") |> 
         distinct(RNum, .keep_all = TRUE) |>
@@ -112,18 +113,18 @@ memPREP <- memoise::memoise(prep_data)
 
 SVA_model <- function(feature){
     x <- memPREP(feature)
-    # Design matrix
+                                        # Design matrix
     mod = model.matrix(~Dx + Age + mitoRate + rRNA_rate + 
                        totalAssignedGene + RIN + Mapping_Rate + 
                        Mean3Bias + snpPC1 + snpPC2 + snpPC3, data = x$samples)
     colnames(mod) <- gsub("Dx", "", colnames(mod))
     colnames(mod) <- gsub("\\(Intercept\\)", "Intercept", colnames(mod))
-    # Null model
+                                        # Null model
     null.model = mod |> as.data.frame() |> select(-"SCZD") |> as.matrix()
     n.sv <- num.sv(x$counts, mod, method="be")
-    ## Fit SVA
+                                        # Fit SVA
     svobj <- svaseq(x$counts, mod, null.model, n.sv=n.sv)
-    ## Add to model
+                                        # Add to model
     print("")
     print(paste('Adding SV to design matrix ...', Sys.time()))
     modQsva <- cbind(mod, svobj$sv)
@@ -132,6 +133,24 @@ SVA_model <- function(feature){
     return(modQsva)
 }
 memSVA <- memoise::memoise(SVA_model)
+
+## qSV_model <- function(feature){
+##     x <- memPREP(feature)
+##                                         # Design matrix
+##     mod = model.matrix(~Dx + Age + mitoRate + rRNA_rate + 
+##                        totalAssignedGene + RIN + Mapping_Rate + 
+##                        Mean3Bias + snpPC1 + snpPC2 + snpPC3, data = x$samples)
+##     colnames(mod) <- gsub("Dx", "", colnames(mod))
+##     colnames(mod) <- gsub("\\(Intercept\\)", "Intercept", colnames(mod))
+##                                         # Load qSV
+##     qsv_file = here("input/qsvs/_m/qSV_dlpfc.csv")
+##     modQsva <- mod |> as.data.frame() |> tibble::rownames_to_column() |>
+##         inner_join(data.table::fread(qsv_file), by=c("rowname"="V1")) |> 
+##         rename_all(list(~stringr::str_replace_all(., 'PC', 'qPC'))) |> 
+##         tibble::column_to_rownames("rowname") |> as.matrix()
+##     return(modQsva)
+## }
+## memQSV <- memoise::memoise(qSV_model)
 
 get_voom <- function(feature){
     ### Preform voom
