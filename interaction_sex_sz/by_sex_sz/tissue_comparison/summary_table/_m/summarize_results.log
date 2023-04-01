@@ -1,0 +1,93 @@
+Significant DE (FDR < 0.05) in Caudate
+Female
+Feature
+
+Gene:		961
+Transcript:	60
+Exon:		205
+Junction:	76
+
+gencodeID
+
+Gene:		961
+Transcript:	59
+Exon:		79
+Junction:	2
+
+Male
+Feature
+
+Gene:		3220
+Transcript:	349
+Exon:		7427
+Junction:	2006
+
+gencodeID
+
+Gene:		3220
+Transcript:	322
+Exon:		1653
+Junction:	8
+
+Significant DE (FDR < 0.05) in DLPFC
+Female
+Feature
+
+Gene:		1
+Transcript:	0
+Exon:		0
+Junction:	0
+
+gencodeID
+
+Gene:		1
+Transcript:	0
+Exon:		0
+Junction:	0
+
+Male
+Feature
+
+Gene:		11
+Transcript:	3
+Exon:		32
+Junction:	30
+
+gencodeID
+
+Gene:		11
+Transcript:	3
+Exon:		7
+Junction:	2
+
+Significant DE (FDR < 0.05) in Hippocampus
+Female
+Feature
+
+Gene:		0
+Transcript:	3
+Exon:		21
+Junction:	19
+
+gencodeID
+
+Gene:		0
+Transcript:	3
+Exon:		18
+Junction:	2
+
+Male
+Feature
+
+Gene:		455
+Transcript:	299
+Exon:		2500
+Junction:	291
+
+gencodeID
+
+Gene:		455
+Transcript:	285
+Exon:		922
+Junction:	3
+
