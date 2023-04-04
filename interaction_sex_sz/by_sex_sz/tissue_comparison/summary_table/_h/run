@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -R y
-#$ -l mem_free=10.0G,h_vmem=10G,h_fsize=50G
+#$ -l mem_free=30.0G,h_vmem=30G,h_fsize=50G
 #$ -N 'summarize_degs'
 #$ -o ./summary.out
 #$ -e ./summary.out

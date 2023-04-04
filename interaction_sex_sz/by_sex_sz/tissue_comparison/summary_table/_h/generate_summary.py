@@ -6,6 +6,7 @@ import pandas as pd
 import session_info
 from pyhere import here
 from functools import lru_cache
+from scipy.stats import mannwhitneyu
 
 @lru_cache()
 def get_annotation(feature, tissue):
@@ -19,7 +20,42 @@ def get_annotation(feature, tissue):
               f"{tissue.lower()}/{new_feature}_annotation.txt")
     return pd.read_csv(fn, sep="\t")
 
-    
+
+@lru_cache()
+def get_resid(feature, tissue):
+    """
+    Using feature and tissue to select residualized expression.
+    """
+    return pd.read_csv(here("interaction_sex_sz/interaction_model",
+                            f"{tissue.lower()}/_m/{feature}",
+                            "residualized_expression.tsv"),
+                       sep="\t", index_col=0)\
+             .transpose()
+
+
+@lru_cache()
+def get_pheno():
+    return pd.read_csv(here("input/phenotypes/_m/phenotypes.csv"))\
+             .loc[:, ["RNum", "Sex", "Dx", "Race", "Age"]]
+
+
+@lru_cache()
+def merge_resid(feature, tissue):
+    return pd.merge(get_pheno(), get_resid(feature, tissue),
+                    left_on="RNum", right_index=True)
+
+
+@lru_cache()
+def subset_resid(tissue, feature, sex):
+    sex_dict = {"Male": "F", "Female": "M"}
+    df = merge_resid(feature, tissue)
+    ctl = df[(df["Dx"] == "Control") &
+             (df["Sex"] == sex_dict[sex])].copy()
+    sz = df[(df["Dx"] == "SCZD") &
+            (df["Sex"] == sex_dict[sex])].copy()
+    return ctl, sz
+
+
 @lru_cache()
 def get_de(feature, tissue, sex, fdr):
     """
@@ -42,30 +78,66 @@ def annotate_de(feature, tissue, sex, fdr):
     """
     Annotate DE features
     """
-    cols = ["Feature", "seqnames", "start", "end", "width", "gencodeID",
-            "ensemblID", "Symbol", "logFC", "AveExpr", "t", "P.Value",
-            "adj.P.Val", "SE", "B"]
+    cols = ["Feature", "seqnames", "gencodeID", "ensemblID",
+            "Symbol", "logFC", "P.Value", "adj.P.Val", "SE"]
     return get_de(feature, tissue, sex, fdr)\
         .merge(get_annotation(feature, tissue),
                left_index=True, right_on="name")\
         .rename(columns={"name": "Feature"})\
         .loc[:, cols].sort_values("adj.P.Val")
 
+
 @lru_cache()
-def extract_sex(feature, tissue, fdr):
-    female = annotate_de(feature, tissue, "Female", fdr)
-    male = annotate_de(feature, tissue, "Male", fdr)
-    female["Sex"] = "Female"; male["Sex"] = "Male"
-    return pd.concat([female, male], axis=0)
+def annotate_pvals(feature, tissue, sex, fdr):
+    if fdr == 1:
+        return annotate_de(feature, tissue, sex, fdr)
+    else:
+        df = annotate_de(feature, tissue, sex, fdr)
+        ctl, sz = subset_resid(tissue, feature, sex)
+        pval_df = []
+        for feature_id in df.Feature:
+            stat, pval = mannwhitneyu(ctl[feature_id], sz[feature_id])
+            pval_df.append(pval)
+        df["other_pval"] = pval_df
+        return df
+
+
+@lru_cache()
+def extract_de(feature, tissue, fdr):
+    ff = annotate_pvals(feature, tissue, "Female", fdr)
+    mm = annotate_pvals(feature, tissue, "Male", fdr)
+    ff["Sex"] = "Female"; mm["Sex"] = "Male"
+    return ff, mm
+
+
+@lru_cache()
+def get_unique(feature, tissue, fdr):
+    ff, mm = extract_de(feature, tissue, fdr)
+    ff_genes = list(set(ff.Feature) - set(mm.Feature))
+    mm_genes = list(set(mm.Feature) - set(ff.Feature))
+    ff = ff[(ff["Feature"].isin(ff_genes))].copy()
+    mm = mm[(mm["Feature"].isin(mm_genes))].copy()
+    return ff, mm
+
+
+@lru_cache()
+def filter_pvals(feature, tissue, fdr):
+    if fdr == 0.05:
+        ff, mm = get_unique(feature, tissue, fdr)
+        ff = ff[(ff["other_pval"] < fdr)].copy()
+        mm = mm[(mm["other_pval"] < fdr)].copy()
+    else:
+        ff, mm = extract_de(feature, tissue, fdr)
+    return pd.concat([ff, mm], axis=0)
 
 
 @lru_cache()
 def extract_features(tissue, fdr):
     # Extract DE from mash model
-    genes = extract_sex("genes", tissue, fdr)
-    trans = extract_sex("transcripts", tissue, fdr)
-    exons = extract_sex("exons", tissue, fdr)
-    juncs = extract_sex("junctions", tissue, fdr)
+    genes = filter_pvals("genes", tissue, fdr)
+    trans = filter_pvals("transcripts", tissue, fdr)
+    exons = filter_pvals("exons", tissue, fdr)
+    juncs = filter_pvals("junctions", tissue, fdr)
     genes["Type"] = "Gene"; trans["Type"] = "Transcript"
     exons["Type"] = "Exon"; juncs["Type"] = "Junction"
     return genes, trans, exons, juncs
@@ -121,19 +193,20 @@ def print_summary(tissue, fdr=0.05):
 
 
 def merge_data():
-    bigdata = []
+    bigdata1 = []; bigdata2 = [];
     for tissue in ["Caudate", "DLPFC", "Hippocampus"]:
         print_summary(tissue)
-        data = get_DEGs_result_by_tissue(tissue, 1)
-        bigdata.append(data)
-    return pd.concat(bigdata)
+        data2 = get_DEGs_result_by_tissue(tissue, 0.05)
+        data1 = get_DEGs_result_by_tissue(tissue, 1)
+        bigdata1.append(data1); bigdata2.append(data2)
+    return pd.concat(bigdata1), pd.concat(bigdata2)
 
 
 def main():
-    df = merge_data()
+    df1, df2 = merge_data()
     # Summary
     print("\nSummary:")
-    gene = df[(df["Type"] == "Gene") & (df["adj.P.Val"] < 0.05)]
+    gene = df2[(df2["Type"] == "Gene")].copy()
     ff = gene[(gene["Sex"] == "Female")].copy()
     mm = gene[(gene["Sex"] == "Male")].copy()
     print("Unique DEGs (Female): %d" %
@@ -143,14 +216,13 @@ def main():
     print(gene.groupby(["Tissue", "Sex", "Direction"]).size())
     # Output
     ## Full data
-    df.sort_values(["Tissue", "Sex", "Type", "P.Value"])\
-      .to_csv("differential_expression_schizophrenia_by_sex_4features.txt.gz",
-              sep='\t', index=False)
+    df1.sort_values(["Tissue", "Sex", "Type", "P.Value"])\
+       .to_csv("differential_expression_schizophrenia_by_sex_4features.txt.gz",
+               sep='\t', index=False)
     ## FDR significant
-    df[(df["adj.P.Val"] < 0.05)]\
-        .sort_values(["Tissue", "Sex", "Type", "P.Value"])\
-        .to_csv("differential_expression_schizophrenia_by_sex_4features.sig.txt.gz",
-                sep='\t', index=False)
+    df2.sort_values(["Tissue", "Sex", "Type", "P.Value"])\
+       .to_csv("differential_expression_schizophrenia_by_sex_4features.sig.txt.gz",
+               sep='\t', index=False)
     # Session infomation
     session_info.show()
 
