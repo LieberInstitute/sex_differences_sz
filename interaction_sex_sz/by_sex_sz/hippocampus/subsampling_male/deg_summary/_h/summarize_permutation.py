@@ -23,10 +23,11 @@ def get_female_deg():
 def summarize_permutation(df):
     xx = df.groupby("Permutation").size()\
            .reset_index().rename(columns={0:"DEGs"})\
-           .merge(pd.DataFrame({"Permutation": [str(x).zfill(2) for x in range(1,11)]}), 
+           .merge(pd.DataFrame({"Permutation":
+                                [str(x).zfill(2) for x in range(1,11)]}), 
                   on="Permutation", how="outer")\
            .fillna(0).sort_values("Permutation")
-    print("Median: %f" % xx.DEGs.median())
+    print(f"Median: {xx.DEGs.median()}")
     print(xx.DEGs.describe())
 
 

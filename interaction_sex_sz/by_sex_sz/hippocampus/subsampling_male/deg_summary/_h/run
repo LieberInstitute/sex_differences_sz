@@ -3,7 +3,6 @@
 #$ -N subsampling_summary
 #$ -o ./summary.log
 #$ -e ./summary.log
-#$ -m e
 
 echo "**** Job starts ****"
 date
@@ -19,7 +18,7 @@ module list
 
 echo "**** Run general permutation summary ****"
 
-python ../_h/summarize_permutation.py
+python3 ../_h/summarize_permutation.py
 
 echo "**** Job ends ****"
 date
