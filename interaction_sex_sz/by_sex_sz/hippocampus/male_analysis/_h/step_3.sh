@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -l mem_free=35.0G,h_vmem=35G,h_fsize=50G
-#$ -N de_sex_exon_caudate
+#$ -N de_sex_exon_hippocampus
 #$ -o ./summary_exon.log
 #$ -e ./summary_exon.log
 
