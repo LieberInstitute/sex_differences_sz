@@ -28,7 +28,7 @@ subset_regions <- function(tissue1, tissue2, sex){
                 tissue2=filter(df2, gencodeID %in% genes)))
 }
 
-run_rrho <- function(tissue1, tissue2, sex){
+run_rrho <- function(tissue1, tissue2, sex, mmax){
     lt       <- subset_regions(tissue1, tissue2, sex)
     rrho_obj <- RRHO2_initialize(lt[["tissue1"]], lt[["tissue2"]],
                                  labels=c(tissue1, tissue2),
@@ -36,12 +36,12 @@ run_rrho <- function(tissue1, tissue2, sex){
     outfile  <- paste("rrho_heatmap", sex, tissue1, tissue2,
                       "pdf", sep=".")
     pdf(file = tolower(outfile), width = 10, height = 10)
-    RRHO2_heatmap(rrho_obj, maximum=600, minimum=0,
+    RRHO2_heatmap(rrho_obj, maximum=mmax, minimum=0,
                   colorGradient=viridis::viridis(100))
     dev.off()
 }
 
-within_tissue_rrho <- function(tissue){
+within_tissue_rrho <- function(tissue, mmax){
     df1 <- filter(subset_sex("Female"), Tissue == tissue) |>
         select(-Tissue)
     df2 <- filter(subset_sex("Male"), Tissue == tissue) |>
@@ -53,21 +53,26 @@ within_tissue_rrho <- function(tissue){
                                  log10.ind=TRUE)
     outfile  <- paste0("rrho_sex_comparison.",tissue,".pdf")
     pdf(file = tolower(outfile), width = 10, height = 10)
-    RRHO2_heatmap(rrho_obj, maximum=600, minimum=0,
+    RRHO2_heatmap(rrho_obj, maximum=mmax, minimum=0,
                   colorGradient=viridis::viridis(100))
     dev.off()
 }
 
 ####### MAIN
-for(sex in c("Female", "Male")){
-    run_rrho("Caudate", "DLPFC", sex)
-    run_rrho("Caudate", "Hippocampus", sex)
-    run_rrho("DLPFC", "Hippocampus", sex)
-}
+sex = "Female"; mmax = 350
+run_rrho("Caudate", "DLPFC", sex, mmax)
+run_rrho("Caudate", "Hippocampus", sex, mmax)
+run_rrho("DLPFC", "Hippocampus", sex, mmax)
 
-within_tissue_rrho("Caudate")
-within_tissue_rrho("DLPFC")
-within_tissue_rrho("Hippocampus")
+sex = "Male"; mmax = 550
+run_rrho("Caudate", "DLPFC", sex, mmax)
+run_rrho("Caudate", "Hippocampus", sex, mmax)
+run_rrho("DLPFC", "Hippocampus", sex, mmax)
+
+mmax = 1000
+within_tissue_rrho("Caudate", mmax)
+within_tissue_rrho("DLPFC", mmax)
+within_tissue_rrho("Hippocampus", mmax)
 
 #### Reproducibility information
 Sys.time()
