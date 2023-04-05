@@ -1,0 +1,31 @@
+**** Job starts ****
+Wed Apr  5 18:45:52 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3099903
+Job name: subsampling_summary
+Hostname: compute-124.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run general permutation summary ****
+Median: 3.0
+count     313.000000
+mean       22.805112
+std        89.124033
+min         0.000000
+25%         1.000000
+50%         3.000000
+75%        10.000000
+max      1086.000000
+Name: DEGs, dtype: float64
+There are 1 DEGs with females!
+**** Job ends ****
+Wed Apr  5 18:50:43 EDT 2023
