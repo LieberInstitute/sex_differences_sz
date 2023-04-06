@@ -3,7 +3,6 @@
 #$ -N permutation_summary
 #$ -o ./summary.log
 #$ -e ./summary.log
-#$ -m e
 
 echo "**** Job starts ****"
 date
@@ -16,20 +15,14 @@ echo "Hostname: ${HOSTNAME}"
 
 ## List current modules for reproducibility
 module load pandoc
-module load tex
-module load R
+module load gcc/9.1.0
+module load conda_R/4.2.x
+
 module list
 
 echo "**** Run permutation summary: subsampling male only ****"
 
-for NOTEBOOK in main; do
-    cp ../_h/${NOTEBOOK}.ipynb tmp_${NOTEBOOK}.ipynb
-    jupyter-nbconvert --execute --ExecutePreprocessor.timeout=-1 \
-                      --to notebook --stdout tmp_${NOTEBOOK}.ipynb > ${NOTEBOOK}.ipynb
-    jupyter nbconvert --to markdown ${NOTEBOOK}.ipynb
-    jupyter nbconvert --to html ${NOTEBOOK}.ipynb
-    rm -f tmp_${NOTEBOOK}.ipynb
-done
+Rscript ../_h/plot_permutations.R
 
 echo "**** Job ends ****"
 date
