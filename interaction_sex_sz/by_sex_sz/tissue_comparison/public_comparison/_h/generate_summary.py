@@ -36,7 +36,7 @@ def get_qin():
 
 def print_summary(tissue):
     df1 = get_specific_deg()[(get_specific_deg()["Tissue"] == tissue)].copy()
-    df2 = get_deg()[(get_specific_deg()["Tissue"] == tissue)].copy()
+    df2 = get_deg()[(get_deg()["Tissue"] == tissue)].copy()
     qin = get_qin().loc[:, ["Symbol", "Direction"]]
     tot = set(qin.Symbol)
     if tissue == "Caudate":
