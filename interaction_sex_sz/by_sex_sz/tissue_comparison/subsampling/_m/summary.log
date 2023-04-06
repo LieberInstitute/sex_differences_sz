@@ -1,10 +1,10 @@
 **** Job starts ****
-Wed Apr  5 20:43:42 EDT 2023
+Thu Apr  6 07:56:48 EDT 2023
 **** JHPCE info ****
 User: jbenjami
-Job id: 3099947
+Job id: 3100560
 Job name: permutation_summary
-Hostname: compute-122.cm.cluster
+Hostname: compute-124.cm.cluster
 
 The following have been reloaded with a version change:
   1) gcc/4.4.7 => gcc/9.1.0
@@ -43,12 +43,12 @@ WARNING: ignoring environment value of R_HOME
 1 Caudate     489.      347 455. 
 2 DLPFC         7.15      0  50.9
 3 Hippocampus  58.7       1 208. 
-[1] "2023-04-05 20:43:56 EDT"
+[1] "2023-04-06 07:56:59 EDT"
    user  system elapsed 
-  4.714   0.430  12.210 
+  3.784   0.335  10.048 
 ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
- version  R version 4.2.3 Patched (2023-03-29 r84167)
+ version  R version 4.2.3 Patched (2023-03-29 r84175)
  os       CentOS Linux 7 (Core)
  system   x86_64, linux-gnu
  ui       X11
@@ -56,7 +56,7 @@ WARNING: ignoring environment value of R_HOME
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       US/Eastern
- date     2023-04-05
+ date     2023-04-06
  pandoc   2.19.2 @ /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/bin/pandoc
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -110,4 +110,4 @@ WARNING: ignoring environment value of R_HOME
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 **** Job ends ****
-Wed Apr  5 20:43:58 EDT 2023
+Thu Apr  6 07:57:00 EDT 2023

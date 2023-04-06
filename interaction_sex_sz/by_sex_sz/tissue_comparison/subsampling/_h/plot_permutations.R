@@ -53,7 +53,7 @@ cal_significant <- function(){
                                         # Z-score
         q <- cal_zscore(region); z_scores <- c(z_scores, q)
                                         # Convert to p-value
-        two_tail <- c(two_tail, 2*pnorm(q, mean=0, sd=1, lower.tail=TRUE))
+        two_tail <- c(two_tail, 2*pnorm(q, mean=0, sd=1, lower.tail=FALSE))
     }
     return(data.frame("Tissue"=tissues, "Z_score"=z_scores,
                       "P_Value"=two_tail))
