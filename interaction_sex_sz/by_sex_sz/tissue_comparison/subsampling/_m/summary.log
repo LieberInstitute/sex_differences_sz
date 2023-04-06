@@ -1,8 +1,8 @@
 **** Job starts ****
-Thu Apr  6 07:56:48 EDT 2023
+Thu Apr  6 08:00:43 EDT 2023
 **** JHPCE info ****
 User: jbenjami
-Job id: 3100560
+Job id: 3100561
 Job name: permutation_summary
 Hostname: compute-124.cm.cluster
 
@@ -43,9 +43,9 @@ WARNING: ignoring environment value of R_HOME
 1 Caudate     489.      347 455. 
 2 DLPFC         7.15      0  50.9
 3 Hippocampus  58.7       1 208. 
-[1] "2023-04-06 07:56:59 EDT"
+[1] "2023-04-06 08:00:50 EDT"
    user  system elapsed 
-  3.784   0.335  10.048 
+  4.333   0.281   5.831 
 ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.2.3 Patched (2023-03-29 r84175)
@@ -110,4 +110,4 @@ WARNING: ignoring environment value of R_HOME
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 **** Job ends ****
-Thu Apr  6 07:57:00 EDT 2023
+Thu Apr  6 08:00:50 EDT 2023
