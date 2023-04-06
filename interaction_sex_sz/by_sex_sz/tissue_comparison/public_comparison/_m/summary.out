@@ -1,0 +1,28 @@
+**** Job starts ****
+2023-04-06T10:21:51-0400
+**** JHPCE info ****
+User: jbenjami
+Job id: 3100627
+Job name: overlap_qin
+Hostname: compute-145.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) gcc/4.4.7                       9) emacs/28.1
+  2) stata/17          6) COMMUNITY_CENTOS7_DEFAULT_ENV  10) pandoc/2.7.3
+  3) JHPCE_tools/1.0   7) JHPCE_CENTOS7_DEFAULT_ENV
+  4) sge/8.1.9         8) python/3.9.10
+
+ 
+
+**** Run summarize results ****
+-----
+pandas              1.4.3
+pyhere              1.0.0
+session_info        1.0.0
+-----
+Python 3.9.10 (main, Feb 22 2022, 16:34:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17
+-----
+Session information updated at 2023-04-06 10:22
+**** Job ends ****
+2023-04-06T10:22:10-0400

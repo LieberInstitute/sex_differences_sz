@@ -1,0 +1,73 @@
+Caudate overlap with Qin et al.
+Female
+
+Specific:	1 (2.2%;['PARD3'])
+  Symbol Direction_qin  Direction_bs
+0  PARD3          1.08           1.0
+
+General:	4 (8.7%;['PARD3', 'CD99', 'ABCG2', 'GABARAPL1'])
+      Symbol Direction_qin  Direction_bs
+0      ABCG2         −1.29          -1.0
+1  GABARAPL1         −1.17           1.0
+2       CD99          1.18           1.0
+3      PARD3          1.08           1.0
+Male
+
+Specific:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+
+General:	5 (10.9%;['CD99', 'USE1', 'LIN7B', 'GABARAPL1', 'ABCG2'])
+      Symbol Direction_qin  Direction_bs
+0      ABCG2         −1.29          -1.0
+1  GABARAPL1         −1.17           1.0
+2      LIN7B         −1.08          -1.0
+3       USE1         −1.07          -1.0
+4       CD99          1.18           1.0
+DLPFC overlap with Qin et al.
+Female
+
+Specific:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+
+General:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+Male
+
+Specific:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+
+General:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+Hippocampus overlap with Qin et al.
+Female
+
+Specific:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+
+General:	0 (0.0%;[])
+Empty DataFrame
+Columns: [Symbol, Direction_qin, Direction_bs]
+Index: []
+Male
+
+Specific:	2 (4.3%;['ABCG2', 'USE1'])
+  Symbol Direction_qin  Direction_bs
+0  ABCG2         −1.29          -1.0
+1   USE1         −1.07          -1.0
+
+General:	2 (4.3%;['ABCG2', 'USE1'])
+  Symbol Direction_qin  Direction_bs
+0  ABCG2         −1.29          -1.0
+1   USE1         −1.07          -1.0
