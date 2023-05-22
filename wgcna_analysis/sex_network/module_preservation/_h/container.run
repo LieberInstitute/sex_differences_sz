@@ -1,0 +1,1 @@
+python /ceph/users/apua/projects/ch-run-wrapper/ch-run-wrapper/ch_run_wrapper/__init__.py --no-home --private-tmp --bind=/ceph --squashfs-image '/ceph/projects/generic_containers/bioarchlinux_arthur/_m/bioarchlinux_arthur.squashfs' --cd="`pwd`" -- init.sh $@
