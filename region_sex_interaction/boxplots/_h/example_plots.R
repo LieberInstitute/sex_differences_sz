@@ -11,17 +11,27 @@ ggplot_save <- function(p, fn, w=7, h=7){
     }
 }
 
+get_sex_de <- function(){
+    fn <- here::here("differential_expression/tissue_comparison",
+                     "summary_table/_m",
+                     "differential_expression_analysis_4features_sex.txt.gz")
+    return(data.table::fread(fn) |> filter(Type == "Gene") |>
+           group_by(Feature) |> summarise(n = n()) |>
+           filter(n == 3) |> as.data.frame())
+}
+memSEX <- memoise::memoise(get_sex_de)
+
 get_de <- function(){
     fn <- paste0("../../metrics_summary/_m/",
                  "differential_expression_region_interaction_sex_4features.txt")
-    return(data.table::fread(fn) |> filter(Type == "Gene") |>
-           arrange(Comp, adj.P.Val) |>
-           mutate(Direction = sign(t)) |>
+    return(data.table::fread(fn) |>
+           filter(Type == "Gene", Feature %in% memSEX()$Feature) |>
+           arrange(Comp, adj.P.Val) |> mutate(Direction = sign(t)) |>
            select(Comp, Feature, Symbol, logFC,
                   adj.P.Val, Direction) |>
            group_by(Comp, Direction) |> slice(1) |>
            as.data.frame() |> select(Feature, Symbol) |>
-           distinct() |> filter(Symbol != "ENSG00000285756"))
+           distinct())
 }
 
 get_pheno <- function(){
@@ -55,13 +65,13 @@ merge_data <- function(){
 
 plot_results <- function(){
     df  <- merge_data()
-    y0  <- round(min(df$resid)) - 0.1;
-    y1  <- round(max(df$resid)) + 0.1;
+    y0  <- round(min(df$resid)) - 0.5;
+    y1  <- round(max(df$resid)) + 0.5;
     bxp <- ggboxplot(df, x="Region", y="resid", color="Sex",
                      add="jitter", facet.by=c("Symbol"), palette="npg",
                      panel.labs.font=list(face='bold', size=14),
-                     ylim=c(y0,y1), xlab="", ylab="Residualized Expression",
-                     add.params=list(alpha=0.5), scales="free_y",
+                     ylim=c(y0, y1), xlab="", ylab="Residualized Expression",
+                     add.params=list(alpha=0.5), #scales="free_y",
                      legend="bottom", outlier.shape=NA,
                      ggtheme=theme_pubr(base_size=15, border=TRUE)) +
         font("xy.title", face="bold", size=16) +
@@ -72,7 +82,7 @@ plot_results <- function(){
 #### MAIN
 bxp     <- plot_results()
 outfile <- 'region_sex_interaction'
-ggplot_save(bxp, outfile, 12, 5)
+ggplot_save(bxp, outfile, 11, 5)
 
 
 #### Reproducility
