@@ -160,7 +160,7 @@ tile_plot <- function(region, norm=TRUE, identity=TRUE){
             ggplot(aes(x = Covariate, y = PC, fill = log.p.bonf,
                        label=ifelse(p.bonf.sig,format(round(log.p.bonf,1),
                                                       nsmall=1), "")))
-        h = 10; w = 12; limits = c(0, 100)
+        h = 12; w = 12; limits = c(0, 100)
         if(norm){
             ylabel = "Normalized Expression"; out = "norm"
         } else {
@@ -173,10 +173,10 @@ tile_plot <- function(region, norm=TRUE, identity=TRUE){
         viridis::scale_fill_viridis(name="-log10(p-value Bonf)",
                                     option="magma",
                                     direction=-1, limits=limits) +
-        labs(x=xlabel, y=ylabel) + ggpubr::theme_pubr(base_size = 15) +
+        labs(x=xlabel, y=ylabel) + ggpubr::theme_pubr(base_size = 20) +
         theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1),
               panel.grid = element_blank(),
-              axis.title = element_text(size=18, face="bold"))
+              axis.title = element_text(face="bold"))
     fn = paste0(region, "_tilePlot_",out,"_covariates")
     save_img(tile_plot, tolower(fn), w, h)
     return(tile_plot)
