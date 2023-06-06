@@ -1,10 +1,10 @@
 **** Job starts ****
-Sat Mar 18 16:33:13 EDT 2023
+Sat Mar 18 17:37:24 EDT 2023
 **** JHPCE info ****
 User: jbenjami
-Job id: 3059783
+Job id: 3059812
 Job name: corr_variables
-Hostname: compute-145.cm.cluster
+Hostname: compute-144.cm.cluster
 Loading conda_R/4.2.x
 
 The following have been reloaded with a version change:
@@ -107,9 +107,9 @@ Caused by warning in `summary.lm()`:
 ! essentially perfect fit: summary may be unreliable
 ℹ Run `dplyr::last_dplyr_warnings()` to see the 31 remaining warnings. 
 [1] "Reproducibility information:"
-[1] "2023-03-18 16:35:30 EDT"
+[1] "2023-03-18 17:39:40 EDT"
    user  system elapsed 
-129.428   3.075 135.233 
+125.102   3.078 135.076 
 ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.2.3 Patched (2023-03-15 r84003)
@@ -192,4 +192,4 @@ Caused by warning in `summary.lm()`:
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 **** Job ends ****
-Sat Mar 18 16:35:30 EDT 2023
+Sat Mar 18 17:39:41 EDT 2023
