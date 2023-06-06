@@ -239,9 +239,13 @@ def main_loop(feature, tissue):
     Y = Y.select(pl.col("Sex"))
     skf = StratifiedKFold(n_splits=10, shuffle=True, random_state=20230222)
     skf.get_n_splits(X.to_numpy(), Y.to_numpy())
-    optimize_rf(X.to_numpy(), Y.to_numpy(), features, cla,
-                skf, outdir, feature)
-    frac = 0.30; step_size = 0.04; fold = 0
+    try: 
+        optimize_rf(X.to_numpy(), Y.to_numpy(), features, cla,
+                    skf, outdir, feature)
+        frac = 0.30; step_size = 0.04; fold = 0
+    except ValueError:
+        ## Default parameters
+        frac = 0.30; step_size = 0.04; fold = 0
     fields = ['n_features_all_features', 'train_oob_score_acc_all_features',
               'train_oob_score_nmi_all_features', 'train_oob_score_roc_all_features',
               'n_max', 'n_features', 'train_oob_score_nmi', 'train_oob_score_acc',

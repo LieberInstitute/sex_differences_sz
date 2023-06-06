@@ -1,6 +1,6 @@
 #!/bin/bash
 #$ -cwd
-#$ -l mem_free=20.0G,h_vmem=20G,h_fsize=50G
+#$ -l mem_free=30.0G,h_vmem=30G,h_fsize=50G
 #$ -N dRFE_exon_caudate
 #$ -o ./summary_exon.log
 #$ -e ./summary_exon.log
