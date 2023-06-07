@@ -71,15 +71,16 @@ def plotNsave_corr(feature, tissue1, tissue2):
         }
     }
     ## Plotting
-    xlab = paste0("Effect Size\n(", tissue1, ")")
-    ylab = paste0("Effect Size\n(", tissue2, ")")
+    xlab = paste0("Effect Size (", tissue1, ")")
+    ylab = paste0("Effect Size (", tissue2, ")")
     fn = tolower(paste(feature, "effectsize_scatter", tissue1, tissue2, sep="."))
     pp = ggpubr::ggscatter(df, x=tissue1, y=tissue2, add="reg.line", size=1,
                            xlab=xlab, ylab=ylab,panel.labs.font=list(face="bold"),
                            add.params=list(color="blue", fill="lightgray"),
                            conf.int=TRUE, cor.coef=TRUE, cor.coef.size=3,
                            cor.method="spearman", cor.coeff.args=list(label.sep="\n"),
-                           ggtheme=ggpubr::theme_pubr(base_size=15), ncol=3)
+                           ggtheme=ggpubr::theme_pubr(base_size=15), ncol=3) +
+        ggpubr::font("xy.title", face="bold", size=16)
     save_plot(pp, fn, 6, 6)
     ''')
 
