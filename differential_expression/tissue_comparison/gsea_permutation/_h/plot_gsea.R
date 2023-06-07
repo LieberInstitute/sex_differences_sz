@@ -49,7 +49,7 @@ plot_GO <- function(){
 
 #### MAIN
 gg = plot_GO()
-save_plot(gg, "sex_differences_GSEA_top10_stacked", 10, 6)
+save_plot(gg, "sex_differences_GSEA_top10_stacked", 8, 6)
 
 #### Reproducibility information
 Sys.time()
