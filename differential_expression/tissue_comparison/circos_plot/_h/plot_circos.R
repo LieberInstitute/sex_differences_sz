@@ -22,8 +22,7 @@ plot_circos <- function(caudate, dlpfc, hippo){
                         title_position="topleft", title="Sex Bias",
                         background="#FFFFFF")
     circos.clear() # clear plot if there is any
-    circos.par("start.degree" = 0, "cell.padding" = c(0, 0, 0, 0),
-               "track.height" = 0.15) # rotate 90 degrees
+    circos.par("start.degree" = 90) # rotate 90 degrees
     # initialize with ideogram
     # use hg38, default is hg19
     circos.initializeWithIdeogram(species="hg38")
@@ -56,10 +55,8 @@ caudate <- extract_bed("Caudate")
 dlpfc   <- extract_bed("DLPFC")
 hippo   <- extract_bed("Hippocampus")
                                         # plot
-pdf(file = paste0("significant_circos_plot.pdf"),
-    width = 10, height = 10)
-plot_circos(caudate, dlpfc, hippo)
-dev.off()
+R.devices::devEval("pdf", name="significant_circos_plot",
+                   {plot_circos(caudate, dlpfc, hippo)})
 
 #### Reproducibility information
 Sys.time()
