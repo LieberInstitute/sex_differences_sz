@@ -1,0 +1,10 @@
+Tissue	ONT	SemSim
+Caudate	BP	0.42
+DLPFC	BP	0.766
+Hippocampus	BP	0.705
+Caudate	CC	0.709
+DLPFC	CC	0.493
+Hippocampus	CC	0.763
+Caudate	MF	0.385
+DLPFC	MF	0.312
+Hippocampus	MF	0.643
