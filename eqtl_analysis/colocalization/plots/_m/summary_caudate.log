@@ -1,272 +1,122 @@
 **** Job starts ****
-Wed Sep 14 08:57:01 EDT 2022
+Wed May 31 14:42:56 EDT 2023
 **** JHPCE info ****
 User: jbenjami
-Job id: 9931367
+Job id: 3212104
 Job name: coloc_plots_caudate
-Hostname: compute-093.cm.cluster
+Hostname: compute-121.cm.cluster
 Loading LIBD module for plink/1.90b6.6
 
+The following have been reloaded with a version change:
+  1) python/3.9.10 => python/3.7.3
+
+
 Currently Loaded Modules:
-  1) matlab/R2019a     5) gcc/4.4.7                       9) emacs/28.1
-  2) stata/17          6) COMMUNITY_CENTOS7_DEFAULT_ENV  10) plink/1.90b6.6
-  3) JHPCE_tools/1.0   7) JHPCE_CENTOS7_DEFAULT_ENV      11) R/4.0.3
-  4) sge/8.1.9         8) python/3.7.3
+  1) matlab/R2019a     5) gcc/4.4.7                       9) plink/1.90b6.6
+  2) stata/17          6) COMMUNITY_CENTOS7_DEFAULT_ENV  10) R/4.0.3
+  3) JHPCE_tools/1.0   7) JHPCE_CENTOS7_DEFAULT_ENV      11) python/3.7.3
+  4) sge/8.1.9         8) emacs/28.1
 
  
 
 **** Run eQTpLot ****
-caudate ENSG00000006744.18 17 12992391 13018187
+caudate ENSG00000287222.1 8 143829518 143832861
 PLINK v1.90b6.6 64-bit (10 Oct 2018)           www.cog-genomics.org/plink/1.9/
 (C) 2005-2018 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to shared_snps_ENSG00000006744.18.log.
+Logging to shared_snps_ENSG00000287222.1.log.
 Options in effect:
   --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed
-  --extract snps_ENSG00000006744.18.txt
-  --keep-fam /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/prep_eqtl_analysis/by_sex/caudate/female/_m/keepFam.txt
+  --extract snps_ENSG00000287222.1.txt
+  --keep-fam /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/eqtl_analysis/colocalization/plots/_m/caudate/female/../../../../../../prep_eqtl_analysis/by_sex/caudate/female/_m/keepFam.txt
   --ld-window-r2 0
-  --out shared_snps_ENSG00000006744.18
+  --out shared_snps_ENSG00000287222.1
   --r2 inter-chr
   --threads 4
   --write-snplist
 
-257856 MB RAM detected; reserving 128928 MB for main workspace.
-Allocated 9679 MB successfully, after larger attempt(s) failed.
+1031603 MB RAM detected; reserving 515801 MB for main workspace.
+Allocated 9189 MB successfully, after larger attempt(s) failed.
 6816103 variants loaded from .bim file.
 2222 people (0 males, 0 females, 2222 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to shared_snps_ENSG00000006744.18.nosex .
---extract: 1073 variants remaining.
---keep-fam: 134 people remaining.
+Ambiguous sex IDs written to shared_snps_ENSG00000287222.1.nosex .
+--extract: 493 variants remaining.
+--keep-fam: 129 people remaining.
 Using up to 4 threads (change this with --threads).
-Before main variant filters, 134 founders and 0 nonfounders present.
+Before main variant filters, 129 founders and 0 nonfounders present.
 Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
-1073 variants and 134 people pass filters and QC.
+493 variants and 129 people pass filters and QC.
 Note: No phenotypes present.
-List of variant IDs written to shared_snps_ENSG00000006744.18.snplist .
---r2 inter-chr to shared_snps_ENSG00000006744.18.ld ... 0% [processing]
-Error: Failed to create thread.
-sed: can't read shared_snps_ENSG00000006744.18.ld: No such file or directory
-Traceback (most recent call last):
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 154, in <module>
-    main(args)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 132, in main
-    args.sex)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 93, in get_ld_by_tissue
-    return get_ld(fn_fam, eqtl_df, gwas_df, "%s" % (label))
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 73, in get_ld
-    return pd.read_csv("shared_snps_%s.ld" % label, sep='\t', usecols=[*range(7)])
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
-    return func(*args, **kwargs)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
-    return _read(filepath_or_buffer, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
-    self._engine = self._make_engine(self.engine)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
-    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
-    self._open_handles(src, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
-    errors=kwds.get("encoding_errors", "strict"),
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
-    newline="",
-FileNotFoundError: [Errno 2] No such file or directory: 'shared_snps_ENSG00000006744.18.ld'
-WARNING: ignoring environment value of R_HOME
-Error in data.table::fread(fn, drop = "V8") : 
-  File 'shared_snps_ENSG00000006744.18.ld' does not exist or is non-readable. getwd()=='/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/eqtl_analysis/colocalization/plots/_m/caudate/female'
-Calls: get_ld -> <Anonymous>
-Execution halted
-caudate ENSG00000234840.1 9 22646200 22824213
+List of variant IDs written to shared_snps_ENSG00000287222.1.snplist .
+--r2 inter-chr to shared_snps_ENSG00000287222.1.ld ... 0% [processing]writing]             done.
+-----
+numpy               1.21.6
+pandas              1.3.5
+pyhere              1.0.0
+rpy2                3.5.4
+session_info        1.0.0
+-----
+Python 3.7.3 (default, Sep  6 2019, 16:02:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-centos-7.9.2009-Core
+-----
+Session information updated at 2023-05-31 14:44
+caudate ENSG00000287222.1 8 143829518 143832861
 PLINK v1.90b6.6 64-bit (10 Oct 2018)           www.cog-genomics.org/plink/1.9/
 (C) 2005-2018 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to shared_snps_ENSG00000234840.1.log.
+Logging to shared_snps_ENSG00000287222.1.log.
 Options in effect:
   --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed
-  --extract snps_ENSG00000234840.1.txt
-  --keep-fam /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/prep_eqtl_analysis/by_sex/caudate/female/_m/keepFam.txt
+  --extract snps_ENSG00000287222.1.txt
+  --keep-fam /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/eqtl_analysis/colocalization/plots/_m/caudate/male/../../../../../../prep_eqtl_analysis/by_sex/caudate/male/_m/keepFam.txt
   --ld-window-r2 0
-  --out shared_snps_ENSG00000234840.1
+  --out shared_snps_ENSG00000287222.1
   --r2 inter-chr
   --threads 4
   --write-snplist
 
-257856 MB RAM detected; reserving 128928 MB for main workspace.
-Allocated 9679 MB successfully, after larger attempt(s) failed.
+1031603 MB RAM detected; reserving 515801 MB for main workspace.
+Allocated 9189 MB successfully, after larger attempt(s) failed.
 6816103 variants loaded from .bim file.
 2222 people (0 males, 0 females, 2222 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to shared_snps_ENSG00000234840.1.nosex .
---extract: 833 variants remaining.
---keep-fam: 134 people remaining.
-Using up to 4 threads (change this with --threads).
-Before main variant filters, 134 founders and 0 nonfounders present.
-Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
-833 variants and 134 people pass filters and QC.
-Note: No phenotypes present.
-List of variant IDs written to shared_snps_ENSG00000234840.1.snplist .
---r2 inter-chr to shared_snps_ENSG00000234840.1.ld ... 0% [processing]
-Error: Failed to create thread.
-sed: can't read shared_snps_ENSG00000234840.1.ld: No such file or directory
-Traceback (most recent call last):
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 154, in <module>
-    main(args)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 132, in main
-    args.sex)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 93, in get_ld_by_tissue
-    return get_ld(fn_fam, eqtl_df, gwas_df, "%s" % (label))
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 73, in get_ld
-    return pd.read_csv("shared_snps_%s.ld" % label, sep='\t', usecols=[*range(7)])
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
-    return func(*args, **kwargs)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
-    return _read(filepath_or_buffer, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
-    self._engine = self._make_engine(self.engine)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
-    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
-    self._open_handles(src, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
-    errors=kwds.get("encoding_errors", "strict"),
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
-    newline="",
-FileNotFoundError: [Errno 2] No such file or directory: 'shared_snps_ENSG00000234840.1.ld'
-WARNING: ignoring environment value of R_HOME
-Error in data.table::fread(fn, drop = "V8") : 
-  File 'shared_snps_ENSG00000234840.1.ld' does not exist or is non-readable. getwd()=='/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/eqtl_analysis/colocalization/plots/_m/caudate/female'
-Calls: get_ld -> <Anonymous>
-Execution halted
-caudate ENSG00000006744.18 17 12992391 13018187
-PLINK v1.90b6.6 64-bit (10 Oct 2018)           www.cog-genomics.org/plink/1.9/
-(C) 2005-2018 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to shared_snps_ENSG00000006744.18.log.
-Options in effect:
-  --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed
-  --extract snps_ENSG00000006744.18.txt
-  --keep-fam /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/prep_eqtl_analysis/by_sex/caudate/male/_m/keepFam.txt
-  --ld-window-r2 0
-  --out shared_snps_ENSG00000006744.18
-  --r2 inter-chr
-  --threads 4
-  --write-snplist
-
-257856 MB RAM detected; reserving 128928 MB for main workspace.
-Allocated 9679 MB successfully, after larger attempt(s) failed.
-6816103 variants loaded from .bim file.
-2222 people (0 males, 0 females, 2222 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to shared_snps_ENSG00000006744.18.nosex .
---extract: 1081 variants remaining.
+Ambiguous sex IDs written to shared_snps_ENSG00000287222.1.nosex .
+--extract: 497 variants remaining.
 --keep-fam: 289 people remaining.
 Using up to 4 threads (change this with --threads).
 Before main variant filters, 289 founders and 0 nonfounders present.
 Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
-1081 variants and 289 people pass filters and QC.
+497 variants and 289 people pass filters and QC.
 Note: No phenotypes present.
-List of variant IDs written to shared_snps_ENSG00000006744.18.snplist .
---r2 inter-chr to shared_snps_ENSG00000006744.18.ld ... 0% [processing]
-Error: Failed to create thread.
-sed: can't read shared_snps_ENSG00000006744.18.ld: No such file or directory
-Traceback (most recent call last):
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 154, in <module>
-    main(args)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 132, in main
-    args.sex)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 93, in get_ld_by_tissue
-    return get_ld(fn_fam, eqtl_df, gwas_df, "%s" % (label))
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 73, in get_ld
-    return pd.read_csv("shared_snps_%s.ld" % label, sep='\t', usecols=[*range(7)])
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
-    return func(*args, **kwargs)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
-    return _read(filepath_or_buffer, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
-    self._engine = self._make_engine(self.engine)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
-    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
-    self._open_handles(src, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
-    errors=kwds.get("encoding_errors", "strict"),
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
-    newline="",
-FileNotFoundError: [Errno 2] No such file or directory: 'shared_snps_ENSG00000006744.18.ld'
-WARNING: ignoring environment value of R_HOME
-Error in data.table::fread(fn, drop = "V8") : 
-  File 'shared_snps_ENSG00000006744.18.ld' does not exist or is non-readable. getwd()=='/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/eqtl_analysis/colocalization/plots/_m/caudate/male'
-Calls: get_ld -> <Anonymous>
-Execution halted
-caudate ENSG00000234840.1 9 22646200 22824213
-PLINK v1.90b6.6 64-bit (10 Oct 2018)           www.cog-genomics.org/plink/1.9/
-(C) 2005-2018 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to shared_snps_ENSG00000234840.1.log.
-Options in effect:
-  --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed
-  --extract snps_ENSG00000234840.1.txt
-  --keep-fam /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/prep_eqtl_analysis/by_sex/caudate/male/_m/keepFam.txt
-  --ld-window-r2 0
-  --out shared_snps_ENSG00000234840.1
-  --r2 inter-chr
-  --threads 4
-  --write-snplist
-
-257856 MB RAM detected; reserving 128928 MB for main workspace.
-Allocated 9679 MB successfully, after larger attempt(s) failed.
-6816103 variants loaded from .bim file.
-2222 people (0 males, 0 females, 2222 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to shared_snps_ENSG00000234840.1.nosex .
---extract: 834 variants remaining.
---keep-fam: 289 people remaining.
-Using up to 4 threads (change this with --threads).
-Before main variant filters, 289 founders and 0 nonfounders present.
-Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
-834 variants and 289 people pass filters and QC.
-Note: No phenotypes present.
-List of variant IDs written to shared_snps_ENSG00000234840.1.snplist .
---r2 inter-chr to shared_snps_ENSG00000234840.1.ld ... 0% [processing]
-Error: Failed to create thread.
-sed: can't read shared_snps_ENSG00000234840.1.ld: No such file or directory
-Traceback (most recent call last):
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 154, in <module>
-    main(args)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 132, in main
-    args.sex)
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 93, in get_ld_by_tissue
-    return get_ld(fn_fam, eqtl_df, gwas_df, "%s" % (label))
-  File "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz//eqtl_analysis/colocalization/plots/_h/prep_colocalization.py", line 73, in get_ld
-    return pd.read_csv("shared_snps_%s.ld" % label, sep='\t', usecols=[*range(7)])
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
-    return func(*args, **kwargs)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
-    return _read(filepath_or_buffer, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
-    parser = TextFileReader(filepath_or_buffer, **kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
-    self._engine = self._make_engine(self.engine)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
-    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
-    self._open_handles(src, kwds)
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
-    errors=kwds.get("encoding_errors", "strict"),
-  File "/users/jbenjami/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
-    newline="",
-FileNotFoundError: [Errno 2] No such file or directory: 'shared_snps_ENSG00000234840.1.ld'
-WARNING: ignoring environment value of R_HOME
-Error in data.table::fread(fn, drop = "V8") : 
-  File 'shared_snps_ENSG00000234840.1.ld' does not exist or is non-readable. getwd()=='/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/eqtl_analysis/colocalization/plots/_m/caudate/male'
-Calls: get_ld -> <Anonymous>
-Execution halted
-WARNING: ignoring environment value of R_HOME
-`geom_smooth()` using formula 'y ~ x'
-`geom_smooth()` using formula 'y ~ x'
-`geom_smooth()` using formula 'y ~ x'
-[1] "2022-09-14 09:03:34 EDT"
+List of variant IDs written to shared_snps_ENSG00000287222.1.snplist .
+--r2 inter-chr to shared_snps_ENSG00000287222.1.ld ... 0% [processing]writing]             done.
+-----
+numpy               1.21.6
+pandas              1.3.5
+pyhere              1.0.0
+rpy2                3.5.4
+session_info        1.0.0
+-----
+Python 3.7.3 (default, Sep  6 2019, 16:02:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-centos-7.9.2009-Core
+-----
+Session information updated at 2023-05-31 14:46
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+`geom_smooth()` using formula = 'y ~ x'
+Warning messages:
+1: Computation failed in `stat_smooth()`
+Caused by error in `dyn.load()`:
+! unable to load shared object '/users/jbenjami/R/x86_64-pc-linux-gnu-library/4.0/Matrix/libs/Matrix.so':
+  libgfortran.so.5: cannot open shared object file: No such file or directory 
+2: Computation failed in `stat_smooth()`
+Caused by error in `dyn.load()`:
+! unable to load shared object '/users/jbenjami/R/x86_64-pc-linux-gnu-library/4.0/Matrix/libs/Matrix.so':
+  libgfortran.so.5: cannot open shared object file: No such file or directory 
+3: Computation failed in `stat_smooth()`
+Caused by error in `dyn.load()`:
+! unable to load shared object '/users/jbenjami/R/x86_64-pc-linux-gnu-library/4.0/Matrix/libs/Matrix.so':
+  libgfortran.so.5: cannot open shared object file: No such file or directory 
+[1] "2023-05-31 14:46:37 EDT"
    user  system elapsed 
-  3.875   0.608   4.898 
+  3.737   3.806  10.468 
 ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.0.3 (2020-10-10)
@@ -277,139 +127,59 @@ WARNING: ignoring environment value of R_HOME
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       US/Eastern
- date     2022-09-14
+ date     2023-05-31
  pandoc   NA
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version    date (UTC) lib source
- abind         1.4-5      2016-07-21 [1] CRAN (R 4.0.3)
- argparse    * 2.1.6      2022-07-17 [1] CRAN (R 4.0.3)
- assertthat    0.2.1      2019-03-21 [2] CRAN (R 4.0.3)
- backports     1.4.1      2021-12-13 [1] CRAN (R 4.0.3)
- broom         1.0.1      2022-08-29 [1] CRAN (R 4.0.3)
- car           3.1-0      2022-06-15 [1] CRAN (R 4.0.3)
- carData       3.0-5      2022-01-06 [1] CRAN (R 4.0.3)
- cli           3.4.0      2022-09-08 [1] CRAN (R 4.0.3)
- colorspace    2.0-3      2022-02-21 [1] CRAN (R 4.0.3)
- data.table    1.14.0     2021-02-21 [2] CRAN (R 4.0.3)
- DBI           1.1.1      2021-01-15 [2] CRAN (R 4.0.3)
- digest        0.6.29     2021-12-01 [1] CRAN (R 4.0.3)
- dplyr       * 1.0.10     2022-09-01 [1] CRAN (R 4.0.3)
- eQTpLot     * 0.0.0.9000 2022-09-12 [1] Github (RitchieLab/eQTpLot@ef6289c)
- fansi         1.0.3      2022-03-24 [1] CRAN (R 4.0.3)
- farver        2.1.1      2022-07-06 [1] CRAN (R 4.0.3)
- findpython    1.0.7      2021-01-27 [1] CRAN (R 4.0.3)
- generics      0.1.3      2022-07-05 [1] CRAN (R 4.0.3)
- ggplot2     * 3.3.6      2022-05-03 [1] CRAN (R 4.0.3)
- ggpubr      * 0.4.0      2020-06-27 [1] CRAN (R 4.0.3)
- ggsignif      0.6.3      2021-09-09 [1] CRAN (R 4.0.3)
- glue          1.6.2      2022-02-24 [1] CRAN (R 4.0.3)
- gtable        0.3.1      2022-09-01 [1] CRAN (R 4.0.3)
- jsonlite      1.8.0      2022-02-22 [1] CRAN (R 4.0.3)
- labeling      0.4.2      2020-10-20 [2] CRAN (R 4.0.3)
- lattice       0.20-41    2020-04-02 [2] CRAN (R 4.0.3)
- lifecycle     1.0.1      2021-09-24 [1] CRAN (R 4.0.3)
- magrittr      2.0.3      2022-03-30 [1] CRAN (R 4.0.3)
- Matrix        1.5-0      2022-09-10 [1] CRAN (R 4.0.3)
- mgcv          1.8-33     2020-08-27 [2] CRAN (R 4.0.3)
- munsell       0.5.0      2018-06-12 [2] CRAN (R 4.0.3)
- nlme          3.1-149    2020-08-23 [2] CRAN (R 4.0.3)
- pillar        1.8.1      2022-08-19 [1] CRAN (R 4.0.3)
- pkgconfig     2.0.3      2019-09-22 [2] CRAN (R 4.0.3)
- purrr         0.3.4      2020-04-17 [2] CRAN (R 4.0.3)
- R6            2.5.1      2021-08-19 [1] CRAN (R 4.0.3)
- rlang         1.0.5      2022-08-31 [1] CRAN (R 4.0.3)
- rstatix       0.7.0      2021-02-13 [1] CRAN (R 4.0.3)
- scales        1.2.1      2022-08-20 [1] CRAN (R 4.0.3)
- sessioninfo   1.2.2      2021-12-06 [1] CRAN (R 4.0.3)
- svglite       2.1.0      2022-02-03 [1] CRAN (R 4.0.3)
- systemfonts   1.0.4      2022-02-11 [1] CRAN (R 4.0.3)
- tibble        3.1.8      2022-07-22 [1] CRAN (R 4.0.3)
- tidyr         1.2.1      2022-09-08 [1] CRAN (R 4.0.3)
- tidyselect    1.1.2      2022-02-21 [1] CRAN (R 4.0.3)
- utf8          1.2.2      2021-07-24 [1] CRAN (R 4.0.3)
- vctrs         0.4.1      2022-04-13 [1] CRAN (R 4.0.3)
- withr         2.5.0      2022-03-03 [1] CRAN (R 4.0.3)
-
- [1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/4.0
- [2] /jhpce/shared/jhpce/core/R/4.0.3/lib64/R/library
-
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-/cm/local/apps/sge/sge-8.1.9/default/spool/compute-093/job_scripts/9931367: line 59: cd: caudate: No such file or directory
-WARNING: ignoring environment value of R_HOME
-`geom_smooth()` using formula 'y ~ x'
-`geom_smooth()` using formula 'y ~ x'
-`geom_smooth()` using formula 'y ~ x'
-[1] "2022-09-14 09:03:39 EDT"
-   user  system elapsed 
-  3.612   0.571   4.532 
-─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
- setting  value
- version  R version 4.0.3 (2020-10-10)
- os       CentOS Linux 7 (Core)
- system   x86_64, linux-gnu
- ui       X11
- language (EN)
- collate  en_US.UTF-8
- ctype    en_US.UTF-8
- tz       US/Eastern
- date     2022-09-14
- pandoc   NA
-
-─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
- package     * version    date (UTC) lib source
- abind         1.4-5      2016-07-21 [1] CRAN (R 4.0.3)
- argparse    * 2.1.6      2022-07-17 [1] CRAN (R 4.0.3)
- assertthat    0.2.1      2019-03-21 [2] CRAN (R 4.0.3)
- backports     1.4.1      2021-12-13 [1] CRAN (R 4.0.3)
- broom         1.0.1      2022-08-29 [1] CRAN (R 4.0.3)
- car           3.1-0      2022-06-15 [1] CRAN (R 4.0.3)
- carData       3.0-5      2022-01-06 [1] CRAN (R 4.0.3)
- cli           3.4.0      2022-09-08 [1] CRAN (R 4.0.3)
- colorspace    2.0-3      2022-02-21 [1] CRAN (R 4.0.3)
- data.table    1.14.0     2021-02-21 [2] CRAN (R 4.0.3)
- DBI           1.1.1      2021-01-15 [2] CRAN (R 4.0.3)
- digest        0.6.29     2021-12-01 [1] CRAN (R 4.0.3)
- dplyr       * 1.0.10     2022-09-01 [1] CRAN (R 4.0.3)
- eQTpLot     * 0.0.0.9000 2022-09-12 [1] Github (RitchieLab/eQTpLot@ef6289c)
- fansi         1.0.3      2022-03-24 [1] CRAN (R 4.0.3)
- farver        2.1.1      2022-07-06 [1] CRAN (R 4.0.3)
- findpython    1.0.7      2021-01-27 [1] CRAN (R 4.0.3)
- generics      0.1.3      2022-07-05 [1] CRAN (R 4.0.3)
- ggplot2     * 3.3.6      2022-05-03 [1] CRAN (R 4.0.3)
- ggpubr      * 0.4.0      2020-06-27 [1] CRAN (R 4.0.3)
- ggsignif      0.6.3      2021-09-09 [1] CRAN (R 4.0.3)
- glue          1.6.2      2022-02-24 [1] CRAN (R 4.0.3)
- gtable        0.3.1      2022-09-01 [1] CRAN (R 4.0.3)
- jsonlite      1.8.0      2022-02-22 [1] CRAN (R 4.0.3)
- labeling      0.4.2      2020-10-20 [2] CRAN (R 4.0.3)
- lattice       0.20-41    2020-04-02 [2] CRAN (R 4.0.3)
- lifecycle     1.0.1      2021-09-24 [1] CRAN (R 4.0.3)
- magrittr      2.0.3      2022-03-30 [1] CRAN (R 4.0.3)
- Matrix        1.5-0      2022-09-10 [1] CRAN (R 4.0.3)
- mgcv          1.8-33     2020-08-27 [2] CRAN (R 4.0.3)
- munsell       0.5.0      2018-06-12 [2] CRAN (R 4.0.3)
- nlme          3.1-149    2020-08-23 [2] CRAN (R 4.0.3)
- pillar        1.8.1      2022-08-19 [1] CRAN (R 4.0.3)
- pkgconfig     2.0.3      2019-09-22 [2] CRAN (R 4.0.3)
- purrr         0.3.4      2020-04-17 [2] CRAN (R 4.0.3)
- R6            2.5.1      2021-08-19 [1] CRAN (R 4.0.3)
- rlang         1.0.5      2022-08-31 [1] CRAN (R 4.0.3)
- rstatix       0.7.0      2021-02-13 [1] CRAN (R 4.0.3)
- scales        1.2.1      2022-08-20 [1] CRAN (R 4.0.3)
- sessioninfo   1.2.2      2021-12-06 [1] CRAN (R 4.0.3)
- svglite       2.1.0      2022-02-03 [1] CRAN (R 4.0.3)
- systemfonts   1.0.4      2022-02-11 [1] CRAN (R 4.0.3)
- tibble        3.1.8      2022-07-22 [1] CRAN (R 4.0.3)
- tidyr         1.2.1      2022-09-08 [1] CRAN (R 4.0.3)
- tidyselect    1.1.2      2022-02-21 [1] CRAN (R 4.0.3)
- utf8          1.2.2      2021-07-24 [1] CRAN (R 4.0.3)
- vctrs         0.4.1      2022-04-13 [1] CRAN (R 4.0.3)
- withr         2.5.0      2022-03-03 [1] CRAN (R 4.0.3)
+ package     * version date (UTC) lib source
+ abind         1.4-5   2016-07-21 [1] CRAN (R 4.0.3)
+ argparse    * 2.1.6   2022-07-17 [1] CRAN (R 4.0.3)
+ assertthat    0.2.1   2019-03-21 [2] CRAN (R 4.0.3)
+ backports     1.4.1   2021-12-13 [1] CRAN (R 4.0.3)
+ broom         1.0.1   2022-08-29 [1] CRAN (R 4.0.3)
+ car           3.1-1   2022-10-19 [1] CRAN (R 4.0.3)
+ carData       3.0-5   2022-01-06 [1] CRAN (R 4.0.3)
+ cli           3.4.1   2022-09-23 [1] CRAN (R 4.0.3)
+ colorspace    2.0-3   2022-02-21 [1] CRAN (R 4.0.3)
+ data.table    1.14.0  2021-02-21 [2] CRAN (R 4.0.3)
+ DBI           1.1.1   2021-01-15 [2] CRAN (R 4.0.3)
+ dplyr       * 1.0.10  2022-09-01 [1] CRAN (R 4.0.3)
+ fansi         1.0.3   2022-03-24 [1] CRAN (R 4.0.3)
+ farver        2.1.1   2022-07-06 [1] CRAN (R 4.0.3)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 4.0.3)
+ generics      0.1.3   2022-07-05 [1] CRAN (R 4.0.3)
+ ggplot2     * 3.4.0   2022-11-04 [1] CRAN (R 4.0.3)
+ ggpubr      * 0.5.0   2022-11-16 [1] CRAN (R 4.0.3)
+ ggsignif      0.6.4   2022-10-13 [1] CRAN (R 4.0.3)
+ glue          1.6.2   2022-02-24 [1] CRAN (R 4.0.3)
+ gtable        0.3.1   2022-09-01 [1] CRAN (R 4.0.3)
+ jsonlite      1.8.3   2022-10-21 [1] CRAN (R 4.0.3)
+ labeling      0.4.2   2020-10-20 [2] CRAN (R 4.0.3)
+ lattice       0.20-41 2020-04-02 [2] CRAN (R 4.0.3)
+ lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.0.3)
+ magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.0.3)
+ munsell       0.5.0   2018-06-12 [2] CRAN (R 4.0.3)
+ nlme          3.1-149 2020-08-23 [2] CRAN (R 4.0.3)
+ pillar        1.8.1   2022-08-19 [1] CRAN (R 4.0.3)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 4.0.3)
+ purrr         0.3.4   2020-04-17 [2] CRAN (R 4.0.3)
+ R6            2.5.1   2021-08-19 [1] CRAN (R 4.0.3)
+ rlang         1.0.6   2022-09-24 [1] CRAN (R 4.0.3)
+ rstatix       0.7.1   2022-11-09 [1] CRAN (R 4.0.3)
+ scales        1.2.1   2022-08-20 [1] CRAN (R 4.0.3)
+ sessioninfo   1.2.2   2021-12-06 [1] CRAN (R 4.0.3)
+ svglite       2.1.0   2022-02-03 [1] CRAN (R 4.0.3)
+ systemfonts   1.0.4   2022-02-11 [1] CRAN (R 4.0.3)
+ tibble        3.1.8   2022-07-22 [1] CRAN (R 4.0.3)
+ tidyr         1.2.1   2022-09-08 [1] CRAN (R 4.0.3)
+ tidyselect    1.2.0   2022-10-10 [1] CRAN (R 4.0.3)
+ utf8          1.2.2   2021-07-24 [1] CRAN (R 4.0.3)
+ vctrs         0.5.1   2022-11-16 [1] CRAN (R 4.0.3)
+ withr         2.5.0   2022-03-03 [1] CRAN (R 4.0.3)
 
  [1] /users/jbenjami/R/x86_64-pc-linux-gnu-library/4.0
  [2] /jhpce/shared/jhpce/core/R/4.0.3/lib64/R/library
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 **** Job ends ****
-Wed Sep 14 09:03:39 EDT 2022
+Wed May 31 14:46:38 EDT 2023
