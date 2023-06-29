@@ -27,27 +27,27 @@ plot_circos <- function(caudate, dlpfc, hippo){
     # use hg38, default is hg19
     circos.initializeWithIdeogram(species="hg38")
     circos.genomicTrack(caudate, bg.border="#000080",
-                        bg.col=add_transparency("#000080", transparency=0.8),
+                        bg.col=add_transparency("#000080", transparency=0.7),
                         panel.fun = function(region, value, ...) {
                             i = getI(...)
                             circos.genomicPoints(region, value, pch = 16,
                                                  cex = 0.6, col = c("blue", "red")[i], ...)
     })
     circos.genomicTrack(dlpfc, bg.border="#8B0000",
-                        bg.col=add_transparency("#8B0000", transparency=0.8),
+                        bg.col=add_transparency("#8B0000", transparency=0.7),
                         panel.fun = function(region, value, ...) {
                             i = getI(...)
                             circos.genomicPoints(region, value, pch = 16,
                                                  cex = 0.6, col = c("blue", "red")[i], ...)
     })
     circos.genomicTrack(hippo, bg.border="#006400",
-                        bg.col=add_transparency("#006400", transparency=0.8),
+                        bg.col=add_transparency("#006400", transparency=0.7),
                         panel.fun = function(region, value, ...) {
                             i = getI(...)
                             circos.genomicPoints(region, value, pch = 16,
                                                  cex = 0.6, col = c("blue", "red")[i], ...)
     })
-    draw(lgd_points, x=unit(5, "mm"), y=unit(5, "mm"), just=c("left", "bottom"))
+    draw(lgd_points, x=unit(6, "mm"), y=unit(6, "mm"), just=c("left", "bottom"))
 }
 
 ####### MAIN
@@ -55,8 +55,10 @@ caudate <- extract_bed("Caudate")
 dlpfc   <- extract_bed("DLPFC")
 hippo   <- extract_bed("Hippocampus")
                                         # plot
-R.devices::devEval("pdf", name="significant_circos_plot",
-                   {plot_circos(caudate, dlpfc, hippo)})
+pdf(file = paste0("significant_circos_plot.pdf"),
+    width = 6, height = 6)
+plot_circos(caudate, dlpfc, hippo)
+dev.off()
 
 #### Reproducibility information
 Sys.time()
