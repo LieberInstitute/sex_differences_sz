@@ -1,7 +1,6 @@
 suppressPackageStartupMessages({
     library(dplyr)
     library(ggpubr)
-    library(eQTpLot)
     library(argparse)
 })
 
@@ -15,7 +14,7 @@ args <- parser$parse_args()
 
 ## Functions
 save_ggplots <- function(p, fn, w=6, h=6){
-    for(ext in c('.svg', '.png', '.pdf')){
+    for(ext in c('.pdf', '.png', '.svg')){
         ggsave(p, filename=paste0(fn, ext), width=w, height=h)
     }
 }
@@ -37,23 +36,22 @@ merge_data <- function(feature, perm_pval){
                          get_eqtl(feature, "male"))
     return(gwas_df %>%
            inner_join(eqtl_df, by=c("SNP"="SNP.Id", "Sex")) %>%
-           mutate(`-log10(P[eQTL])`=-log10(P.Value),
-                  `-log10(P[GWAS])`=-log10(P)) %>%
+           mutate("eqtl"=-log10(P.Value), "gwas"=-log10(P)) %>%
            filter(P.Value < perm_pval) %>%
-           mutate_if(is.character, as.factor))
+           mutate_if(is.character, as.factor) %>%
+           mutate(Sex=recode_factor(Sex, female="Female",
+                                    male="Male")))
 }
 
 plotNsave_PP <- function(feature, perm_pval){
-    sca <- merge_data(feature, perm_pval) %>%
-        mutate(Sex=recode_factor(Sex, female="Female", male="Male")) %>%
-        ggscatter(x="-log10(P[eQTL])", y="-log10(P[GWAS])", facet.by="Sex",
+    sca <- merge_data(feature, perm_pval) %>%        
+        ggscatter(x="eqtl", y="gwas", facet.by="Sex",
+                  ylab="-log10(P[GWAS])", xlab="-log10(P[eQTL])",
                   panel.labs.font=list(face="bold", size=16),
                   add="reg.line", conf.int=TRUE, cor.coef=TRUE,
                   add.params=list(fill="lightgray"), scales="free_x",
                   cor.coeff.args=list(label.sep="\n", label.y=8), 
                   ggtheme=theme_pubr(base_size=15, border=TRUE)) +
-        ylab(bquote(-log10(P[GWAS]))) +
-        xlab(bquote(-log10(P[eQTL]))) +
         font("xy.title", face="bold", size=16)
     save_ggplots(sca, paste0(feature, "_PP_plot"), 6, 4)
 }

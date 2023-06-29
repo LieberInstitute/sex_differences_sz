@@ -5,7 +5,6 @@
 #$ -N coloc_plots_hippocampus
 #$ -o ./summary_hippocampus.log
 #$ -e ./summary_hippocampus.log
-#$ -m e -M jade.benjamin@libd.org
 
 echo "**** Job starts ****"
 date
@@ -19,6 +18,8 @@ echo "Hostname: ${HOSTNAME}"
 ## List current modules for reproducibility
 module load plink/1.90b6.6
 module load R/4.0.3
+module load python
+
 module list
 
 
@@ -26,7 +27,7 @@ echo "**** Run eQTpLot ****"
 TISSUE="hippocampus"
 BASELOC="/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/"
 BED="${BASELOC}/input/counts/text_files_counts/_m/caudate"
-PGC3_COLOC="${BASELOC}/prep_eqtl_analysis/${TISSUE}/genes/prepare_expression/fastqtl_nominal/dapg_finemap/fastENLOC/_m/pgc3.enloc.sig.out"
+PGC3_COLOC="${BASELOC}/prep_eqtl_analysis/${TISSUE}/genes/interaction_model/dapg_finemap/fastENLOC/_m/pgc3.enloc.sig.out"
 
 mkdir $TISSUE
 
@@ -35,7 +36,7 @@ for SEX in female male; do
     cd $TISSUE/$SEX
     for FEATURE in `awk '$6 > 0.5 {print $1}' $PGC3_COLOC | cut -f1 -d: | grep ENSG`; do
 	grep $FEATURE $BED/gene.bed | while read -r PARAM; do
-            GNAME=`echo $PARAM | awk '{print $1}'`
+            GNAME=`echo $PARAM | awk '{print $5}'`
             CHR=`echo $PARAM | awk '{print $2}' | sed 's/chr//' -`
             START=`echo $PARAM | awk '{print $3}'`
             END=`echo $PARAM | awk '{print $4}'`
@@ -45,11 +46,6 @@ for SEX in female male; do
                    --chrom $CHR --start $START --end $END \
                    --feature $GNAME --tissue $TISSUE --sex $SEX \
                    --perm_pval 0.001 ## This is too many eQTL
-	    # R plotting
-	    Rscript $BASELOC/eqtl_analysis/colocalization/plots/_h/eQTL_coloc_plotting.R \
-		    --chrom $CHR --start $START --end $END \
-                    --feature $GNAME --tissue $TISSUE \
-                    --perm_pval 0.001
         done
     done
     cd ../../
@@ -58,7 +54,7 @@ done
 for FEATURE in `awk '$6 > 0.5 {print $1}' $PGC3_COLOC | cut -f1 -d: | grep ENSG`; do
     cd $TISSUE
     grep $FEATURE $BED/gene.bed | while read -r PARAM; do
-            GNAME=`echo $PARAM | awk '{print $1}'`
+            GNAME=`echo $PARAM | awk '{print $5}'`
 	    Rscript $BASELOC/eqtl_analysis/colocalization/plots/_h/pp_plots.R \
 		    --feature $GNAME --perm_pval 0.001
     done

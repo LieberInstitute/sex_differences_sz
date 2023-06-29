@@ -7,32 +7,12 @@ Changes are for module plotting.
 """
 import numpy as np
 import pandas as pd
+from pyhere import here
+from functools import lru_cache
+import subprocess, argparse, session_info
 from rpy2.robjects import r, pandas2ri, globalenv
-import subprocess, argparse, functools, session_info
 
-@functools.lru_cache()
-def get_gwas():
-    gwas_fn = '/dcs04/lieber/ds2b/users/kynon/v4_phase3_paper/inputs/sz_gwas/'+\
-              'pgc3/map_phase3/zscore/_m/libd_hg38_pgc2sz_snps.tsv'
-    return pd.read_csv(gwas_fn, sep="\t", dtype={'chrN':str}, index_col=0)
-
-
-@functools.lru_cache()
-def subset_gwas(chrom, pos, window):
-    gwas_df = get_gwas().loc[(get_gwas()['chrN'] == chrom) &
-                             (get_gwas()['pos'] > pos - window) &
-                             (get_gwas()['pos'] < pos + window),
-                             ['chrN', 'pos', 'our_snp_id', 'P']]\
-                        .rename(columns={'chrN':'CHR', 'pos':'BP', 'our_snp_id':'SNP'})
-    ## Flip direction of OR based on alleles matching
-    gwas_df['BETA'] = np.log(get_gwas()[["OR"]])
-    gwas_df['PHE'] = 'SCZD'
-    gwas_df['CHR'] = gwas_df['CHR'].astype(int)
-    gwas_df['pgc3_a1_same_as_our_counted'] = get_gwas()[["pgc3_a1_same_as_our_counted"]]
-    return gwas_df
-
-
-@functools.lru_cache()
+@lru_cache()
 def get_eqtl(fn, feature):
     cmd = '''
     zcat %s | head -1; zcat %s | awk '$1 == "%s" {print}'
@@ -42,42 +22,49 @@ def get_eqtl(fn, feature):
     return df
 
 
-@functools.lru_cache()
+@lru_cache()
 def annotate_eqtls(fn, feature, tissue):
     df = get_eqtl(fn, feature)
-    eqtl_df = pd.DataFrame({'SNP.Id': df['variant_id'],
-                            'Gene.Symbol': df['gene_id'],
-                            'P.Value': df['pval_nominal'],
-                            'NES': df['slope'], 'Tissue': tissue},
-                           index=df.index)
-    return eqtl_df
+    return pd.DataFrame({'SNP.Id': df['variant_id'],
+                         'Gene.Symbol': df['phenotype_id'],
+                         'P.Value': df['pval_nominal'],
+                         'NES': df['slope'], 'Tissue': tissue},
+                        index=df.index)
+
+
+@lru_cache()
+def get_eqtl_by_genes(sex, tissue, gene):
+    fn = here(f'prep_eqtl_analysis/by_sex/{tissue}/{sex}/',
+              'cis_model/_m/BrainSEQ_TOPMed.allpairs.txt.gz')
+    return annotate_eqtls(fn, gene, tissue)
+
+
+@lru_cache()
+def get_gwas():
+    gwas_fn = here('input/sz_gwas/map_phase3/zscore',
+                   '_m/libd_hg38_pgc2sz_snps.tsv')
+    return pd.read_csv(gwas_fn, sep="\t", dtype={'chrN':str},
+                       index_col=0)
+
+
+@lru_cache()
+def subset_gwas(chrom, pos, window):
+    gwas_df = get_gwas().loc[(get_gwas()['chrN'] == chrom) &
+                             (get_gwas()['pos'] > pos - window) &
+                             (get_gwas()['pos'] < pos + window),
+                             ['chrN', 'pos', 'our_snp_id', 'P']]\
+                        .rename(columns={'chrN':'CHR', 'pos':'BP',
+                                         'our_snp_id':'SNP'})
+    ## Flip direction of OR based on alleles matching
+    gwas_df['BETA'] = np.log(get_gwas()[["OR"]])
+    gwas_df['PHE'] = 'SCZD'
+    gwas_df['CHR'] = gwas_df['CHR'].astype(int)
+    gwas_df['pgc3_a1_same_as_our_counted'] = get_gwas()[["pgc3_a1_same_as_our_counted"]]
+    return gwas_df
 
 
 def flip_slope_by_allele(row):
     return [-1, 1][bool(row["pgc3_a1_same_as_our_counted"])] * row["NES"]
-
-
-def get_ld(fn, eqtl_dfx, gwas_dfx, label):
-    shared_df = gwas_dfx.merge(eqtl_dfx, left_on='SNP', right_on='SNP.Id')\
-                        .sort_values('P', ascending=True)
-    shared_df[['SNP.Id']].to_csv('snps_%s.txt' % label, index=None, header=None)
-    cmd = '''plink \
-                --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed \
-                --extract snps_%s.txt --threads 4 \
-                --keep-fam %s --r2 inter-chr \
-                --write-snplist --ld-window-r2 0 \
-                --out shared_snps_%s;
-            sed -i 's/ \+//; s/ \+/\t/g' shared_snps_%s.ld
-      ''' % (label,fn,label,label)
-    subprocess.run(cmd, shell=True)
-    return pd.read_csv("shared_snps_%s.ld" % label, sep='\t', usecols=[*range(7)])
-
-
-def get_eqtl_by_genes(sex, tissue, gene):
-    fn = '/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/' +\
-        'prep_eqtl_analysis/by_sex/%s/%s/' % (tissue, sex) +\
-        'prepare_expression/fastqtl_nominal/_m/Brainseq_LIBD.allpairs.txt.gz'
-    return annotate_eqtls(fn, gene, tissue)
 
 
 def merge_gwas(eqtl_df, gwas_df):
@@ -87,20 +74,36 @@ def merge_gwas(eqtl_df, gwas_df):
     return eqtl_df.drop(["pgc3_a1_same_as_our_counted"], axis=1)
 
 
+def get_ld(fn, eqtl_dfx, gwas_dfx, label):
+    shared_df = gwas_dfx.merge(eqtl_dfx, left_on='SNP',
+                               right_on='SNP.Id')\
+                        .sort_values('P', ascending=True)
+    shared_df[['SNP.Id']].to_csv(f'snps_{label}.txt',
+                                 index=None, header=None)
+    cmd = '''plink \
+                --bfile /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/input/genotypes/subset_by_sex/shared_snps/_m/LIBD_Brain_TopMed \
+                --extract snps_%s.txt --threads 4 \
+                --keep-fam %s --r2 inter-chr \
+                --write-snplist --ld-window-r2 0 \
+                --out shared_snps_%s;
+            sed -i 's/ \+//; s/ \+/\t/g' shared_snps_%s.ld
+      ''' % (label,fn,label,label)
+    subprocess.run(cmd, shell=True)
+    return pd.read_csv(f"shared_snps_{label}.ld", sep='\t',
+                       usecols=[*range(7)])
+
+
 def get_ld_by_tissue(eqtl_df, gwas_df, tissue, label, sex):
-    fn_fam = "/dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz/" +\
-        "prep_eqtl_analysis/by_sex/%s/%s/_m/keepFam.txt" % (tissue, sex)
-    return get_ld(fn_fam, eqtl_df, gwas_df, "%s" % (label))
+    fn_fam = here("prep_eqtl_analysis/by_sex",
+                  f"{tissue}/{sex}/_m/keepFam.txt")
+    return get_ld(fn_fam, eqtl_df, gwas_df, f"{label}")
 
 
 def plot_coloc(gwas_df, genes_df, perm_pval, ld_df, eqtl_df, tissue):
     pandas2ri.activate()
-    globalenv["gwas_df"] = gwas_df
-    globalenv["genes_df"] = genes_df
-    globalenv["ld_df"] = ld_df
-    globalenv["eqtl_df"] = eqtl_df
-    globalenv["perm_pval"] = perm_pval
-    globalenv["tissue"] = tissue
+    globalenv["gwas_df"] = gwas_df; globalenv["genes_df"] = genes_df
+    globalenv["ld_df"] = ld_df; globalenv["eqtl_df"] = eqtl_df
+    globalenv["perm_pval"] = perm_pval; globalenv["tissue"] = tissue
     r("""
     library(eQTpLot)
     pval = perm_pval$perm_pval[1]
@@ -116,7 +119,7 @@ def plot_coloc(gwas_df, genes_df, perm_pval, ld_df, eqtl_df, tissue):
 
 
 def main(args):
-    gwas_df = subset_gwas("%d" % args.chrom, args.start, args.window)
+    gwas_df = subset_gwas(f"{args.chrom}", args.start, args.window)
     perm_pval = pd.DataFrame({"Gene": [args.feature],
                               "perm_pval": [args.perm_pval]})
     genes_df = pd.DataFrame({'CHR':[args.chrom], 'Start':[args.start],
@@ -124,12 +127,12 @@ def main(args):
                              'Build': ['hg38']})
     eqtl_df = get_eqtl_by_genes(args.sex, args.tissue, genes_df.Gene[0])
     eqtl_df = merge_gwas(eqtl_df, gwas_df)
-    eqtl_df.to_csv("eqtl_%s.txt" % args.feature, sep='\t', index=False)
+    eqtl_df.to_csv(f"eqtl_{args.feature}.txt", sep='\t', index=False)
     gwas_df.drop(["pgc3_a1_same_as_our_counted"], axis=1, inplace=True)
-    gwas_df.to_csv("gwas_pgc3_%s.txt" % args.feature,
+    gwas_df.to_csv(f"gwas_pgc3_{args.feature}.txt",
                    sep='\t', index=False)
-    ld_df = get_ld_by_tissue(eqtl_df, gwas_df, args.tissue, args.feature,
-                             args.sex)
+    ld_df = get_ld_by_tissue(eqtl_df, gwas_df, args.tissue,
+                             args.feature, args.sex)
     # try:
     #     plot_coloc(gwas_df, genes_df, perm_pval, ld_df, eqtl_df, args.tissue)
     # except:
