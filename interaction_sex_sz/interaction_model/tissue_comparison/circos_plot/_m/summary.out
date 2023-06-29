@@ -1,10 +1,10 @@
 **** Job starts ****
-Fri Mar 31 08:06:33 EDT 2023
+Mon Jun 12 10:56:06 EDT 2023
 **** JHPCE info ****
 User: jbenjami
-Job id: 3085622
+Job id: 3556107
 Job name: circos_plot
-Hostname: compute-110.cm.cluster
+Hostname: compute-105.cm.cluster
 
 The following have been reloaded with a version change:
   1) gcc/4.4.7 => gcc/9.1.0
@@ -21,9 +21,9 @@ Currently Loaded Modules:
 **** Run circos plot script ****
 null device 
           1 
-[1] "2023-03-31 08:06:45 EDT"
+[1] "2023-06-12 10:56:57 EDT"
    user  system elapsed 
-  9.312   0.374  11.586 
+ 10.104   0.531  44.125 
 ─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
  setting  value
  version  R version 4.0.3 (2020-10-10)
@@ -34,7 +34,7 @@ null device
  collate  en_US.UTF-8
  ctype    en_US.UTF-8
  tz       US/Eastern
- date     2023-03-31
+ date     2023-06-12
  pandoc   2.7.3 @ /jhpce/shared/jhpce/core/pandoc/2.7.3/bin/pandoc
 
 ─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -83,4 +83,4 @@ null device
 
 ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 **** Job ends ****
-Fri Mar 31 08:06:46 EDT 2023
+Mon Jun 12 10:56:58 EDT 2023
