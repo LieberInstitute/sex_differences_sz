@@ -5,7 +5,6 @@
 #$ -N coloc_supp
 #$ -o ./summary.log
 #$ -e ./summary.log
-#$ -m e -M jade.benjamin@libd.org
 
 echo "**** Job starts ****"
 date

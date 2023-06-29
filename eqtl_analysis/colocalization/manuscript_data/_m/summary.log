@@ -1,0 +1,145 @@
+**** Job starts ****
+Wed May 31 09:19:50 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3210597
+Job name: coloc_supp
+Hostname: compute-096.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run generate supplement ****
+WARNING: ignoring environment value of R_HOME
+
+    Caudate       DLPFC Hippocampus 
+        402         447         342 
+[1] "RCP > 0.5"
+       Tissue n
+1     Caudate 1
+2       DLPFC 7
+3 Hippocampus 5
+        cluster_name N_SNPS eQTL_PIP GWAS_PIP GWAS_PIP_prior    RCP      Tissue
+1  ENSG00000287222:1      3   0.9958  0.28400         0.6497 0.6168     Caudate
+2  ENSG00000140265:2     12   0.9999  0.79660         0.8665 0.6549       DLPFC
+3  ENSG00000289128:1      4   0.8130  0.12930         0.5552 0.5406       DLPFC
+4  ENSG00000140564:1      2   0.6501  0.99930         0.9994 0.6435       DLPFC
+5  ENSG00000006744:1      4   0.9997  0.42620         0.7365 0.6685       DLPFC
+6  ENSG00000108960:1      4   1.0000  0.58710         0.8898 0.8437       DLPFC
+7  ENSG00000159640:1      2   0.9992  0.39410         0.7818 0.7393       DLPFC
+8  ENSG00000224924:1     14   0.9708  0.73790         0.7791 0.5204       DLPFC
+9  ENSG00000242866:1     16   0.9752  0.89110         0.8961 0.5346 Hippocampus
+10 ENSG00000006744:1      1   0.9851  0.09479         0.6158 0.6152 Hippocampus
+11 ENSG00000108960:1      4   0.9995  0.58710         0.8380 0.7571 Hippocampus
+12 ENSG00000159640:1      8   0.7554  0.85900         0.8825 0.5819 Hippocampus
+13 ENSG00000287222:1      3   0.6975  0.41380         0.6377 0.5395 Hippocampus
+[1] "RCP > 0.4"
+       Tissue  n
+1     Caudate  5
+2       DLPFC 12
+3 Hippocampus  7
+        cluster_name N_SNPS eQTL_PIP GWAS_PIP GWAS_PIP_prior    RCP      Tissue
+1  ENSG00000259775:2      1   0.8938  0.11100         0.4915 0.4860     Caudate
+2  ENSG00000249839:2     16   0.9902  0.79440         0.7866 0.4427     Caudate
+3  ENSG00000006744:1      1   0.9815  0.09479         0.4914 0.4906     Caudate
+4  ENSG00000289145:3      2   0.9990  0.13680         0.5073 0.4958     Caudate
+5  ENSG00000287222:1      3   0.9958  0.28400         0.6497 0.6168     Caudate
+6  ENSG00000136144:1     21   1.0000  0.80460         0.8084 0.4751       DLPFC
+7  ENSG00000140265:2     12   0.9999  0.79660         0.8665 0.6549       DLPFC
+8  ENSG00000289128:1      4   0.8130  0.12930         0.5552 0.5406       DLPFC
+9  ENSG00000140564:1      2   0.6501  0.99930         0.9994 0.6435       DLPFC
+10 ENSG00000278434:1      8   0.9834  0.38680         0.5810 0.4779       DLPFC
+11 ENSG00000006744:1      4   0.9997  0.42620         0.7365 0.6685       DLPFC
+12 ENSG00000108960:1      4   1.0000  0.58710         0.8898 0.8437       DLPFC
+13 ENSG00000159640:1      2   0.9992  0.39410         0.7818 0.7393       DLPFC
+14 ENSG00000226476:1      5   0.9973  0.16030         0.4382 0.4019       DLPFC
+15 ENSG00000224924:1     14   0.9708  0.73790         0.7791 0.5204       DLPFC
+16 ENSG00000170802:1      1   1.0000  0.04481         0.4357 0.4357       DLPFC
+17 ENSG00000287222:1      6   0.9364  0.46670         0.5787 0.4285       DLPFC
+18 ENSG00000136144:1     21   1.0000  0.80460         0.8093 0.4747 Hippocampus
+19 ENSG00000242866:1     16   0.9752  0.89110         0.8961 0.5346 Hippocampus
+20 ENSG00000006744:1      1   0.9851  0.09479         0.6158 0.6152 Hippocampus
+21 ENSG00000108960:1      4   0.9995  0.58710         0.8380 0.7571 Hippocampus
+22 ENSG00000159640:1      8   0.7554  0.85900         0.8825 0.5819 Hippocampus
+23 ENSG00000170802:1      1   0.9720  0.04481         0.4156 0.4150 Hippocampus
+24 ENSG00000287222:1      3   0.6975  0.41380         0.6377 0.5395 Hippocampus
+
+    Caudate       DLPFC Hippocampus 
+       3030        3276        2614 
+       cluster_name         variant_id eQTL_PIP GWAS_PIP GWAS_PIP_prior SNP_RCP
+1 ENSG00000289128:1 chr15:89384958:T:G   0.7709  0.12350         0.5526  0.5393
+2 ENSG00000140564:1 chr15:90883330:G:A   0.6435  0.99900         0.9993  0.6435
+3 ENSG00000006744:1 chr17:12992667:G:C   0.9591  0.09479         0.6581  0.6565
+4 ENSG00000108960:1 chr17:55402186:C:T   0.9066  0.20180         0.7745  0.7714
+5 ENSG00000159640:1 chr17:63476980:C:T   0.9786  0.12350         0.7217  0.7214
+6 ENSG00000006744:1 chr17:12992667:G:C   0.9851  0.09479         0.6158  0.6152
+7 ENSG00000108960:1 chr17:55393830:T:A   0.6819  0.11540         0.5151  0.5092
+8 ENSG00000287222:1 chr8:143826551:C:G   0.6567  0.15250         0.5367  0.5091
+       Tissue
+1       DLPFC
+2       DLPFC
+3       DLPFC
+4       DLPFC
+5       DLPFC
+6 Hippocampus
+7 Hippocampus
+8 Hippocampus
+[1] "2023-05-31 09:19:54 EDT"
+   user  system elapsed 
+  2.710   0.562   3.109 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.3 Patched (2023-04-07 r84211)
+ os       CentOS Linux 7 (Core)
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       US/Eastern
+ date     2023-05-31
+ pandoc   2.7.3 @ /jhpce/shared/jhpce/core/pandoc/2.7.3/bin/pandoc
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ cli           3.6.1   2023-03-23 [2] CRAN (R 4.2.3)
+ codetools     0.2-19  2023-02-01 [3] CRAN (R 4.2.3)
+ data.table    1.14.8  2023-02-17 [2] CRAN (R 4.2.2)
+ doParallel  * 1.0.17  2022-02-07 [2] CRAN (R 4.2.1)
+ dplyr       * 1.1.1   2023-03-22 [2] CRAN (R 4.2.3)
+ fansi         1.0.4   2023-01-22 [2] CRAN (R 4.2.2)
+ foreach     * 1.5.2   2022-02-02 [2] CRAN (R 4.2.1)
+ generics      0.1.3   2022-07-05 [2] CRAN (R 4.2.1)
+ glue          1.6.2   2022-02-24 [2] CRAN (R 4.2.1)
+ here        * 1.0.1   2020-12-13 [2] CRAN (R 4.2.1)
+ iterators   * 1.0.14  2022-02-05 [2] CRAN (R 4.2.1)
+ lifecycle     1.0.3   2022-10-07 [2] CRAN (R 4.2.1)
+ magrittr      2.0.3   2022-03-30 [2] CRAN (R 4.2.1)
+ pillar        1.9.0   2023-03-22 [2] CRAN (R 4.2.3)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 4.2.1)
+ R6            2.5.1   2021-08-19 [2] CRAN (R 4.2.1)
+ rlang         1.1.0   2023-03-14 [2] CRAN (R 4.2.3)
+ rprojroot     2.0.3   2022-04-02 [2] CRAN (R 4.2.1)
+ sessioninfo   1.2.2   2021-12-06 [2] CRAN (R 4.2.1)
+ tibble        3.2.1   2023-03-20 [2] CRAN (R 4.2.3)
+ tidyselect    1.2.0   2022-10-10 [2] CRAN (R 4.2.1)
+ utf8          1.2.3   2023-01-31 [2] CRAN (R 4.2.2)
+ vctrs         0.6.1   2023-03-22 [2] CRAN (R 4.2.3)
+
+ [1] /users/jbenjami/R/4.2.x
+ [2] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/site-library
+ [3] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+**** Job ends ****
+Wed May 31 09:19:54 EDT 2023
