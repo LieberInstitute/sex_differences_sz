@@ -1,0 +1,25 @@
+**** Job starts ****
+Thu Jun  1 20:36:30 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3219914
+Job name: extract_eGenes
+Hostname: compute-068.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run mashr prep ****
+Load data!
+Loading Caudate data!
+Loading DLPFC data!
+Loading hippocampus data!
+Extract strong set!
+**** Job ends ****
+Thu Jun  1 20:37:01 EDT 2023
