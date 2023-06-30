@@ -1,10 +1,10 @@
 #!/bin/bash
 #$ -cwd
 #$ -R y
-#$ -l mem_free=50G,h_vmem=50G,h_fsize=50G
+#$ -l mem_free=90G,h_vmem=90G,h_fsize=50G
 #$ -N prepare_mashr
-#$ -o ./summary.out
-#$ -e ./summary.out
+#$ -o ./summary.log
+#$ -e ./summary.log
 
 echo "**** Job starts ****"
 date
@@ -19,7 +19,7 @@ echo "Hostname: ${HOSTNAME}"
 module list
 
 ## Job command
-FEATURE="genes"
+FEATURE="exons"
 
 echo "**** Run mashr prep ****"
 python3 ../_h/01_prepare_files.py --feature $FEATURE

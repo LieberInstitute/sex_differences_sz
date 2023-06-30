@@ -1,7 +1,7 @@
 #!/bin/bash
 #$ -cwd
 #$ -R y
-#$ -l mem_free=25G,h_vmem=25G,h_fsize=100G
+#$ -l mem_free=10G,h_vmem=10G,h_fsize=100G
 #$ -N extract_model
 #$ -o ./mash.log
 #$ -e ./mash.log
