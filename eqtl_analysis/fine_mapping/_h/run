@@ -1,10 +1,31 @@
-#!/bin/bash
+#$ -cwd
+#$ -R y
+#$ -l mem_free=10G,h_vmem=10G,h_fsize=100G
+#$ -N 'compress_dapg'
+#$ -o ./summary.log
+#$ -e ./summary.log
+
+echo "**** Job starts ****"
+date -Is
+
+echo "**** JHPCE info ****"
+echo "User: ${USER}"
+echo "Job id: ${JOB_ID}"
+echo "Job name: ${JOB_NAME}"
+echo "Hostname: ${HOSTNAME}"
+
+module list
+
+echo "**** Generate data ****"
 
 for TISSUE in caudate dlpfc hippocampus; do
     mkdir $TISSUE
-    FN="../../../prep_eqtl_analysis/${TISSUE}/genes/prepare_expression/fastqtl_nominal/dapg_finemap/_m/dapg_out/"
+    FN="../../../prep_eqtl_analysis/${TISSUE}/genes/interaction_model/dapg_finemap/_m/dapg_out/"
     find $FN -type f -name "*out" -exec cp -v {} $TISSUE/ \;
 done
 
 tar -czvf dapg_sex_interacting_eQTL_results.tar.gz caudate dlpfc hippocampus
 rm -rf caudate/ dlpfc/ hippocampus/
+
+echo "**** Job ends ****"
+date -Is

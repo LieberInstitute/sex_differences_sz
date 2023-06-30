@@ -5,7 +5,7 @@ import pandas as pd
 from os import system,environ
 
 def get_cmd(task, tissue):
-    return pd.read_csv("%s.assemble.cmd" % tissue,
+    return pd.read_csv(f"{tissue}.assemble.cmd",
                        header=None).iloc[task-1,0]
 
 

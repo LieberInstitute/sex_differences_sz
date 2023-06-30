@@ -18,12 +18,12 @@ while(<FILE>){
 
    $var = $data[0];
    shift @data;
-   $covar_text .="controlled $var gtex @data\n";
+   $covar_text .="controlled $var brainseq @data\n";
 }
 
 
 $geno_text = "";
-open FILE, "bcftools view --threads 1 -R $query_bed $geno_vcf |";
+open FILE, "bcftools view -R $query_bed $geno_vcf |";
 while(<FILE>){
 
    if(/^\s*\#CHROM/){
@@ -57,7 +57,7 @@ while(<FILE>){
      push @geno, $g;
    }
 
-   $geno_text .= "geno $snp gtex @geno\n";
+   $geno_text .= "geno $snp brainseq @geno\n";
 
 }
 
