@@ -1,0 +1,20 @@
+**** Job starts ****
+Thu Jun  1 19:20:27 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3219718
+Job name: prepare_mashr
+Hostname: compute-127.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run mashr prep ****
+**** Job ends ****
+Thu Jun  1 21:26:57 EDT 2023

@@ -1,0 +1,26 @@
+**** Job starts ****
+Fri Jun  2 14:53:36 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3220770
+Job name: mash_allpairs_chunking
+Hostname: compute-100.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run mashr prep ****
+WARNING: ignoring environment value of R_HOME
+[1] "2023-06-02 15:59:42 EDT"
+    user   system  elapsed 
+3253.906  275.321 3956.247 
