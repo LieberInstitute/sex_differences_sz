@@ -1,0 +1,3 @@
+region,gene_id,variant_id,gencode_id,gene_name,seqnames,start,end,lfsr,posterior_mean,feature_type,ensembl_gene_id,external_gene_name,entrezgene,description
+Caudate,ENSG00000125703.15,chr1:63060301:G:A,ENSG00000125703.15,ATG4C,chr1,62784132,62865516,0.0198385423930296,0.0941361585250639,Gene,ENSG00000125703,ATG4C,84938.0,autophagy related 4C cysteine peptidase [Source:HGNC Symbol;Acc:HGNC:16040]
+Caudate,ENSG00000104267.10,chr8:84966439:A:T,ENSG00000104267.10,CA2,chr8,85463968,85481493,0.045577791357655,0.289556509098448,Gene,ENSG00000104267,CA2,760.0,carbonic anhydrase 2 [Source:HGNC Symbol;Acc:HGNC:1373]

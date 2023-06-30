@@ -1,0 +1,3 @@
+ensembl_gene_id,hugo_gene_id,gene_type,variant_id,rs_id,Tissue,maf,pval_nominal_sb,slope_sb,slope_se_sb,numtested,pvals.corrected,qval,pval_nominal_f,slope_f,slope_se_f,pval_nominal_m,slope_m,slope_se_m,pval_nominal,slope,slope_se
+ENSG00000270605.1,RP5-1092A3.4,antisense,chr1_28223937_C_T_b38,rs481640,Skin_Not_Sun_Exposed_Suprapubic,0.323985,0.000236513,-0.241524,0.0651609,1,0.000236513,0.208194510133333,4.0465899999999995e-21,-0.760755,0.0631424,6.39588e-13,-0.599143,0.0724705,9.91708e-60,-0.591873,0.0310473
+ENSG00000272977.1,CTA-390C10.10,sense_intronic,chr22_25459662_G_A_b38,rs6004655,Spleen,0.167401,3.78752e-05,0.413128,0.0978565,1,3.78752e-05,0.212883132,7.93121e-14,-1.12903,0.107327,5.15526e-16,-1.27659,0.10469,4.8966399999999995e-51,-1.19367,0.0566585
