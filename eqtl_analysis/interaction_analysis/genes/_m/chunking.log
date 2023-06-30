@@ -1,0 +1,55 @@
+**** Job starts ****
+Thu Jun  1 20:43:59 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3219916
+Job name: mash_allpairs_chunking
+Hostname: compute-114.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run mashr prep ****
+WARNING: ignoring environment value of R_HOME
+[1] "2023-06-01 20:55:10 EDT"
+   user  system elapsed 
+477.216  22.549 664.712 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.3 Patched (2023-04-07 r84211)
+ os       CentOS Linux 7 (Core)
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       US/Eastern
+ date     2023-06-01
+ pandoc   2.7.3 @ /jhpce/shared/jhpce/core/pandoc/2.7.3/bin/pandoc
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ argparse    * 2.2.2   2023-02-15 [1] CRAN (R 4.2.2)
+ cli           3.6.1   2023-03-23 [2] CRAN (R 4.2.3)
+ findpython    1.0.7   2021-01-27 [1] CRAN (R 4.2.2)
+ jsonlite      1.8.4   2022-12-06 [2] CRAN (R 4.2.2)
+ R6            2.5.1   2021-08-19 [2] CRAN (R 4.2.1)
+ sessioninfo   1.2.2   2021-12-06 [2] CRAN (R 4.2.1)
+
+ [1] /users/jbenjami/R/4.2.x
+ [2] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/site-library
+ [3] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+**** Job ends ****
+Thu Jun  1 20:55:13 EDT 2023

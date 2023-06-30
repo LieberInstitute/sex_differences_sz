@@ -61,7 +61,7 @@ run_mashr <- function(SEED, percentage){
     random.subset <- sample(1:nrow(bhat), rand_n)
                                         # Strong subset
     m.1by1 = mash_1by1(mash_set_data(bhat, shat))
-    strong.subset = get_significant_results(m.1by1, 0.25)
+    strong.subset = get_significant_results(m.1by1, 0.20)
     rm(m.1by1); gc(verbose=TRUE)
     ## Correlation structure
     print("Correlate structures!")

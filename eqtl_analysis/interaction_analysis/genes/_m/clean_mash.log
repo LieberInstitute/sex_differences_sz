@@ -1,0 +1,20 @@
+**** Job starts ****
+Fri Jun  2 07:00:36 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3220399
+Job name: mash_allpairs_clean
+Hostname: compute-090.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run combine mash results ****
+**** Job ends ****
+Fri Jun  2 07:11:13 EDT 2023
