@@ -3,8 +3,8 @@
 #$ -R y
 #$ -l h_fsize=50G
 #$ -N extract_eGenes
-#$ -o ./summary.out
-#$ -e ./summary.out
+#$ -o ./egenes.log
+#$ -e ./egenes.log
 
 echo "**** Job starts ****"
 date
