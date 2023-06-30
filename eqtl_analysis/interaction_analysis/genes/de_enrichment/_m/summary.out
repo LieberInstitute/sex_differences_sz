@@ -1,0 +1,52 @@
+**** Job starts ****
+2023-06-26T11:53:10-0400
+**** JHPCE info ****
+User: jbenjami
+Job id: 3585882
+Job name: enrichment_fishers
+Hostname: compute-121.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run enrichment analysis ****
+all
+Caudate
+[[23, 680], [666, 26324]]
+DLPFC
+[[6, 539], [250, 26778]]
+Hippocampus
+[[2, 544], [145, 26935]]
+up
+Caudate
+[[15, 688], [395, 26595]]
+DLPFC
+[[3, 542], [154, 26874]]
+Hippocampus
+[[0, 546], [83, 26997]]
+down
+Caudate
+[[8, 695], [271, 26719]]
+DLPFC
+[[3, 542], [96, 26932]]
+Hippocampus
+[[2, 544], [62, 27018]]
+-----
+pandas              1.4.3
+pyhere              1.0.0
+scipy               1.8.1
+session_info        1.0.0
+statsmodels         0.13.2
+-----
+Python 3.9.10 (main, Feb 22 2022, 16:34:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17
+-----
+Session information updated at 2023-06-26 11:57
+**** Job ends ****
+2023-06-26T11:57:11-0400
