@@ -1,0 +1,186 @@
+**** Job starts ****
+Fri Jun  2 14:59:51 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3220775
+Job name: jxn_mashr
+Hostname: compute-127.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run mashr prep ****
+WARNING: ignoring environment value of R_HOME
+[1] "Load prepared data!"
+[1] "Prepare random and strong subsets!"
+[1] "Correlate structures!"
+Garbage collection 456 = 413+20+23 (level 2) ... 
+13502.6 Mbytes of cons cells used (62%)
+32707.7 Mbytes of vectors used (49%)
+[1] "Apply to random and strong subset!"
+Garbage collection 457 = 413+20+24 (level 2) ... 
+259.3 Mbytes of cons cells used (1%)
+2498.4 Mbytes of vectors used (5%)
+[1] "Calculated covariances!"
+Garbage collection 458 = 413+20+25 (level 2) ... 
+259.5 Mbytes of cons cells used (2%)
+2498.4 Mbytes of vectors used (6%)
+[1] "Fit model!"
+ - Computing 2508291 x 253 likelihood matrix.
+ - Likelihood calculations took 413.98 seconds.
+ - Fitting model with 253 mixture components.
+ - Model fitting took 2606.48 seconds.
+Garbage collection 471 = 419+22+30 (level 2) ... 
+126.7 Mbytes of cons cells used (3%)
+2537.2 Mbytes of vectors used (10%)
+[1] "Compute posterior summaries!"
+ - Computing 348453 x 253 likelihood matrix.
+ - Likelihood calculations took 56.03 seconds.
+ - Computing posterior matrices.
+ - Computation allocated took 4.12 seconds.
+Garbage collection 474 = 419+22+33 (level 2) ... 
+126.8 Mbytes of cons cells used (5%)
+2196.5 Mbytes of vectors used (16%)
+[1] "Examine pairwise sharing!"
+              Caudate    DLPFC Hippocampus
+Caudate     1.0000000 0.975265   0.9787986
+DLPFC       0.9752650 1.000000   1.0000000
+Hippocampus 0.9787986 1.000000   1.0000000
+[1] "Save results!"
+[1] 283
+[1] "Estimate mixture of proportions!"
+         null      ED_PCA_1      ED_PCA_2      ED_PCA_3       ED_tPCA 
+ 0.4084071072  0.0355080417  0.0000549692  0.0000000000  0.0000000000 
+     identity       Caudate         DLPFC   Hippocampus equal_effects 
+ 0.0000558754  0.1976148370  0.0000000000  0.0000000000  0.3583591695 
+ simple_het_1  simple_het_2  simple_het_3 
+ 0.0000000000  0.0000000000  0.0000000000 
+[1] "2023-06-02 16:48:20 EDT"
+    user   system  elapsed 
+5911.343  536.617 6505.355 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.2.3 Patched (2023-04-07 r84211)
+ os       CentOS Linux 7 (Core)
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       US/Eastern
+ date     2023-06-02
+ pandoc   2.7.3 @ /jhpce/shared/jhpce/core/pandoc/2.7.3/bin/pandoc
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ abind         1.4-5   2016-07-21 [2] CRAN (R 4.2.1)
+ ashr        * 2.2-54  2022-02-22 [2] CRAN (R 4.2.1)
+ assertthat    0.2.1   2019-03-21 [2] CRAN (R 4.2.1)
+ backports     1.4.1   2021-12-13 [2] CRAN (R 4.2.1)
+ broom         1.0.4   2023-03-11 [2] CRAN (R 4.2.3)
+ car           3.1-2   2023-03-30 [2] CRAN (R 4.2.3)
+ carData       3.0-5   2022-01-06 [2] CRAN (R 4.2.1)
+ cli           3.6.1   2023-03-23 [2] CRAN (R 4.2.3)
+ colorspace    2.1-0   2023-01-23 [2] CRAN (R 4.2.2)
+ data.table    1.14.8  2023-02-17 [2] CRAN (R 4.2.2)
+ dplyr       * 1.1.1   2023-03-22 [2] CRAN (R 4.2.3)
+ fansi         1.0.4   2023-01-22 [2] CRAN (R 4.2.2)
+ farver        2.1.1   2022-07-06 [2] CRAN (R 4.2.1)
+ generics      0.1.3   2022-07-05 [2] CRAN (R 4.2.1)
+ ggplot2     * 3.4.2   2023-04-03 [2] CRAN (R 4.2.3)
+ ggpubr      * 0.6.0   2023-02-10 [2] CRAN (R 4.2.2)
+ ggsignif      0.6.4   2022-10-13 [2] CRAN (R 4.2.1)
+ glue          1.6.2   2022-02-24 [2] CRAN (R 4.2.1)
+ gtable        0.3.3   2023-03-21 [2] CRAN (R 4.2.3)
+ invgamma      1.1     2017-05-07 [2] CRAN (R 4.2.1)
+ irlba         2.3.5.1 2022-10-03 [2] CRAN (R 4.2.1)
+ labeling      0.4.2   2020-10-20 [2] CRAN (R 4.2.1)
+ lattice       0.20-45 2021-09-22 [3] CRAN (R 4.2.3)
+ lifecycle     1.0.3   2022-10-07 [2] CRAN (R 4.2.1)
+ magrittr      2.0.3   2022-03-30 [2] CRAN (R 4.2.1)
+ mashr       * 0.2.69  2022-12-07 [1] CRAN (R 4.2.2)
+ Matrix        1.5-4   2023-04-04 [2] CRAN (R 4.2.3)
+ mixsqp        0.3-48  2022-11-16 [2] CRAN (R 4.2.2)
+ munsell       0.5.0   2018-06-12 [2] CRAN (R 4.2.1)
+ mvtnorm       1.1-3   2021-10-08 [2] CRAN (R 4.2.1)
+ pillar        1.9.0   2023-03-22 [2] CRAN (R 4.2.3)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 4.2.1)
+ plyr          1.8.8   2022-11-11 [2] CRAN (R 4.2.2)
+ purrr         1.0.1   2023-01-10 [2] CRAN (R 4.2.2)
+ R.methodsS3   1.8.2   2022-06-13 [2] CRAN (R 4.2.1)
+ R.oo          1.25.0  2022-06-12 [2] CRAN (R 4.2.1)
+ R.utils       2.12.2  2022-11-11 [2] CRAN (R 4.2.2)
+ R6            2.5.1   2021-08-19 [2] CRAN (R 4.2.1)
+ ragg          1.2.5   2023-01-12 [2] CRAN (R 4.2.2)
+ Rcpp          1.0.10  2023-01-22 [2] CRAN (R 4.2.2)
+ rlang         1.1.0   2023-03-14 [2] CRAN (R 4.2.3)
+ rmeta         3.0     2018-03-20 [1] CRAN (R 4.2.2)
+ rstatix       0.7.2   2023-02-01 [2] CRAN (R 4.2.2)
+ scales        1.2.1   2022-08-20 [2] CRAN (R 4.2.1)
+ sessioninfo   1.2.2   2021-12-06 [2] CRAN (R 4.2.1)
+ SQUAREM       2021.1  2021-01-13 [2] CRAN (R 4.2.1)
+ svglite       2.1.1   2023-01-10 [2] CRAN (R 4.2.2)
+ systemfonts   1.0.4   2022-02-11 [2] CRAN (R 4.2.1)
+ textshaping   0.3.6   2021-10-13 [2] CRAN (R 4.2.1)
+ tibble        3.2.1   2023-03-20 [2] CRAN (R 4.2.3)
+ tidyr         1.3.0   2023-01-24 [2] CRAN (R 4.2.2)
+ tidyselect    1.2.0   2022-10-10 [2] CRAN (R 4.2.1)
+ truncnorm     1.0-9   2023-03-20 [2] CRAN (R 4.2.3)
+ utf8          1.2.3   2023-01-31 [2] CRAN (R 4.2.2)
+ vctrs         0.6.1   2023-03-22 [2] CRAN (R 4.2.3)
+ withr         2.5.0   2022-03-03 [2] CRAN (R 4.2.1)
+
+ [1] /users/jbenjami/R/4.2.x
+ [2] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/site-library
+ [3] /jhpce/shared/jhpce/core/conda/miniconda3-4.11.0/envs/svnR-4.2.x/R/4.2.x/lib64/R/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+**** Job ends ****
+Fri Jun  2 16:48:40 EDT 2023
+**** Job starts ****
+Fri Jun  2 17:35:46 EDT 2023
+**** JHPCE info ****
+User: jbenjami
+Job id: 3220853
+Job name: extract_model
+Hostname: compute-141.cm.cluster
+Loading conda_R/4.2.x
+
+The following have been reloaded with a version change:
+  1) gcc/4.4.7 => gcc/9.1.0
+
+
+Currently Loaded Modules:
+  1) matlab/R2019a     5) COMMUNITY_CENTOS7_DEFAULT_ENV   9) conda/3-4.11.0
+  2) stata/17          6) JHPCE_CENTOS7_DEFAULT_ENV      10) conda_R/4.2.x
+  3) JHPCE_tools/1.0   7) python/3.9.10                  11) gcc/9.1.0
+  4) sge/8.1.9         8) emacs/28.1                     12) pandoc/2.7.3
+
+ 
+
+**** Run mashr prep ****
+WARNING: ignoring environment value of R_HOME
+Loading required package: ashr
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+**** Job ends ****
+Fri Jun  2 17:35:59 EDT 2023
