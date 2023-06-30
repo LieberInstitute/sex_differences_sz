@@ -1,0 +1,66 @@
+Significant DE (lfsr < 0.05) in Caudate
+effect
+
+Gene:		3274
+Transcript:	10186
+Exon:		10439
+Junction:	1740
+
+gene_id
+
+Gene:		703
+Transcript:	1700
+Exon:		1737
+Junction:	328
+
+gencode_id
+
+Gene:		703
+Transcript:	1577
+Exon:		801
+Junction:	7
+
+Significant DE (lfsr < 0.05) in DLPFC
+effect
+
+Gene:		2464
+Transcript:	8032
+Exon:		7873
+Junction:	1150
+
+gene_id
+
+Gene:		545
+Transcript:	1383
+Exon:		1426
+Junction:	228
+
+gencode_id
+
+Gene:		545
+Transcript:	1286
+Exon:		665
+Junction:	5
+
+Significant DE (lfsr < 0.05) in Hippocampus
+effect
+
+Gene:		2465
+Transcript:	8207
+Exon:		7824
+Junction:	1145
+
+gene_id
+
+Gene:		546
+Transcript:	1394
+Exon:		1420
+Junction:	228
+
+gencode_id
+
+Gene:		546
+Transcript:	1296
+Exon:		662
+Junction:	5
+

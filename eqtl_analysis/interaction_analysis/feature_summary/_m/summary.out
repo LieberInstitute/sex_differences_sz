@@ -1,0 +1,85 @@
+**** Job starts ****
+2023-06-03T09:28:59-0400
+**** JHPCE info ****
+User: jbenjami
+Job id: 3221361
+Job name: summarize_eqtl
+Hostname: compute-124.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run summarize results ****
+-----
+pandas              1.4.3
+pyhere              1.0.0
+session_info        1.0.0
+-----
+Python 3.9.10 (main, Feb 22 2022, 16:34:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17
+-----
+Session information updated at 2023-06-03 12:22
+**** Job ends ****
+2023-06-03T12:22:54-0400
+**** Job starts ****
+2023-06-03T12:23:10-0400
+**** JHPCE info ****
+User: jbenjami
+Job id: 3221422
+Job name: summarize_eqtl
+Hostname: compute-124.cm.cluster
+
+Currently Loaded Modules:
+  1) matlab/R2019a     6) COMMUNITY_CENTOS7_DEFAULT_ENV
+  2) stata/17          7) JHPCE_CENTOS7_DEFAULT_ENV
+  3) JHPCE_tools/1.0   8) python/3.9.10
+  4) sge/8.1.9         9) emacs/28.1
+  5) gcc/4.4.7
+
+ 
+
+**** Run summarize results ****
+(704, 2)
+   seqnames  n_total  percentage_total  n_eGenes  percentage_eGenes
+0      chr1     2049          0.097137        71           0.100852
+1     chr10      835          0.039585        36           0.051136
+2     chr11     1121          0.053143        42           0.059659
+3     chr12     1144          0.054233        39           0.055398
+4     chr13      432          0.020480        15           0.021307
+5     chr14      662          0.031383        23           0.032670
+6     chr15      750          0.035555        20           0.028409
+7     chr16     1035          0.049066        34           0.048295
+8     chr17     1267          0.060064        33           0.046875
+9     chr18      374          0.017730        15           0.021307
+10    chr19     1384          0.065611        52           0.073864
+11     chr2     1407          0.066701        32           0.045455
+12    chr20      533          0.025268        14           0.019886
+13    chr21      221          0.010477         6           0.008523
+14    chr22      514          0.024367        20           0.028409
+15     chr3     1184          0.056130        38           0.053977
+16     chr4      761          0.036077        28           0.039773
+17     chr5     1008          0.047786        32           0.045455
+18     chr6     1119          0.053048        36           0.051136
+19     chr7     1015          0.048118        33           0.046875
+20     chr8      789          0.037404        33           0.046875
+21     chr9      810          0.038400        31           0.044034
+22     chrX      680          0.032237        21           0.029830
+KstestResult(statistic=0.17391304347826086, pvalue=0.8880369085652451)
+-----
+pandas              1.4.3
+pyhere              1.0.0
+scipy               1.8.1
+session_info        1.0.0
+-----
+Python 3.9.10 (main, Feb 22 2022, 16:34:24) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+Linux-3.10.0-1160.el7.x86_64-x86_64-with-glibc2.17
+-----
+Session information updated at 2023-06-03 12:23
+**** Job ends ****
+2023-06-03T12:23:57-0400
