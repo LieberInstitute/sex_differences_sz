@@ -1,0 +1,7 @@
+# MEAN_SAMPLE_SIZE = 46351
+# TOTAL_GENES = 25251
+# TEST_DIRECTION = one-sided, positive (set), two-sided (covar)
+# CONDITIONED_INTERNAL = gene size, gene density, inverse mac, log(gene size), log(gene density), log(inverse mac)
+VARIABLE               TYPE  NGENES         BETA     BETA_STD           SE            P
+hippocampus__down       SET      32      0.14134    0.0050285      0.16072      0.18959
+hippocampus__up         SET      30     -0.11874   -0.0040905      0.16101      0.76958

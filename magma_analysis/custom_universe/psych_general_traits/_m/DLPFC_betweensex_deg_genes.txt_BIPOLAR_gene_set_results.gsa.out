@@ -1,0 +1,6 @@
+# MEAN_SAMPLE_SIZE = 42404
+# TOTAL_GENES = 25306
+# TEST_DIRECTION = one-sided, positive (set), two-sided (covar)
+# CONDITIONED_INTERNAL = gene size, gene density, sample size, inverse mac, log(gene size), log(gene density), log(sample size), log(inverse mac)
+VARIABLE               TYPE  NGENES         BETA     BETA_STD           SE            P
+Male__down__DLPFC       SET       4      0.08728    0.0010973      0.46048      0.42484
