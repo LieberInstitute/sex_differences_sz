@@ -1,0 +1,9 @@
+CvD
+ENSEMBL_ID:	 rho > 0.977	R2 ~ 0.955	p-value < 0.0
+ENSEMBL_ID (FDR < 0.05):	 rho > 0.996	R2 ~ 0.992	p-value < 0.0
+CvH
+ENSEMBL_ID:	 rho > 0.872	R2 ~ 0.761	p-value < 1.2e-07
+ENSEMBL_ID (FDR < 0.05):	 rho > 0.861	R2 ~ 0.741	p-value < 3.8e-05
+DvH
+ENSEMBL_ID:	 rho > 0.492	R2 ~ 0.242	p-value < 0.017
+ENSEMBL_ID (FDR < 0.05):	 rho > 1.0	R2 ~ 1.0	p-value < nan
