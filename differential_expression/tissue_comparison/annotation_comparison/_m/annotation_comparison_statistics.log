@@ -1,0 +1,12 @@
+Caudate
+GENE_ID:	 rho > 0.92	R2 ~ 0.847	p-value < 0.0
+ENSEMBL_ID:	 rho > 0.928	R2 ~ 0.86	p-value < 0.0
+ENSEMBL_ID (FDR < 0.05):	 rho > 0.997	R2 ~ 0.995	p-value < 0.0
+DLPFC
+GENE_ID:	 rho > 0.913	R2 ~ 0.833	p-value < 0.0
+ENSEMBL_ID:	 rho > 0.946	R2 ~ 0.895	p-value < 0.0
+ENSEMBL_ID (FDR < 0.05):	 rho > 0.999	R2 ~ 0.997	p-value < 4.7e-233
+Hippocampus
+GENE_ID:	 rho > 0.867	R2 ~ 0.752	p-value < 0.0
+ENSEMBL_ID:	 rho > 0.863	R2 ~ 0.744	p-value < 0.0
+ENSEMBL_ID (FDR < 0.05):	 rho > 0.995	R2 ~ 0.99	p-value < 1.3e-85
