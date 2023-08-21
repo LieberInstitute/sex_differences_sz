@@ -1,0 +1,121 @@
+import os
+from pathlib import Path
+
+# Set project name
+
+# Define paths for input files and output directory
+magma_run = "/ceph/opt/magma/v1_10/magma"
+Pop_Data_File = "/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur"
+
+
+#file_groups = ['ADHD','ANOREXIA','AUTISM','BIPOLAR','DEPRESSION','SCZ','HEIGHT','BMI']
+file_groups = ['BASO','EO','MONO','NEUT']
+#file_groups = ['BASO','EO','MONO','NEUT','ADHD','ANOREXIA','AUTISM','BIPOLAR','DEPRESSION','SCZ','HEIGHT','BMI']
+
+
+# Define dictionary linking Gene_Input_Files to Gene_Loc_Files, where keys are just file names
+gene_input_files = [
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt',
+
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt',
+
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt',
+
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt'
+]
+
+
+
+gene_loc_files = [
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc',
+
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc',
+
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc',
+
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc',
+'/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc'
+]
+
+gene_files_dict = {
+    Path(gene_input_file).name: gene_loc_file for gene_input_file, gene_loc_file in zip(gene_input_files, gene_loc_files)
+}
+
+# A dictionary to map file names back to full paths
+full_path_dict = {
+    Path(gene_input_file).name: gene_input_file for gene_input_file in gene_input_files
+}
+
+# Get the current directory
+current_dir = os.getcwd()
+
+rule all:
+    input:
+        expand(os.path.join(current_dir, "{gene_input_file}_{group}_gene_set_results.gsa.out"), gene_input_file=gene_files_dict.keys(), group=file_groups)
+
+rule create_annot_file:
+    input:
+        gene_loc_file = lambda wildcards: gene_files_dict[wildcards.gene_input_file],
+        snp_loc_file = "/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/{group}.snp.loc"
+    output:
+        annot_file = os.path.join(current_dir, "{gene_input_file}_{group}.genes.annot")
+    params:
+        output_prefix = os.path.join(current_dir, "{gene_input_file}_{group}")
+    shell:
+        """
+        {magma_run} \
+            --annotate window=35,10 \
+            --snp-loc {input.snp_loc_file} \
+            --gene-loc {input.gene_loc_file} \
+            --out {params.output_prefix}
+        """
+        
+rule create_genes_raw_file:
+    input:
+        annot_file = os.path.join(current_dir, "{gene_input_file}_{group}.genes.annot"),
+        snp_pval_file = "/ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/{group}.snp_pval.tsv"
+    output:
+        raw_file = os.path.join(current_dir, "{gene_input_file}_{group}.genes.raw")
+    params:
+        output_prefix = os.path.join(current_dir, "{gene_input_file}_{group}")
+    shell:
+        """
+        {magma_run} \
+            --bfile {Pop_Data_File} \
+            --gene-annot {input.annot_file} \
+            --gene-model snp-wise=mean \
+            --pval {input.snp_pval_file} ncol=NEFF \
+            --out {params.output_prefix}
+        """
+        
+rule run_gene_set_analysis:
+    input:
+        genes_raw = os.path.join(current_dir, "{gene_input_file}_{group}.genes.raw"),
+        gene_input_file = lambda wildcards: full_path_dict[wildcards.gene_input_file]
+    output:
+        gene_set_results = os.path.join(current_dir, "{gene_input_file}_{group}_gene_set_results.gsa.out")
+    params:
+        output_prefix = os.path.join(current_dir, "{gene_input_file}_{group}_gene_set_results")
+    benchmark:
+        "benchmarks/{gene_input_file}_{group}_gene_set_analysis.tsv"
+    shell:
+        """
+        {magma_run} \
+            --gene-results {input.genes_raw} \
+            --set-annot {input.gene_input_file} col=2,1 \
+            --out {params.output_prefix} || touch {output.gene_set_results}
+        """
+
+
+
+
+

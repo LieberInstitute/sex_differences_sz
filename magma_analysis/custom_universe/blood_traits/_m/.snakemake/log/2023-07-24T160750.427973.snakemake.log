@@ -1,0 +1,1886 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+create_annot_file           36
+create_genes_raw_file       36
+run_gene_set_analysis       36
+total                      109
+
+Select jobs to execute...
+
+[Mon Jul 24 16:07:50 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.annot
+    jobid: 18
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.annot
+    jobid: 54
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.annot
+    jobid: 66
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.annot
+    jobid: 30
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.annot
+    jobid: 15
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.annot
+    jobid: 102
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.annot
+    jobid: 6
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.annot
+    jobid: 42
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO
+        
+[Mon Jul 24 16:08:45 2023]
+Finished job 6.
+1 of 109 steps (1%) done
+Select jobs to execute...
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.raw
+    jobid: 5
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO
+        
+[Mon Jul 24 16:08:45 2023]
+Finished job 18.
+2 of 109 steps (2%) done
+[Mon Jul 24 16:08:45 2023]
+Finished job 42.
+3 of 109 steps (3%) done
+[Mon Jul 24 16:08:45 2023]
+Finished job 54.
+4 of 109 steps (4%) done
+[Mon Jul 24 16:08:45 2023]
+Finished job 102.
+5 of 109 steps (5%) done
+[Mon Jul 24 16:08:45 2023]
+Finished job 30.
+6 of 109 steps (6%) done
+[Mon Jul 24 16:08:45 2023]
+Finished job 66.
+7 of 109 steps (6%) done
+Select jobs to execute...
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.raw
+    jobid: 29
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.raw
+    jobid: 65
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.raw
+    jobid: 41
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.raw
+    jobid: 101
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.raw
+    jobid: 17
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO
+        
+
+[Mon Jul 24 16:08:45 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.raw
+    jobid: 53
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO
+        
+Select jobs to execute...
+[Mon Jul 24 16:08:46 2023]
+Finished job 15.
+8 of 109 steps (7%) done
+
+[Mon Jul 24 16:08:46 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.raw
+    jobid: 14
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO
+        
+[Tue Jul 25 12:51:54 2023]
+Finished job 14.
+9 of 109 steps (8%) done
+Select jobs to execute...
+
+[Tue Jul 25 12:51:55 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.annot
+    jobid: 3
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO
+        
+[Tue Jul 25 12:55:14 2023]
+Finished job 3.
+10 of 109 steps (9%) done
+Select jobs to execute...
+
+[Tue Jul 25 12:55:14 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.raw
+    jobid: 2
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO
+        
+[Wed Jul 26 16:30:11 2023]
+Finished job 2.
+11 of 109 steps (10%) done
+Select jobs to execute...
+
+[Wed Jul 26 16:30:11 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.annot
+    jobid: 90
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO
+        
+[Wed Jul 26 16:35:17 2023]
+Finished job 90.
+12 of 109 steps (11%) done
+Select jobs to execute...
+
+[Wed Jul 26 16:35:17 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.raw
+    jobid: 89
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO
+        
+[Thu Jul 27 07:24:21 2023]
+Finished job 65.
+13 of 109 steps (12%) done
+Select jobs to execute...
+
+[Thu Jul 27 07:24:22 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.annot
+    jobid: 63
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO
+        
+[Thu Jul 27 07:27:34 2023]
+Finished job 63.
+14 of 109 steps (13%) done
+Select jobs to execute...
+
+[Thu Jul 27 07:27:34 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.raw
+    jobid: 62
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO
+        
+[Thu Jul 27 09:57:57 2023]
+Finished job 101.
+15 of 109 steps (14%) done
+Select jobs to execute...
+
+[Thu Jul 27 09:57:58 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.annot
+    jobid: 51
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO
+        
+[Thu Jul 27 09:59:44 2023]
+Finished job 51.
+16 of 109 steps (15%) done
+Select jobs to execute...
+
+[Thu Jul 27 09:59:44 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.raw
+    jobid: 50
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO
+        
+[Thu Jul 27 10:42:05 2023]
+Finished job 29.
+17 of 109 steps (16%) done
+Select jobs to execute...
+
+[Thu Jul 27 10:42:05 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.annot
+    jobid: 39
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO
+        
+[Thu Jul 27 10:43:43 2023]
+Finished job 39.
+18 of 109 steps (17%) done
+Select jobs to execute...
+
+[Thu Jul 27 10:43:43 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.raw
+    jobid: 38
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO
+        
+[Thu Jul 27 11:16:05 2023]
+Finished job 53.
+19 of 109 steps (17%) done
+Select jobs to execute...
+
+[Thu Jul 27 11:16:05 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.annot
+    jobid: 27
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO
+        
+[Thu Jul 27 11:18:06 2023]
+Finished job 27.
+20 of 109 steps (18%) done
+Select jobs to execute...
+
+[Thu Jul 27 11:18:06 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.raw
+    jobid: 26
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO
+        
+[Thu Jul 27 11:32:34 2023]
+Finished job 17.
+21 of 109 steps (19%) done
+Select jobs to execute...
+
+[Thu Jul 27 11:32:34 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.annot
+    jobid: 78
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO
+        
+[Thu Jul 27 11:35:52 2023]
+Finished job 78.
+22 of 109 steps (20%) done
+Select jobs to execute...
+
+[Thu Jul 27 11:35:52 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.raw
+    jobid: 77
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/EO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO
+        
+[Thu Jul 27 12:10:53 2023]
+Finished job 41.
+23 of 109 steps (21%) done
+Select jobs to execute...
+
+[Thu Jul 27 12:10:54 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.annot
+    jobid: 99
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO
+        
+[Thu Jul 27 12:12:12 2023]
+Finished job 99.
+24 of 109 steps (22%) done
+Select jobs to execute...
+
+[Thu Jul 27 12:12:12 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.raw
+    jobid: 98
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO
+        
+[Thu Jul 27 16:07:51 2023]
+Finished job 5.
+25 of 109 steps (23%) done
+Select jobs to execute...
+
+[Thu Jul 27 16:07:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.annot
+    jobid: 87
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO
+        
+[Thu Jul 27 16:09:13 2023]
+Finished job 87.
+26 of 109 steps (24%) done
+Select jobs to execute...
+
+[Thu Jul 27 16:09:14 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.raw
+    jobid: 86
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO
+        
+[Fri Jul 28 10:44:44 2023]
+Finished job 62.
+27 of 109 steps (25%) done
+Select jobs to execute...
+
+[Fri Jul 28 10:44:44 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.annot
+    jobid: 75
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO
+        
+[Fri Jul 28 10:46:22 2023]
+Finished job 75.
+28 of 109 steps (26%) done
+Select jobs to execute...
+
+[Fri Jul 28 10:46:23 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.raw
+    jobid: 74
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/BASO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO
+        
+[Fri Jul 28 11:34:23 2023]
+Finished job 26.
+29 of 109 steps (27%) done
+Select jobs to execute...
+
+[Fri Jul 28 11:34:23 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.annot
+    jobid: 9
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO
+        
+[Fri Jul 28 11:37:21 2023]
+Finished job 9.
+30 of 109 steps (28%) done
+Select jobs to execute...
+
+[Fri Jul 28 11:37:21 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.raw
+    jobid: 8
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO
+        
+[Fri Jul 28 12:40:30 2023]
+Finished job 50.
+31 of 109 steps (28%) done
+Select jobs to execute...
+
+[Fri Jul 28 12:40:30 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.annot
+    jobid: 21
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO
+        
+[Fri Jul 28 12:41:51 2023]
+Finished job 21.
+32 of 109 steps (29%) done
+Select jobs to execute...
+
+[Fri Jul 28 12:41:51 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.raw
+    jobid: 20
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO
+        
+[Fri Jul 28 14:02:53 2023]
+Finished job 38.
+33 of 109 steps (30%) done
+Select jobs to execute...
+
+[Fri Jul 28 14:02:53 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.annot
+    jobid: 69
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO
+        
+[Fri Jul 28 14:04:40 2023]
+Finished job 69.
+34 of 109 steps (31%) done
+Select jobs to execute...
+
+[Fri Jul 28 14:04:40 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.raw
+    jobid: 68
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO
+        
+[Fri Jul 28 15:04:51 2023]
+Finished job 98.
+35 of 109 steps (32%) done
+Select jobs to execute...
+
+[Fri Jul 28 15:04:52 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.annot
+    jobid: 57
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO
+        
+[Fri Jul 28 15:09:10 2023]
+Finished job 57.
+36 of 109 steps (33%) done
+Select jobs to execute...
+
+[Fri Jul 28 15:09:11 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.raw
+    jobid: 56
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO
+        
+[Fri Jul 28 18:29:29 2023]
+Finished job 86.
+37 of 109 steps (34%) done
+Select jobs to execute...
+
+[Fri Jul 28 18:29:30 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.annot
+    jobid: 45
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO
+        
+[Fri Jul 28 18:32:32 2023]
+Finished job 45.
+38 of 109 steps (35%) done
+Select jobs to execute...
+
+[Fri Jul 28 18:32:32 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.raw
+    jobid: 44
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO
+        
+[Sat Jul 29 14:00:57 2023]
+Finished job 89.
+39 of 109 steps (36%) done
+Select jobs to execute...
+
+[Sat Jul 29 14:00:57 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.annot
+    jobid: 33
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO
+        
+[Sat Jul 29 14:03:06 2023]
+Finished job 33.
+40 of 109 steps (37%) done
+Select jobs to execute...
+
+[Sat Jul 29 14:03:06 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.raw
+    jobid: 32
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO
+        
+[Sat Jul 29 14:29:34 2023]
+Finished job 74.
+41 of 109 steps (38%) done
+Select jobs to execute...
+
+[Sat Jul 29 14:29:34 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.annot
+    jobid: 24
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT
+        
+[Sat Jul 29 14:32:57 2023]
+Finished job 24.
+42 of 109 steps (39%) done
+Select jobs to execute...
+
+[Sat Jul 29 14:32:57 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.raw
+    jobid: 23
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT
+        
+[Sun Jul 30 13:05:16 2023]
+Finished job 77.
+43 of 109 steps (39%) done
+Select jobs to execute...
+
+[Sun Jul 30 13:05:17 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    jobid: 12
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/caudate.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT
+        
+[Sun Jul 30 13:08:51 2023]
+Finished job 12.
+44 of 109 steps (40%) done
+Select jobs to execute...
+
+[Sun Jul 30 13:08:51 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.raw
+    jobid: 11
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT
+        
+[Mon Jul 31 15:47:01 2023]
+Finished job 20.
+45 of 109 steps (41%) done
+Select jobs to execute...
+
+[Mon Jul 31 15:47:01 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.annot
+    jobid: 105
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO
+        
+[Mon Jul 31 15:52:12 2023]
+Finished job 105.
+46 of 109 steps (42%) done
+Select jobs to execute...
+
+[Mon Jul 31 15:52:13 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.raw
+    jobid: 104
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO
+        
+[Mon Jul 31 17:16:29 2023]
+Finished job 8.
+47 of 109 steps (43%) done
+Select jobs to execute...
+
+[Mon Jul 31 17:16:29 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    jobid: 60
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT
+        
+[Mon Jul 31 17:17:59 2023]
+Finished job 60.
+48 of 109 steps (44%) done
+Select jobs to execute...
+
+[Mon Jul 31 17:17:59 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.raw
+    jobid: 59
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT
+        
+[Mon Jul 31 19:44:03 2023]
+Finished job 56.
+49 of 109 steps (45%) done
+Select jobs to execute...
+
+[Mon Jul 31 19:44:03 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.annot
+    jobid: 72
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/hippocampus.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT
+        
+[Mon Jul 31 19:45:34 2023]
+Finished job 72.
+50 of 109 steps (46%) done
+Select jobs to execute...
+
+[Mon Jul 31 19:45:35 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.raw
+    jobid: 71
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT
+        
+[Mon Jul 31 19:51:51 2023]
+Finished job 68.
+51 of 109 steps (47%) done
+Select jobs to execute...
+
+[Mon Jul 31 19:51:51 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.annot
+    jobid: 48
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT
+        
+[Mon Jul 31 19:53:35 2023]
+Finished job 48.
+52 of 109 steps (48%) done
+Select jobs to execute...
+
+[Mon Jul 31 19:53:35 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.raw
+    jobid: 47
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT
+        
+[Mon Jul 31 22:09:31 2023]
+Finished job 44.
+53 of 109 steps (49%) done
+Select jobs to execute...
+
+[Mon Jul 31 22:09:32 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    jobid: 36
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/dlpfc.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT
+        
+[Mon Jul 31 22:10:33 2023]
+Finished job 36.
+54 of 109 steps (50%) done
+Select jobs to execute...
+
+[Mon Jul 31 22:10:33 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.raw
+    jobid: 35
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT
+        
+[Tue Aug  1 06:46:47 2023]
+Finished job 23.
+55 of 109 steps (50%) done
+Select jobs to execute...
+
+[Tue Aug  1 06:46:47 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.annot
+    jobid: 93
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO
+        
+[Tue Aug  1 06:51:07 2023]
+Finished job 93.
+56 of 109 steps (51%) done
+Select jobs to execute...
+
+[Tue Aug  1 06:51:07 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.raw
+    jobid: 92
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO
+        
+[Tue Aug  1 18:15:53 2023]
+Finished job 32.
+57 of 109 steps (52%) done
+Select jobs to execute...
+
+[Tue Aug  1 18:15:53 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.annot
+    jobid: 81
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO
+        
+[Tue Aug  1 18:18:14 2023]
+Finished job 81.
+58 of 109 steps (53%) done
+Select jobs to execute...
+
+[Tue Aug  1 18:18:14 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.raw
+    jobid: 80
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/MONO.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO
+        
+[Wed Aug  2 02:45:12 2023]
+Finished job 11.
+59 of 109 steps (54%) done
+Select jobs to execute...
+
+[Wed Aug  2 02:45:12 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.annot
+    jobid: 108
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/DvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT
+        
+[Wed Aug  2 02:46:08 2023]
+Finished job 108.
+60 of 109 steps (55%) done
+Select jobs to execute...
+
+[Wed Aug  2 02:46:08 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.raw
+    jobid: 107
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT
+        
+[Wed Aug  2 16:14:59 2023]
+Finished job 59.
+61 of 109 steps (56%) done
+Select jobs to execute...
+
+[Wed Aug  2 16:14:59 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.annot
+    jobid: 96
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvH.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT
+        
+[Wed Aug  2 16:16:21 2023]
+Finished job 96.
+62 of 109 steps (57%) done
+Select jobs to execute...
+
+[Wed Aug  2 16:16:21 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.raw
+    jobid: 95
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT
+        
+[Wed Aug  2 16:19:11 2023]
+Finished job 47.
+63 of 109 steps (58%) done
+Select jobs to execute...
+
+[Wed Aug  2 16:19:11 2023]
+rule create_annot_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.annot
+    jobid: 84
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --annotate window=35,10             --snp-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp.loc             --gene-loc /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/hg38_hg19/_m/CvD.gencode.v41lift37.genesymbol.loc             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT
+        
+[Wed Aug  2 16:20:14 2023]
+Finished job 84.
+64 of 109 steps (59%) done
+Select jobs to execute...
+
+[Wed Aug  2 16:20:14 2023]
+rule create_genes_raw_file:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.annot, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.raw
+    jobid: 83
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.raw; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.annot
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --bfile /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/pop/_m/g1000_eur             --gene-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.annot             --gene-model snp-wise=mean             --pval /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gwas_datasets_updated/_m/NEUT.snp_pval.tsv ncol=NEFF             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT
+        
+[Wed Aug  2 16:42:55 2023]
+Finished job 71.
+65 of 109 steps (60%) done
+Select jobs to execute...
+
+[Wed Aug  2 16:42:55 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 13
+    benchmark: benchmarks/Caudate_betweensex_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:01:12 2023]
+Finished job 13.
+66 of 109 steps (61%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:01:12 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 16
+    benchmark: benchmarks/Caudate_betweensex_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:05:51 2023]
+Finished job 16.
+67 of 109 steps (61%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:05:51 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 22
+    benchmark: benchmarks/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:11:23 2023]
+Finished job 22.
+68 of 109 steps (62%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:11:23 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 19
+    benchmark: benchmarks/Caudate_betweensex_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=Caudate_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Caudate_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:14:27 2023]
+Finished job 19.
+69 of 109 steps (63%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:14:27 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 1
+    benchmark: benchmarks/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:25:49 2023]
+Finished job 1.
+70 of 109 steps (64%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:25:49 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 4
+    benchmark: benchmarks/caudate_maleVfemale_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:40:32 2023]
+Finished job 4.
+71 of 109 steps (65%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:40:32 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 10
+    benchmark: benchmarks/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Wed Aug  2 17:56:02 2023]
+Finished job 10.
+72 of 109 steps (66%) done
+Select jobs to execute...
+
+[Wed Aug  2 17:56:02 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 7
+    benchmark: benchmarks/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=caudate_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/caudate_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Wed Aug  2 18:06:23 2023]
+Finished job 7.
+73 of 109 steps (67%) done
+Select jobs to execute...
+
+[Wed Aug  2 18:06:23 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 61
+    benchmark: benchmarks/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 18:14:00 2023]
+Finished job 61.
+74 of 109 steps (68%) done
+Select jobs to execute...
+
+[Wed Aug  2 18:14:00 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 49
+    benchmark: benchmarks/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 18:23:43 2023]
+Finished job 49.
+75 of 109 steps (69%) done
+Select jobs to execute...
+
+[Wed Aug  2 18:23:43 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 64
+    benchmark: benchmarks/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 18:34:58 2023]
+Finished job 64.
+76 of 109 steps (70%) done
+Select jobs to execute...
+
+[Wed Aug  2 18:34:58 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 70
+    benchmark: benchmarks/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Wed Aug  2 18:49:58 2023]
+Finished job 70.
+77 of 109 steps (71%) done
+Select jobs to execute...
+
+[Wed Aug  2 18:49:59 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 52
+    benchmark: benchmarks/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 19:15:04 2023]
+Finished job 52.
+78 of 109 steps (72%) done
+Select jobs to execute...
+
+[Wed Aug  2 19:15:05 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 67
+    benchmark: benchmarks/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=Hippocampus_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/Hippocampus_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Wed Aug  2 19:33:27 2023]
+Finished job 67.
+79 of 109 steps (72%) done
+Select jobs to execute...
+
+[Wed Aug  2 19:33:27 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 58
+    benchmark: benchmarks/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Wed Aug  2 19:51:34 2023]
+Finished job 58.
+80 of 109 steps (73%) done
+Select jobs to execute...
+
+[Wed Aug  2 19:51:34 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 55
+    benchmark: benchmarks/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=hippocampus_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/hippocampus_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:05:41 2023]
+Finished job 55.
+81 of 109 steps (74%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:05:41 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 25
+    benchmark: benchmarks/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:08:46 2023]
+Finished job 25.
+82 of 109 steps (75%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:08:46 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 28
+    benchmark: benchmarks/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:19:05 2023]
+Finished job 28.
+83 of 109 steps (76%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:19:05 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 31
+    benchmark: benchmarks/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:21:56 2023]
+Finished job 31.
+84 of 109 steps (77%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:21:56 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 37
+    benchmark: benchmarks/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:38:33 2023]
+Finished job 37.
+85 of 109 steps (78%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:38:33 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 40
+    benchmark: benchmarks/DLPFC_betweensex_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:50:03 2023]
+Finished job 35.
+86 of 109 steps (79%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:50:04 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 34
+    benchmark: benchmarks/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=dlpfc_maleVfemale_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/dlpfc_maleVfemale_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Wed Aug  2 20:53:35 2023]
+Finished job 34.
+87 of 109 steps (80%) done
+Select jobs to execute...
+
+[Wed Aug  2 20:53:35 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 46
+    benchmark: benchmarks/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:00:35 2023]
+Finished job 40.
+88 of 109 steps (81%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:00:35 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 43
+    benchmark: benchmarks/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=DLPFC_betweensex_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DLPFC_betweensex_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:12:10 2023]
+Finished job 46.
+89 of 109 steps (82%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:12:10 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 97
+    benchmark: benchmarks/DvH_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:12:12 2023]
+Finished job 97.
+90 of 109 steps (83%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:12:12 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 100
+    benchmark: benchmarks/DvH_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:12:14 2023]
+Finished job 100.
+91 of 109 steps (83%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:12:14 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 85
+    benchmark: benchmarks/CvH_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:16:18 2023]
+Finished job 85.
+92 of 109 steps (84%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:16:18 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 88
+    benchmark: benchmarks/CvH_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:19:03 2023]
+Finished job 88.
+93 of 109 steps (85%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:19:03 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO_gene_set_results.gsa.out
+    jobid: 73
+    benchmark: benchmarks/CvD_deg_genes.txt_BASO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.raw
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=BASO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:20:00 2023]
+Finished job 43.
+94 of 109 steps (86%) done
+Select jobs to execute...
+
+[Wed Aug  2 21:20:00 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO_gene_set_results.gsa.out
+    jobid: 76
+    benchmark: benchmarks/CvD_deg_genes.txt_EO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.raw
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=EO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO_gene_set_results.gsa.out
+        
+[Wed Aug  2 21:23:27 2023]
+Finished job 76.
+95 of 109 steps (87%) done
+[Wed Aug  2 21:29:42 2023]
+Finished job 73.
+96 of 109 steps (88%) done
+[Thu Aug  3 00:29:21 2023]
+Finished job 104.
+97 of 109 steps (89%) done
+Select jobs to execute...
+
+[Thu Aug  3 00:29:21 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 103
+    benchmark: benchmarks/DvH_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Thu Aug  3 00:29:22 2023]
+Finished job 103.
+98 of 109 steps (90%) done
+[Thu Aug  3 04:13:14 2023]
+Finished job 80.
+99 of 109 steps (91%) done
+Select jobs to execute...
+
+[Thu Aug  3 04:13:15 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 79
+    benchmark: benchmarks/CvD_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Thu Aug  3 04:14:48 2023]
+Finished job 107.
+100 of 109 steps (92%) done
+Select jobs to execute...
+
+[Thu Aug  3 04:14:48 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 106
+    benchmark: benchmarks/DvH_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=DvH_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/DvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Thu Aug  3 04:14:50 2023]
+Finished job 106.
+101 of 109 steps (93%) done
+[Thu Aug  3 04:15:31 2023]
+Finished job 79.
+102 of 109 steps (94%) done
+[Thu Aug  3 04:37:38 2023]
+Finished job 92.
+103 of 109 steps (94%) done
+Select jobs to execute...
+
+[Thu Aug  3 04:37:38 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO_gene_set_results.gsa.out
+    jobid: 91
+    benchmark: benchmarks/CvH_deg_genes.txt_MONO_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.raw
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=MONO
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO_gene_set_results.gsa.out
+        
+[Thu Aug  3 04:42:08 2023]
+Finished job 91.
+104 of 109 steps (95%) done
+[Thu Aug  3 08:46:44 2023]
+Finished job 83.
+105 of 109 steps (96%) done
+Select jobs to execute...
+
+[Thu Aug  3 08:46:44 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 82
+    benchmark: benchmarks/CvD_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=CvD_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvD_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Thu Aug  3 08:49:28 2023]
+Finished job 82.
+106 of 109 steps (97%) done
+[Thu Aug  3 09:03:11 2023]
+Finished job 95.
+107 of 109 steps (98%) done
+Select jobs to execute...
+
+[Thu Aug  3 09:03:11 2023]
+rule run_gene_set_analysis:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.raw, /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt
+    output: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 94
+    benchmark: benchmarks/CvH_deg_genes.txt_NEUT_gene_set_analysis.tsv
+    reason: Missing output files: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT_gene_set_results.gsa.out; Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.raw
+    wildcards: gene_input_file=CvH_deg_genes.txt, group=NEUT
+    resources: tmpdir=/tmp
+
+
+        /ceph/opt/magma/v1_10/magma             --gene-results /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT.genes.raw             --set-annot /ceph/projects/sex_diff_schizophrenia/analysis/magma/inputs/gene_sets/_m/CvH_deg_genes.txt col=2,1             --out /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT_gene_set_results || touch /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT_gene_set_results.gsa.out
+        
+[Thu Aug  3 09:05:12 2023]
+Finished job 94.
+108 of 109 steps (99%) done
+Select jobs to execute...
+
+[Thu Aug  3 09:05:12 2023]
+localrule all:
+    input: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT_gene_set_results.gsa.out
+    jobid: 0
+    reason: Input files updated by another job: /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/caudate_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Caudate_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/dlpfc_maleVfemale_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_NEUT_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvH_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/Hippocampus_betweensex_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/hippocampus_maleVfemale_deg_genes.txt_MONO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/CvD_deg_genes.txt_EO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DLPFC_betweensex_deg_genes.txt_BASO_gene_set_results.gsa.out, /ceph/projects/sex_diff_schizophrenia/analysis/magma/custom_universe/blood_traits/_m/DvH_deg_genes.txt_EO_gene_set_results.gsa.out
+    resources: tmpdir=/tmp
+
+[Thu Aug  3 09:05:12 2023]
+Finished job 0.
+109 of 109 steps (100%) done
+Complete log: .snakemake/log/2023-07-24T160750.427973.snakemake.log
