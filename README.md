@@ -1,5 +1,6 @@
 # LIBD Sex Differences in Schizophrenia
 
+**Abstract**<br>
 Schizophrenia is a complex neuropsychiatric disorder with sexually dimorphic
 features, including differential symptomatology, drug responsiveness, and
 male incidence rate. To date, only the prefrontal cortex has been studied in
@@ -30,15 +31,15 @@ need for increased female samples for schizophrenia analyses.
 
 If you use anything in this repository please cite the following pre-print:
 
-Kynon JM Benjamin<sup>*+</sup>, Ria Arora<sup>+</sup>, Arthur S Feltrin,
+Kynon JM Benjamin<sup>\*+</sup>, Ria Arora<sup>+</sup>, Arthur S Feltrin,
 Geo Pertea, Hunter Giles, Josh Stolz, Laura D’Ignazio,
 Leonardo Collado-Torres, Thomas M Hyde, Joel E Kleinman, 
-Daniel R Weinberger, Apuã CM Paquola<sup>*</sup>, 
-Jennifer Erwin<sup>*</sup>.
+Daniel R Weinberger, Apuã CM Paquola<sup>\*</sup>, 
+Jennifer Erwin<sup>\*</sup>.
 How sex affects transcriptional associations with schizophrenia across dorsolateral
 prefrontal cortex, hippocampus, and caudate nucleus. 2022.
 
-<sup>*</sup>Corresponding authors<br>
+<sup>\*</sup>Corresponding authors<br>
 <sup>+</sup>Co-first authors
 
 Pre-print DOI: [https://doi.org/10.1101/2022.09.30.22280452](https://doi.org/10.1101/2022.09.30.22280452).
