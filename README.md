@@ -46,7 +46,7 @@ Pre-print DOI: [https://doi.org/10.1101/2022.09.30.22280452](https://doi.org/10.
 
 ## Supplementary Data
 
-We have uploaded the supplementary data to [Zenodo](https://doi.org/10.5281/zenodo.7125280).
+We have uploaded the supplementary data to [Zenodo](https://doi.org/10.5281/zenodo.8415382).
 
 ## License
 
