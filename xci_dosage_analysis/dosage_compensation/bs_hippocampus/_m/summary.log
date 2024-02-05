@@ -1,0 +1,41 @@
+**** Job starts ****
+Fri Feb  2 11:41:51 AM EST 2024
+**** JHPCE info ****
+User: jbenjami
+Job id: 1900673
+Job name: xci_exploration
+Node name: 
+Hostname: compute-124
+Task id: 
+
+Currently Loaded Modules:
+  1) JHPCE_ROCKY9_DEFAULT_ENV   2) JHPCE_tools/3.0
+
+ 
+
+**** Run explore RXE ****
+Full dataset
+Mann-WhitneyU for ctl vs sz (RXE): 0.00210226
+Removing all XCI genes
+Mann-WhitneyU for ctl vs sz (RXE): 0.0858475
+ESCAPE
+Mann-WhitneyU for ctl vs sz (RXE): 0.00475836
+VARIABLE
+Mann-WhitneyU for ctl vs sz (RXE): 0.00155407
+INACTIVE
+Mann-WhitneyU for ctl vs sz (RXE): 0.316896
+RXE
+X
+-----
+polars              0.19.12
+pyhere              1.0.0
+scipy               1.8.1
+session_info        1.0.0
+statsmodels         0.14.0
+-----
+Python 3.9.16 (main, Dec  8 2022, 00:00:00) [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
+Linux-5.14.0-284.11.1.el9_2.x86_64-x86_64-with-glibc2.34
+-----
+Session information updated at 2024-02-02 11:42
+**** Job ends ****
+Fri Feb  2 11:42:04 AM EST 2024
