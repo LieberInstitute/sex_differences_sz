@@ -1,41 +1,103 @@
 **** Job starts ****
-Fri Feb  2 11:41:51 AM EST 2024
+Tue Feb  6 09:28:29 AM EST 2024
 **** JHPCE info ****
 User: jbenjami
-Job id: 1900673
-Job name: xci_exploration
+Job id: 1929746
+Job name: xci_plotting
 Node name: 
-Hostname: compute-124
+Hostname: compute-108
 Task id: 
+Loading conda_R/4.3.x
 
 Currently Loaded Modules:
-  1) JHPCE_ROCKY9_DEFAULT_ENV   2) JHPCE_tools/3.0
+  1) JHPCE_ROCKY9_DEFAULT_ENV   3) conda/3-23.3.1
+  2) JHPCE_tools/3.0            4) conda_R/4.3.x
 
  
 
-**** Run explore RXE ****
-Full dataset
-Mann-WhitneyU for ctl vs sz (RXE): 0.00210226
-Removing all XCI genes
-Mann-WhitneyU for ctl vs sz (RXE): 0.0858475
-ESCAPE
-Mann-WhitneyU for ctl vs sz (RXE): 0.00475836
-VARIABLE
-Mann-WhitneyU for ctl vs sz (RXE): 0.00155407
-INACTIVE
-Mann-WhitneyU for ctl vs sz (RXE): 0.316896
-RXE
-X
------
-polars              0.19.12
-pyhere              1.0.0
-scipy               1.8.1
-session_info        1.0.0
-statsmodels         0.14.0
------
-Python 3.9.16 (main, Dec  8 2022, 00:00:00) [GCC 11.3.1 20221121 (Red Hat 11.3.1-4)]
-Linux-5.14.0-284.11.1.el9_2.x86_64-x86_64-with-glibc2.34
------
-Session information updated at 2024-02-02 11:42
+**** Run plotting RXE (hippocampus) XCI ****
+here() starts at /dcs04/lieber/statsgen/jbenjami/projects/sex_differences_sz
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: ggplot2
+[1] "2024-02-06 09:28:55 EST"
+   user  system elapsed 
+  9.047   0.810  23.424 
+─ Session info ───────────────────────────────────────────────────────────────────────────────────────────────────────
+ setting  value
+ version  R version 4.3.2 Patched (2023-11-13 r85524)
+ os       Rocky Linux 9.2 (Blue Onyx)
+ system   x86_64, linux-gnu
+ ui       X11
+ language (EN)
+ collate  en_US.UTF-8
+ ctype    en_US.UTF-8
+ tz       US/Eastern
+ date     2024-02-06
+ pandoc   3.1.3 @ /jhpce/shared/community/core/conda_R/4.3.x/bin/pandoc
+
+─ Packages ───────────────────────────────────────────────────────────────────────────────────────────────────────────
+ package     * version date (UTC) lib source
+ abind         1.4-5   2016-07-21 [2] CRAN (R 4.3.2)
+ backports     1.4.1   2021-12-13 [2] CRAN (R 4.3.2)
+ broom         1.0.5   2023-06-09 [2] CRAN (R 4.3.2)
+ cachem        1.0.8   2023-05-01 [2] CRAN (R 4.3.2)
+ car           3.1-2   2023-03-30 [2] CRAN (R 4.3.2)
+ carData       3.0-5   2022-01-06 [2] CRAN (R 4.3.2)
+ cli           3.6.1   2023-03-23 [2] CRAN (R 4.3.2)
+ colorspace    2.1-0   2023-01-23 [2] CRAN (R 4.3.2)
+ data.table    1.14.8  2023-02-17 [2] CRAN (R 4.3.2)
+ dplyr       * 1.1.3   2023-09-03 [2] CRAN (R 4.3.2)
+ fansi         1.0.5   2023-10-08 [2] CRAN (R 4.3.2)
+ farver        2.1.1   2022-07-06 [2] CRAN (R 4.3.2)
+ fastmap       1.1.1   2023-02-24 [2] CRAN (R 4.3.2)
+ generics      0.1.3   2022-07-05 [2] CRAN (R 4.3.2)
+ ggplot2     * 3.4.4   2023-10-12 [2] CRAN (R 4.3.2)
+ ggpubr      * 0.6.0   2023-02-10 [2] CRAN (R 4.3.2)
+ ggsignif      0.6.4   2022-10-13 [2] CRAN (R 4.3.2)
+ glue          1.6.2   2022-02-24 [2] CRAN (R 4.3.2)
+ gtable        0.3.4   2023-08-21 [2] CRAN (R 4.3.2)
+ here        * 1.0.1   2020-12-13 [2] CRAN (R 4.3.2)
+ labeling      0.4.3   2023-08-29 [2] CRAN (R 4.3.2)
+ lifecycle     1.0.4   2023-11-07 [2] CRAN (R 4.3.2)
+ magrittr      2.0.3   2022-03-30 [2] CRAN (R 4.3.2)
+ memoise       2.0.1   2021-11-26 [2] CRAN (R 4.3.2)
+ munsell       0.5.0   2018-06-12 [2] CRAN (R 4.3.2)
+ pillar        1.9.0   2023-03-22 [2] CRAN (R 4.3.2)
+ pkgconfig     2.0.3   2019-09-22 [2] CRAN (R 4.3.2)
+ purrr         1.0.2   2023-08-10 [2] CRAN (R 4.3.2)
+ R6            2.5.1   2021-08-19 [2] CRAN (R 4.3.2)
+ ragg          1.2.6   2023-10-10 [2] CRAN (R 4.3.2)
+ rlang         1.1.2   2023-11-04 [2] CRAN (R 4.3.2)
+ rprojroot     2.0.4   2023-11-05 [2] CRAN (R 4.3.2)
+ rstatix       0.7.2   2023-02-01 [2] CRAN (R 4.3.2)
+ scales        1.2.1   2022-08-20 [2] CRAN (R 4.3.2)
+ sessioninfo   1.2.2   2021-12-06 [2] CRAN (R 4.3.2)
+ stringi       1.8.1   2023-11-13 [2] CRAN (R 4.3.2)
+ stringr       1.5.1   2023-11-14 [2] CRAN (R 4.3.2)
+ svglite       2.1.2   2023-10-11 [2] CRAN (R 4.3.2)
+ systemfonts   1.0.5   2023-10-09 [2] CRAN (R 4.3.2)
+ textshaping   0.3.7   2023-10-09 [2] CRAN (R 4.3.2)
+ tibble        3.2.1   2023-03-20 [2] CRAN (R 4.3.2)
+ tidyr         1.3.0   2023-01-24 [2] CRAN (R 4.3.2)
+ tidyselect    1.2.0   2022-10-10 [2] CRAN (R 4.3.2)
+ utf8          1.2.4   2023-10-22 [2] CRAN (R 4.3.2)
+ vctrs         0.6.4   2023-10-12 [2] CRAN (R 4.3.2)
+ withr         2.5.2   2023-10-30 [2] CRAN (R 4.3.2)
+
+ [1] /users/jbenjami/R/4.3.x
+ [2] /jhpce/shared/community/core/conda_R/4.3.x/R/lib64/R/site-library
+ [3] /jhpce/shared/community/core/conda_R/4.3.x/R/lib64/R/library
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 **** Job ends ****
-Fri Feb  2 11:42:04 AM EST 2024
+Tue Feb  6 09:28:57 AM EST 2024
